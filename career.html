@@ -20,50 +20,34 @@
 
 <body>
   <header class="rds-hero rds-hero-page">
-    <!-- NAVIVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!--======================================================
+                    RDS NAVIGATION
+    =======================================================-->
+    <nav class="navbar rds-navbar navbar-expand-lg fixed-top">
 
       <div class="container">
 
-        <!--  LOGO  -->
-        <a class="navbar-brand" href="index.html">
+        <!--==================================================
+                        BRAND
+        ===================================================-->
+        <a href="index.html" class="navbar-brand rds-navbar-brand">
 
-          <!-- Mobile -->
-          <img src="images/mobile-logo.png" alt="ROGONTRA GROUP" class="d-md-none" height="42">
+          <!-- Mobile Logo -->
+          <img src="images/mobile-logo.png" alt="ROGONTRA Group" class="d-md-none">
 
-          <!-- Desktop -->
-          <img src="images/main-logo.png" alt="ROGONTRA GROUP" class="d-none d-md-block" height="54">
+          <!-- Desktop Logo -->
+          <img src="images/main-logo.png" alt="ROGONTRA Group" class="d-none d-md-block">
 
         </a>
 
-        <!--  RIGHT SIDE  -->
-        <div class="d-flex align-items-center ms-auto order-lg-last">
-
-          <a href="contact.html" class="btn btn-nav-touch d-none d-lg-inline-flex">
-
-            Get In Touch
-
-          </a>
-
-          <button class="navbar-toggler custom-toggler d-lg-none ms-3" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#mobileMenu" aria-label="Toggle navigation">
-
-            <span></span>
-
-            <span></span>
-
-            <span></span>
-
-          </button>
-
-        </div>
-
-        <!--  DESKTOP NAVIGATION  -->
-        <ul class="navbar-nav ms-auto d-none d-lg-flex align-items-center">
+        <!--==================================================
+                    DESKTOP NAVIGATION
+        ===================================================-->
+        <ul class="navbar-nav rds-navbar-nav ms-auto d-none d-lg-flex">
 
           <li class="nav-item">
 
-            <a class="nav-link" href="index.html">
+            <a href="index.html" class="nav-link">
 
               Home
 
@@ -73,7 +57,7 @@
 
           <li class="nav-item">
 
-            <a class="nav-link" href="about.html">
+            <a href="about.html" class="nav-link">
 
               About
 
@@ -81,10 +65,10 @@
 
           </li>
 
-          <!-- Businesses Dropdown -->
+          <!-- Businesses -->
           <li class="nav-item dropdown">
 
-            <a class="nav-link dropdown-toggle" href="business.html" data-bs-toggle="dropdown">
+            <a href="business.html" class="nav-link dropdown-toggle" role="button" aria-expanded="false">
 
               Our Businesses
 
@@ -93,69 +77,43 @@
             <ul class="dropdown-menu">
 
               <li>
-
                 <a class="dropdown-item" href="business.html#technology">
-
                   Technology
-
                 </a>
-
               </li>
 
               <li>
-
                 <a class="dropdown-item" href="business.html#infrastructure">
-
                   Infrastructure
-
                 </a>
-
               </li>
 
               <li>
-
                 <a class="dropdown-item" href="business.html#logistics">
-
                   Logistics
-
                 </a>
-
               </li>
 
               <li>
-
                 <a class="dropdown-item" href="business.html#agriculture">
-
                   Agriculture
-
                 </a>
-
               </li>
 
               <li>
-
                 <a class="dropdown-item" href="business.html#hospitality">
-
                   Hospitality
-
                 </a>
-
               </li>
 
               <li>
-
                 <a class="dropdown-item" href="business.html#strategic-investment">
-
                   Trade
-
                 </a>
-
               </li>
 
               <li>
-
                 <hr class="dropdown-divider">
-
               </li>
 
               <li>
@@ -174,7 +132,7 @@
 
           <li class="nav-item">
 
-            <a class="nav-link" href="investors.html">
+            <a href="investors.html" class="nav-link">
 
               Investors
 
@@ -184,7 +142,7 @@
 
           <li class="nav-item">
 
-            <a class="nav-link active" href="career.html">
+            <a href="career.html" class="nav-link active">
 
               Careers
 
@@ -194,9 +152,19 @@
 
           <li class="nav-item">
 
-            <a class="nav-link" href="contact.html">
+            <a href="contact.html" class="nav-link">
 
-              Contact Us
+              Contact
+
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a href="news.html" class="nav-link">
+
+              News
 
             </a>
 
@@ -204,11 +172,35 @@
 
         </ul>
 
+        <!--==================================================
+                    RIGHT ACTIONS
+        ===================================================-->
+        <div class="rds-navbar-actions ms-lg-4">
+
+          <a href="contact.html" class="rds-btn rds-btn-secondary d-none d-lg-inline-flex">
+
+            Get In Touch
+
+          </a>
+
+          <button class="navbar-toggler rds-navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-label="Open Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </button>
+
+        </div>
+
       </div>
 
     </nav>
 
-    <!--  EXECUTIVE OFFCANVAS  -->
+    <!--======================================================
+                RDS EXECUTIVE OFFCANVAS
+    =======================================================-->
     <div class="offcanvas offcanvas-end executive-offcanvas" tabindex="-1" id="mobileMenu">
 
       <!-- Header -->
@@ -216,10 +208,9 @@
 
         <div class="offcanvas-brand">
 
-          <!-- Background World Map -->
-          <img src="images/world.svg" alt="World Map" class="offcanvas-world-map">
+          <img src="images/world.svg" alt="" class="offcanvas-world-map">
 
-          <img src="images/mobile-logo.png" alt="ROGONTRA GROUP">
+          <img src="images/mobile-logo.png" alt="ROGONTRA Group">
 
           <h5>
 
@@ -236,21 +227,19 @@
         </div>
 
         <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas">
+
         </button>
 
       </div>
 
-      <!-- Divider -->
-      <div class="offcanvas-divider"></div>
-
-      <!-- Navigation -->
+      <!-- Body -->
       <div class="offcanvas-body">
 
-        <ul class="navbar-nav offcanvas-nav">
+        <ul class="navbar-nav offcanvas-nav flex-column">
 
           <li>
 
-            <a class="nav-link" href="index.html">
+            <a href="index.html" class="nav-link">
 
               Home
 
@@ -260,7 +249,7 @@
 
           <li>
 
-            <a class="nav-link" href="about.html">
+            <a href="about.html" class="nav-link">
 
               About
 
@@ -268,19 +257,42 @@
 
           </li>
 
+          <!-- Businesses -->
           <li>
 
-            <a class="nav-link" href="business.html">
+            <a class="nav-link" data-bs-toggle="collapse" href="#mobileBusinesses">
 
               Our Businesses
 
             </a>
 
+            <div class="collapse mt-2" id="mobileBusinesses">
+
+              <ul class="list-unstyled ps-3">
+
+                <li><a href="business.html#technology">Technology</a></li>
+
+                <li><a href="business.html#infrastructure">Infrastructure</a></li>
+
+                <li><a href="business.html#logistics">Logistics</a></li>
+
+                <li><a href="business.html#agriculture">Agriculture</a></li>
+
+                <li><a href="business.html#hospitality">Hospitality</a></li>
+
+                <li><a href="business.html#strategic-investment">Trade</a></li>
+
+                <li><a href="business.html">View All Businesses →</a></li>
+
+              </ul>
+
+            </div>
+
           </li>
 
           <li>
 
-            <a class="nav-link" href="investors.html">
+            <a href="investors.html" class="nav-link">
 
               Investors
 
@@ -290,7 +302,7 @@
 
           <li>
 
-            <a class="nav-link active" href="career.html">
+            <a href="career.html" class="nav-link active">
 
               Careers
 
@@ -300,9 +312,19 @@
 
           <li>
 
-            <a class="nav-link" href="contact.html">
+            <a href="contact.html" class="nav-link">
 
-              Contact Us
+              Contact
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a href="news.html" class="nav-link">
+
+              News
 
             </a>
 
@@ -313,7 +335,7 @@
         <!-- Bottom -->
         <div class="offcanvas-footer">
 
-          <a href="contact.html" class="btn btn-nav-touch w-100">
+          <a href="contact.html" class="rds-btn rds-btn-secondary w-100">
 
             Get In Touch
 
@@ -611,7 +633,7 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
 
-  <script type="module" src="scripts/annimations.js"></script>
+  <script type="module" src="scripts/navigation.js"></script>
 </body>
 
 </html>

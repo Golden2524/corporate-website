@@ -1,0 +1,2095 @@
+/*======================================================
+                EXECUTIVE NAVBAR
+======================================================
+
+.navbar {
+
+  padding: 20px 0;
+
+  background: rgba(8, 26, 44, .78);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: all .4s ease;
+
+  z-index: 9999;
+
+}
+
+.navbar.scrolled {
+
+  padding: 12px 0;
+
+  background: rgba(8, 26, 44, .95);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+
+}
+
+/*======================================================
+                    LOGO
+======================================================
+
+.navbar-brand img {
+
+  transition: all .35s ease;
+
+}
+
+.navbar.scrolled .navbar-brand img {
+
+  transform: scale(.92);
+
+}
+
+/*======================================================
+                NAVIGATION LINKS
+======================================================
+
+.navbar-nav {
+
+  gap: 12px;
+
+}
+
+.navbar-nav .nav-link {
+
+  position: relative;
+
+  color: rgba(255, 255, 255, .82);
+
+  font-weight: 500;
+
+  font-size: .95rem;
+
+  letter-spacing: .3px;
+
+  padding: .8rem .9rem;
+
+  transition: all .35s ease;
+
+}
+
+.navbar-nav .nav-link:hover {
+
+  color: #ffffff;
+
+}
+
+/*======================================================
+            GOLD UNDERLINE EFFECT
+======================================================
+
+.navbar-nav .nav-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--secondary);
+
+  border-radius: 50px;
+
+  transform: translateX(-50%);
+
+  transition: all .35s ease;
+
+}
+
+.navbar-nav .nav-link:hover::after,
+
+.navbar-nav .nav-link.active::after {
+
+  width: 70%;
+
+}
+
+.navbar-nav .nav-link.active {
+
+  color: #ffffff;
+
+}
+
+
+/*======================================================
+                CTA BUTTON
+======================================================
+
+.btn-nav-touch {
+
+  padding: 12px 28px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+
+  color: #ffffff;
+
+  background: transparent;
+
+  font-weight: 600;
+
+  transition: all .35s ease;
+
+}
+
+.btn-nav-touch:hover {
+
+  background: var(--secondary);
+
+  border-color: var(--secondary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(199, 164, 77, .25);
+
+}
+
+/*======================================================
+            EXECUTIVE HAMBURGER
+======================================================
+
+.custom-toggler {
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+  background: rgba(255, 255, 255, .06);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all var(--transition);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0;
+
+  box-shadow: none;
+
+}
+
+.custom-toggler:focus {
+
+  box-shadow: none;
+
+}
+
+.custom-toggler span {
+
+  width: 26px;
+
+  height: 2px;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+
+  transition: all .35s ease;
+
+}
+
+/* Hover 
+
+.custom-toggler:hover span {
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+            OPEN STATE
+======================================================
+
+.custom-toggler.active span:nth-child(1) {
+
+  transform:
+    rotate(45deg) translate(6px, 6px);
+
+}
+
+.custom-toggler.active span:nth-child(2) {
+
+  opacity: 0;
+
+}
+
+.custom-toggler.active span:nth-child(3) {
+
+  transform:
+    rotate(-45deg) translate(5px, -5px);
+
+}
+
+/*======================================================
+                DROPDOWN
+======================================================
+
+.dropdown-menu {
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  padding: 12px;
+
+  min-width: 260px;
+
+  background: rgba(255, 255, 255, .96);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+
+  animation: dropdownFade .28s ease;
+
+}
+
+.dropdown-menu .dropdown-item {
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  color: var(--text-light);
+
+  font-weight: 500;
+
+  transition: all .3s ease;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--primary);
+
+  padding-left: 24px;
+
+}
+
+.dropdown-divider {
+
+  margin: 10px 0;
+
+}
+
+/*======================================================
+            EXECUTIVE OFFCANVAS
+======================================================
+
+.executive-offcanvas {
+
+  --bs-offcanvas-width: 280px;
+
+  background: #081A2C;
+
+  color: #fff;
+
+  margin-top: 70px;
+
+}
+
+/*=====================================
+
+.offcanvas-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 28px;
+
+}
+
+/*=====================================
+
+.offcanvas-brand img {
+
+  width: 58px;
+
+  margin-bottom: 18px;
+
+}
+
+.offcanvas-brand h5 {
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  color: #fff;
+
+  margin-bottom: 6px;
+
+}
+
+.offcanvas-brand span {
+
+  color: var(--secondary);
+
+  font-size: .9rem;
+
+}
+
+/*=====================================
+
+.offcanvas-divider {
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, .08);
+
+  margin: 0 28px;
+
+}
+
+/*=====================================
+
+.offcanvas-body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 30px 28px;
+
+}
+
+/*=====================================
+
+.offcanvas-nav {
+
+  gap: 6px;
+
+}
+
+.offcanvas-nav .nav-link {
+
+  position: relative;
+
+  padding: 16px 18px;
+
+  border-radius: 12px;
+
+  color: var(--text-light);
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  transition: all .3s ease;
+
+}
+
+/* Reduce desktop underline 
+
+.offcanvas-nav .nav-link:hover::after,
+
+.offcanvas-nav .nav-link.active::after {
+
+  width: 10%;
+
+}
+
+/* Hover 
+
+.offcanvas-nav .nav-link:hover {
+
+  background: rgba(255, 255, 255, .05);
+
+  color: var(--secondary);
+
+  padding-left: 26px;
+
+}
+
+/* Active 
+
+.offcanvas-nav .nav-link.active {
+
+  background: rgba(199, 164, 77, .12);
+
+  color: var(--primary);
+
+  border-left: 3px solid var(--secondary);
+
+}
+
+/*=====================================
+
+.offcanvas-footer {
+
+  margin-top: 40px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.offcanvas-footer:hover .btn {
+  border: 1px solid var(--primary);
+}
+
+/*Animations
+.executive-offcanvas {
+
+  animation-duration: .45s;
+
+}
+
+/*======================================================
+            WORLD MAP
+======================================================
+
+.offcanvas-brand {
+
+  position: relative;
+
+  text-align: center;
+
+  padding: 18px 0 12px;
+
+}
+
+/* Background Map 
+
+.offcanvas-world-map {
+
+  position: absolute;
+
+  top: -5px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+
+  opacity: .05;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  animation: worldFloat 8s ease-in-out infinite;
+
+}
+
+/* Logo 
+
+.offcanvas-logo {
+
+  position: relative;
+
+  width: 60px;
+
+  margin-bottom: 18px;
+
+  z-index: 2;
+
+}
+
+/* Text 
+
+.offcanvas-brand h5 {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.offcanvas-brand span {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.offcanvas-backdrop.show {
+
+  backdrop-filter: blur(6px);
+
+  -webkit-backdrop-filter: blur(6px);
+
+  background: rgba(0, 0, 0, .35);
+
+}
+
+/*======================================================
+                RESPONSIVE
+======================================================
+
+@media(max-width:991px) {
+
+  .navbar {
+
+    padding: 1.5rem 0;
+
+  }
+
+  .navbar-brand img {
+
+    max-height: 40px;
+
+    width: auto;
+
+    object-fit: contain;
+  }
+
+  /*.ms-auto .btn-nav-touch {
+
+    display: none;
+
+  }
+
+}
+
+
+@media(min-width:767px) {
+
+  .hero .offcanvas {
+    margin-top: 80px;
+  }
+}
+
+@media(max-width:576px) {}*/
+
+
+/*======================================================
+                RDS NAVBAR FOUNDATION
+======================================================*/
+
+.rds-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    padding: 1.15rem 0;
+
+    background: rgba(8, 26, 44, .78);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+
+    transition:
+        background .35s ease,
+        padding .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+.rds-navbar.rds-navbar-scrolled {
+
+    padding: .8rem 0;
+
+    background: rgba(8, 26, 44, .95);
+
+    border-color: rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .18);
+
+}
+
+/*======================================================
+                CONTAINER
+======================================================*/
+
+.rds-navbar .container {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+/*======================================================
+                    LOGO
+======================================================*/
+
+.rds-navbar-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+}
+
+.rds-navbar-brand img {
+
+    display: block;
+
+    height: 60px;
+
+    width: auto;
+
+    transition: transform .35s ease;
+
+}
+
+.rds-navbar-scrolled .rds-navbar-brand img {
+
+    transform: scale(.94);
+
+}
+
+/* temporary logo space */
+
+.rds-navbar-brand-placeholder {
+
+    width: 190px;
+
+    height: 60px;
+
+}
+
+/*======================================================
+                DESKTOP NAVIGATION
+======================================================*/
+
+.rds-navbar-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-left: auto;
+
+}
+
+.rds-navbar-nav>.nav-item {
+
+    position: relative;
+
+}
+
+.rds-navbar-nav .nav-link {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 52px;
+
+    padding: 0 18px;
+
+    color: rgba(255, 255, 255, .84);
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    letter-spacing: .02em;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+.rds-navbar-nav .nav-link:hover {
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+}
+
+.rds-navbar-nav .nav-link.active {
+
+    color: #fff;
+
+}
+
+/*======================================================
+                GOLD INDICATOR
+======================================================*/
+
+.rds-navbar-nav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 8px;
+
+    transform: translateX(-50%);
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--secondary);
+
+    transition: .35s ease;
+
+}
+
+.rds-navbar-nav .nav-link:hover::after,
+
+.rds-navbar-nav .nav-link.active::after {
+
+    width: 68%;
+
+}
+
+/*======================================================
+                RIGHT ACTIONS
+======================================================*/
+
+.rds-navbar-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-left: 28px;
+
+}
+
+/*======================================================
+                    CTA
+======================================================*/
+
+.rds-navbar .rds-btn {
+
+    min-height: 52px;
+
+    padding-inline: 28px;
+
+}
+
+/*======================================================
+                HAMBURGER
+======================================================*/
+
+.rds-navbar-toggler {
+
+    width: 56px;
+
+    height: 56px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(18px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    transition: .35s ease;
+
+}
+
+.rds-navbar-toggler:focus {
+
+    outline: none;
+
+    box-shadow: none;
+
+}
+
+.rds-navbar-toggler span {
+
+    width: 28px;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #fff;
+
+    transition: .35s ease;
+
+}
+
+.rds-navbar-toggler:hover {
+
+    border-color: rgba(199, 164, 77, .35);
+
+    background: rgba(255, 255, 255, .10);
+
+}
+
+.rds-navbar-toggler:hover span {
+
+    background: var(--secondary);
+
+}
+
+.rds-navbar-toggler.active span:nth-child(1) {
+
+    transform:
+        translateY(9px) rotate(45deg);
+
+}
+
+.rds-navbar-toggler.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.rds-navbar-toggler.active span:nth-child(3) {
+
+    transform:
+        translateY(-9px) rotate(-45deg);
+
+}
+
+/*======================================================
+                RDS DESKTOP DROPDOWN
+======================================================*/
+
+.rds-navbar .dropdown {
+
+    position: relative;
+
+}
+
+.rds-navbar .dropdown-toggle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .45rem;
+
+}
+
+.rds-navbar .dropdown-toggle::after {
+
+    margin-left: .15rem;
+
+    vertical-align: middle;
+
+    border-top: .28em solid;
+
+    border-right: .28em solid transparent;
+
+    border-left: .28em solid transparent;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+
+/* Rotate Arrow */
+
+.rds-navbar .dropdown:hover>.dropdown-toggle::after {
+
+    transform: rotate(180deg);
+
+}
+
+/*======================================================
+            DROPDOWN PANEL
+======================================================*/
+
+.rds-navbar .dropdown-menu {
+
+    display: block;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateY(18px) scale(.97);
+
+    transform-origin: top center;
+
+    transition:
+        opacity .28s ease,
+        transform .28s ease,
+        visibility .28s ease;
+
+    position: absolute;
+
+    top: calc(100% + 18px);
+
+    left: 50%;
+
+    translate: -50%;
+
+    min-width: 310px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, .97);
+
+    backdrop-filter: blur(26px);
+
+    -webkit-backdrop-filter: blur(26px);
+
+    box-shadow:
+
+        0 35px 80px rgba(0, 0, 0, .16),
+
+        0 12px 30px rgba(0, 0, 0, .08);
+
+    overflow: hidden;
+
+}
+
+/*======================================================
+            SHOW ON HOVER
+======================================================*/
+
+.rds-navbar .dropdown:hover>.dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0) scale(1);
+
+}
+
+/*======================================================
+            GOLD TOP LINE
+======================================================*/
+
+.rds-navbar .dropdown-menu::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            var(--secondary),
+
+            transparent);
+
+}
+
+/*======================================================
+            MENU ITEMS
+======================================================*/
+
+.rds-navbar .dropdown-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    font-size: .96rem;
+
+    font-weight: 500;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition:
+
+        background .3s ease,
+
+        color .3s ease,
+
+        padding .3s ease,
+
+        transform .3s ease;
+
+}
+
+/*======================================================
+            ARROW
+======================================================*/
+
+.rds-navbar .dropdown-item::after {
+
+    content: "→";
+
+    opacity: 0;
+
+    transform: translateX(-8px);
+
+    transition: .3s ease;
+
+}
+
+/*======================================================
+            HOVER
+======================================================*/
+
+.rds-navbar .dropdown-item:hover {
+
+    background:
+
+        rgba(199, 164, 77, .08);
+
+    color: var(--primary);
+
+    padding-left: 26px;
+
+}
+
+.rds-navbar .dropdown-item:hover::after {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+/*======================================================
+            DIVIDER
+======================================================*/
+
+.rds-navbar .dropdown-divider {
+
+    margin: 12px 0;
+
+    border: none;
+
+    height: 1px;
+
+    background:
+
+        rgba(8, 26, 44, .08);
+
+}
+
+/*======================================================
+        FEATURED LAST LINK
+======================================================*/
+
+.rds-navbar .dropdown-item.fw-semibold {
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+}
+
+/*======================================================
+        DROPDOWN SHADOW GLOW
+======================================================*/
+
+.rds-navbar .dropdown-menu::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    top: -90px;
+
+    right: -90px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(circle,
+
+            rgba(199, 164, 77, .12),
+
+            transparent 70%);
+
+    pointer-events: none;
+
+}
+
+/*======================================================
+        RDS STICKY NAVBAR
+======================================================*/
+
+.rds-navbar {
+
+    will-change:
+        background,
+        padding,
+        box-shadow,
+        transform;
+
+}
+
+.rds-navbar.rds-navbar-scrolled {
+
+    padding: .75rem 0;
+
+    background: rgba(8, 26, 44, .96);
+
+    backdrop-filter: blur(30px);
+
+    -webkit-backdrop-filter: blur(30px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow:
+
+        0 18px 45px rgba(0, 0, 0, .18),
+
+        0 4px 12px rgba(0, 0, 0, .08);
+
+}
+
+/* Logo */
+
+.rds-navbar.rds-navbar-scrolled .rds-navbar-brand img {
+
+    height: 54px;
+
+}
+
+/* Desktop Links */
+
+.rds-navbar.rds-navbar-scrolled .nav-link {
+
+    height: 48px;
+
+}
+
+/* CTA */
+
+.rds-navbar.rds-navbar-scrolled .rds-btn {
+
+    min-height: 48px;
+
+}
+
+/*======================================================
+        HAMBURGER
+======================================================*/
+
+.rds-navbar-toggler {
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.rds-navbar-toggler::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+
+        radial-gradient(circle,
+
+            rgba(199, 164, 77, .12),
+
+            transparent 70%);
+
+    opacity: 0;
+
+    transition: .35s ease;
+
+}
+
+.rds-navbar-toggler:hover::before {
+
+    opacity: 1;
+
+}
+
+.rds-navbar-toggler:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.rds-navbar-toggler:active {
+
+    transform: scale(.96);
+
+}
+
+/*======================================================
+        OPEN STATE
+======================================================*/
+
+.rds-navbar-toggler.active {
+
+    background:
+
+        rgba(199, 164, 77, .10);
+
+    border-color:
+
+        rgba(199, 164, 77, .35);
+
+}
+
+.rds-navbar-toggler.active span {
+
+    background: var(--secondary);
+
+}
+
+.rds-navbar-toggler.active span:nth-child(1) {
+
+    transform:
+
+        translateY(9px) rotate(45deg);
+
+}
+
+.rds-navbar-toggler.active span:nth-child(2) {
+
+    opacity: 0;
+
+    transform: scaleX(0);
+
+}
+
+.rds-navbar-toggler.active span:nth-child(3) {
+
+    transform:
+
+        translateY(-9px) rotate(-45deg);
+
+}
+
+/*======================================================
+        NAVBAR ENTRANCE
+======================================================*/
+
+.rds-navbar {
+
+    animation:
+
+        rdsNavbarFade .7s ease;
+
+}
+
+@keyframes rdsNavbarFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/*======================================================
+            RDS EXECUTIVE OFFCANVAS
+======================================================*/
+
+.executive-offcanvas {
+
+    --bs-offcanvas-width: 380px;
+
+    background: linear-gradient(180deg,
+            #081A2C 0%,
+            #0B223B 100%);
+
+    color: #fff;
+
+    border-left: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(30px);
+
+    -webkit-backdrop-filter: blur(30px);
+
+    overflow: hidden;
+
+}
+
+/*======================================================
+            HEADER
+======================================================*/
+
+.executive-offcanvas .offcanvas-header {
+
+    position: relative;
+
+    padding: 2rem;
+
+    align-items: flex-start;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+
+}
+
+/*======================================================
+            BRAND
+======================================================*/
+
+.offcanvas-brand {
+
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 1rem;
+
+}
+
+.offcanvas-world-map {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+
+    opacity: .05;
+
+    pointer-events: none;
+
+}
+
+.offcanvas-brand img {
+
+    width: 74px;
+
+    height: auto;
+
+    margin-bottom: 1.25rem;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.offcanvas-brand h5 {
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+    color: #fff;
+
+    margin-bottom: .45rem;
+
+}
+
+.offcanvas-brand span {
+
+    display: block;
+
+    color: var(--secondary);
+
+    font-size: .98rem;
+
+    line-height: 1.6;
+
+}
+
+/*======================================================
+            CLOSE BUTTON
+======================================================*/
+
+.executive-offcanvas .btn-close {
+
+    opacity: 1;
+
+    transform: scale(1.15);
+
+    transition: .3s;
+
+}
+
+.executive-offcanvas .btn-close:hover {
+
+    transform: rotate(90deg) scale(1.2);
+
+}
+
+/*======================================================
+            BODY
+======================================================*/
+
+.executive-offcanvas .offcanvas-body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 2rem;
+
+}
+
+/*======================================================
+            NAVIGATION
+======================================================*/
+
+.offcanvas-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .75rem;
+
+}
+
+.offcanvas-nav .nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 58px;
+
+    padding: 0 1.25rem;
+
+    border-radius: 16px;
+
+    font-size: 1.08rem;
+
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, .88);
+
+    text-decoration: none;
+
+    transition: .35s;
+
+}
+
+.offcanvas-nav .nav-link::after {
+
+    content: "→";
+
+    opacity: 0;
+
+    transform: translateX(-8px);
+
+    transition: .3s;
+
+}
+
+.offcanvas-nav .nav-link:hover {
+
+    background: rgba(255, 255, 255, .07);
+
+    color: #fff;
+
+    padding-left: 1.6rem;
+
+}
+
+.offcanvas-nav .nav-link:hover::after {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+.offcanvas-nav .nav-link.active {
+
+    background: rgba(199, 164, 77, .12);
+
+    border-left: 4px solid var(--secondary);
+
+    color: var(--secondary);
+
+}
+
+/*======================================================
+            FOOTER
+======================================================*/
+
+.offcanvas-footer {
+
+    margin-top: 2.5rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.offcanvas-footer .rds-btn,
+
+.offcanvas-footer .btn {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    font-size: 1rem;
+
+}
+
+/*======================================================
+            BACKDROP
+======================================================*/
+
+.offcanvas-backdrop.show {
+
+    background: rgba(0, 0, 0, .42);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+}
+
+/*======================================================
+            OPEN ANIMATION
+======================================================*/
+
+.executive-offcanvas {
+
+    animation-duration: .45s;
+
+}
+
+.executive-offcanvas .offcanvas-body {
+
+    animation: rdsOffcanvasFade .45s ease;
+
+}
+
+@keyframes rdsOffcanvasFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+/*======================================================
+        RDS RESPONSIVE LAYOUT
+======================================================*/
+
+
+/*======================================================
+        XL DEVICES (≤1199.98px)
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+    .rds-navbar {
+
+        padding: 1rem 0;
+
+    }
+
+    .rds-navbar-brand img {
+
+        height: 56px;
+
+    }
+
+    .rds-navbar-nav {
+
+        gap: 8px;
+
+    }
+
+    .rds-navbar-nav .nav-link {
+
+        padding-inline: 15px;
+
+        font-size: .95rem;
+
+    }
+
+    .rds-navbar-actions {
+
+        margin-left: 20px;
+
+        gap: 14px;
+
+    }
+
+}
+
+
+/*======================================================
+        TABLETS (≤991.98px)
+======================================================*/
+
+@media (max-width:991.98px) {
+
+    .rds-navbar {
+
+        padding: .95rem 0;
+
+    }
+
+    .rds-navbar .container {
+
+        min-height: 72px;
+
+    }
+
+    .rds-navbar-brand img {
+
+        height: 60px;
+
+    }
+
+    .rds-navbar-actions {
+
+        margin-left: auto;
+
+        gap: 12px;
+
+    }
+
+    .rds-navbar .rds-btn {
+
+        display: none;
+
+    }
+
+    .rds-navbar-toggler {
+
+        width: 58px;
+
+        height: 58px;
+
+    }
+
+    .executive-offcanvas {
+
+        --bs-offcanvas-width: 380px;
+
+    }
+
+}
+
+
+/*======================================================
+        MOBILE (≤767.98px)
+======================================================*/
+
+@media (max-width:767.98px) {
+
+    .rds-navbar {
+
+        padding: .9rem 0;
+
+    }
+
+    .rds-navbar .container {
+
+        min-height: 70px;
+
+    }
+
+    .rds-navbar-brand img {
+
+        height: 54px;
+
+    }
+
+    .rds-navbar-toggler {
+
+        width: 56px;
+
+        height: 56px;
+
+    }
+
+    .executive-offcanvas {
+
+        --bs-offcanvas-width: 340px;
+
+    }
+
+    .offcanvas-header {
+
+        padding: 1.75rem;
+
+    }
+
+    .offcanvas-body {
+
+        padding: 1.75rem;
+
+    }
+
+    .offcanvas-brand img {
+
+        width: 70px;
+
+    }
+
+    .offcanvas-brand h5 {
+
+        font-size: 1.3rem;
+
+    }
+
+    .offcanvas-brand span {
+
+        font-size: .95rem;
+
+    }
+
+    .offcanvas-nav .nav-link {
+
+        min-height: 56px;
+
+        font-size: 1.05rem;
+
+    }
+
+}
+
+
+/*======================================================
+        SMALL PHONES (≤575.98px)
+======================================================*/
+
+@media (max-width:575.98px) {
+
+    .rds-navbar {
+
+        padding: .85rem 0;
+
+    }
+
+    .rds-navbar .container {
+
+        padding-inline: 18px;
+
+        min-height: 68px;
+
+    }
+
+    .rds-navbar-brand img {
+
+        height: 50px;
+
+    }
+
+    .rds-navbar-toggler {
+
+        width: 54px;
+
+        height: 54px;
+
+        border-radius: 15px;
+
+    }
+
+    .rds-navbar-toggler span {
+
+        width: 26px;
+
+    }
+
+    .executive-offcanvas {
+
+        --bs-offcanvas-width: 100%;
+
+    }
+
+    .offcanvas-header {
+
+        padding: 1.5rem;
+
+    }
+
+    .offcanvas-body {
+
+        padding: 1.5rem;
+
+    }
+
+    .offcanvas-brand {
+
+        padding-top: .5rem;
+
+    }
+
+    .offcanvas-world-map {
+
+        width: 220px;
+
+    }
+
+    .offcanvas-brand img {
+
+        width: 66px;
+
+    }
+
+    .offcanvas-brand h5 {
+
+        font-size: 1.22rem;
+
+    }
+
+    .offcanvas-brand span {
+
+        font-size: .92rem;
+
+    }
+
+    .offcanvas-nav {
+
+        gap: .55rem;
+
+    }
+
+    .offcanvas-nav .nav-link {
+
+        min-height: 54px;
+
+        padding-inline: 18px;
+
+        font-size: 1rem;
+
+        border-radius: 14px;
+
+    }
+
+    .offcanvas-footer {
+
+        margin-top: 2rem;
+
+    }
+
+}
+
+
+/*======================================================
+        EXTRA SMALL PHONES (≤399.98px)
+======================================================*/
+
+@media (max-width:399.98px) {
+
+    .rds-navbar {
+
+        padding: .8rem 0;
+
+    }
+
+    .rds-navbar .container {
+
+        min-height: 64px;
+
+        padding-inline: 16px;
+
+    }
+
+    .rds-navbar-brand img {
+
+        height: 46px;
+
+    }
+
+    .rds-navbar-toggler {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+    .rds-navbar-toggler span {
+
+        width: 24px;
+
+    }
+
+    .executive-offcanvas {
+
+        --bs-offcanvas-width: 100%;
+
+    }
+
+    .offcanvas-header {
+
+        padding: 1.35rem;
+
+    }
+
+    .offcanvas-body {
+
+        padding: 1.35rem;
+
+    }
+
+    .offcanvas-brand img {
+
+        width: 60px;
+
+    }
+
+    .offcanvas-brand h5 {
+
+        font-size: 1.1rem;
+
+    }
+
+    .offcanvas-brand span {
+
+        font-size: .88rem;
+
+    }
+
+    .offcanvas-nav .nav-link {
+
+        min-height: 52px;
+
+        font-size: .96rem;
+
+        padding-inline: 16px;
+
+    }
+
+    .offcanvas-footer .rds-btn {
+
+        min-height: 54px;
+
+        font-size: .95rem;
+
+    }
+
+}

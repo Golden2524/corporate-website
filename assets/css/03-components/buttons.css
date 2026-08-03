@@ -194,7 +194,7 @@
 
   background: transparent;
 
-  color: rgba(199, 164, 77, .35);
+  color: var(--white);
 
   border: 1px solid rgba(199, 164, 77, .12);
 

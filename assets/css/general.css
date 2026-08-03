@@ -3,7 +3,7 @@
 @import url("01-base/utilities.css");
 @import url("01-base/variables.css");
 @import url("02-layout/footer.css");
-@import url("02-layout/header.css");
+@import url("02-layout/navigation.css");
 @import url("02-layout/hero-sections.css");
 @import url("02-layout/sections.css");
 @import url("02-layout/statistics.css");

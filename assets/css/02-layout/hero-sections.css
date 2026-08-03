@@ -30,6 +30,8 @@
 
   isolation: isolate;
 
+  z-index: 1;
+
 }
 
 
@@ -55,6 +57,8 @@
 
   background-size: cover;
 
+  z-index: 1;
+
 }
 
 
@@ -75,6 +79,8 @@
       rgba(8, 26, 44, .88) 0%,
       rgba(8, 26, 44, .60) 45%,
       rgba(8, 26, 44, .22) 100%);
+
+  pointer-events: none;
 
   z-index: 1;
 
