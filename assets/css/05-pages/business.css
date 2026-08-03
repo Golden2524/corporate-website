@@ -343,17 +343,11 @@
 
 /*======================================================
                 RESPONSIVE
-======================================================*/
+======================================================
 
 @media (max-width:991.98px) {
 
   .business-hero {
-
-    /*text-align: center;
-
-    min-height: auto;
-
-    padding: 160px 0 120px;*/
 
     min-height: auto;
 
@@ -368,7 +362,7 @@
 
   }
 
-  /*new line*/
+  /*new line
   .business-hero h1 {
 
     font-size: clamp(2.8rem, 6vw, 3.8rem);
@@ -380,8 +374,6 @@
   }
 
   .hero-description {
-
-    /*margin-inline: auto;*/
 
     max-width: 620px;
 
@@ -440,6 +432,188 @@
     align-items: center;
     justify-content: center;
   }
+}*/
+
+/*======================================================
+        BUSINESS HERO RESPONSIVE
+======================================================*/
+
+
+/*======================================================
+        EXTRA LARGE
+        max-width:1199.98px
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .business-hero {
+
+    padding-top: 160px;
+
+    padding-bottom: 100px;
+
+  }
+
+  .floating-top-right-lg {
+
+    left: -22%;
+
+    bottom: 18%;
+
+  }
+
+}
+
+
+/*======================================================
+        LARGE DEVICES
+        max-width:991.98px
+======================================================*/
+
+@media (max-width:991.98px) {
+
+  .business-hero {
+
+    min-height: auto;
+
+    padding-top: 140px;
+
+    padding-bottom: 90px;
+
+  }
+
+  .hero-breadcrumb {
+
+    justify-content: center;
+
+    margin-bottom: 1.5rem;
+
+  }
+
+  .hero-description {
+
+    margin-inline: auto;
+
+  }
+
+  .hero-business-card {
+
+    margin-top: 3rem;
+
+  }
+
+}
+
+
+/*======================================================
+        MEDIUM DEVICES
+        max-width:767.98px
+======================================================*/
+
+@media (max-width:767.98px) {
+
+  .business-hero {
+
+    padding-top: 120px;
+
+    padding-bottom: 70px;
+
+  }
+
+  .hero-breadcrumb {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    text-align: center;
+
+  }
+
+  .hero-description {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+  }
+
+  .hero-divider svg {
+
+    height: 70px;
+
+  }
+
+}
+
+
+/*======================================================
+        SMALL DEVICES
+        max-width:575.98px
+======================================================*/
+
+@media (max-width:575.98px) {
+
+  .business-hero {
+
+    padding-top: 110px;
+
+    padding-bottom: 60px;
+
+  }
+
+  .hero-breadcrumb {
+
+    font-size: .9rem;
+
+  }
+
+  .hero-description {
+
+    font-size: .95rem;
+
+  }
+
+  .hero-divider svg {
+
+    height: 55px;
+
+  }
+
+}
+
+
+/*======================================================
+        EXTRA SMALL DEVICES
+        max-width:399.98px
+======================================================*/
+
+@media (max-width:399.98px) {
+
+  .business-hero {
+
+    padding-top: 100px;
+
+    padding-bottom: 50px;
+
+  }
+
+  .hero-breadcrumb {
+
+    font-size: .82rem;
+
+    gap: 8px;
+
+  }
+
+  .hero-description {
+
+    font-size: .9rem;
+
+  }
+
 }
 
 /*======================================================

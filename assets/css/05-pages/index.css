@@ -211,7 +211,7 @@ body {
 
 /*======================================================
                 HERO RESPONSIVE
-======================================================*/
+======================================================
 
 @media(max-width:991px) {
 
@@ -273,6 +273,344 @@ body {
 
   }
 
+}*/
+
+/*======================================================
+        HOMEPAGE HERO RESPONSIVE
+======================================================*/
+
+
+/*======================================================
+        EXTRA LARGE
+        max-width:1199.98px
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .hero-content {
+
+    padding-top: 160px;
+
+    padding-bottom: 100px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: clamp(3.2rem, 5vw, 4.4rem);
+
+  }
+
+  .hero-content p {
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+  }
+
+}
+
+
+/*======================================================
+        LARGE DEVICES
+        max-width:991.98px
+======================================================*/
+
+@media (max-width:991.98px) {
+
+  .hero-content {
+
+    min-height: auto;
+
+    padding-top: 140px;
+
+    padding-bottom: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+  }
+
+  .hero-content .container {
+
+    max-width: 720px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: clamp(2.8rem, 6vw, 3.8rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 1.25rem;
+
+  }
+
+  .hero-content p {
+
+    max-width: 620px;
+
+    margin: 1.5rem auto 2rem;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+  }
+
+  .hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+  }
+
+  .stats-container {
+
+    margin-top: 2.5rem;
+
+    padding-bottom: 3rem;
+
+  }
+
+  .stat-box {
+
+    padding: 24px 18px;
+
+  }
+
+  .stat-number {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+
+/*======================================================
+        MEDIUM DEVICES
+        max-width:767.98px
+======================================================*/
+
+@media (max-width:767.98px) {
+
+  .hero-content {
+
+    padding-top: 120px;
+
+    padding-bottom: 70px;
+
+  }
+
+  .hero-content .container {
+
+    max-width: 540px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 2.5rem;
+
+    line-height: 1.2;
+
+  }
+
+  .hero-content p {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    max-width: 100%;
+
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+  }
+
+  .rds-btn-group .rds-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+  }
+
+  .stats-container {
+
+    margin-top: 2rem;
+
+    padding-bottom: 2rem;
+
+  }
+
+  .stat-box {
+
+    padding: 20px 16px;
+
+  }
+
+  .stat-number {
+
+    font-size: 1.75rem;
+
+  }
+
+  .stat-label {
+
+    font-size: .9rem;
+
+  }
+
+  .hero-divider svg {
+
+    height: 60px;
+
+  }
+
+}
+
+
+/*======================================================
+        SMALL DEVICES
+        max-width:575.98px
+======================================================*/
+
+@media (max-width:575.98px) {
+
+  .hero-content {
+
+    padding-top: 110px;
+
+    padding-bottom: 60px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 2rem;
+
+  }
+
+  .hero-content p {
+
+    font-size: .96rem;
+
+    line-height: 1.75;
+
+  }
+
+  .luxury-divider {
+
+    margin: 1.5rem 0;
+
+  }
+
+  .stat-box {
+
+    padding: 18px 12px;
+
+    border-radius: 14px;
+
+  }
+
+  .stat-number {
+
+    font-size: 1.55rem;
+
+  }
+
+  .stat-label {
+
+    font-size: .82rem;
+
+  }
+
+  .hero-divider svg {
+
+    height: 50px;
+
+  }
+
+}
+
+
+/*======================================================
+        EXTRA SMALL DEVICES
+        max-width:399.98px
+======================================================*/
+
+@media (max-width:399.98px) {
+
+  .hero-content {
+
+    padding-top: 100px;
+
+    padding-bottom: 50px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 1.75rem;
+
+    line-height: 1.2;
+
+  }
+
+  .hero-content p {
+
+    font-size: .9rem;
+
+  }
+
+  .hero-buttons {
+
+    width: 100%;
+
+    max-width: 100%;
+
+  }
+
+  .stat-box {
+
+    padding: 16px 10px;
+
+  }
+
+  .stat-number {
+
+    font-size: 1.35rem;
+
+  }
+
+  .stat-label {
+
+    font-size: .78rem;
+
+  }
+
 }
 
 /*======================================================
@@ -311,7 +649,7 @@ body {
 
 }
 
-@media(max-width:767px) {
+/*@media(max-width:767px) {
 
   .hero-divider svg {
 
@@ -319,7 +657,7 @@ body {
 
   }
 
-}
+}*/
 
 /*======================================================
             ABOUT PREVIEW SECTION
