@@ -1,0 +1,607 @@
+/*=====================================================
+        07. STATISTICS
+======================================================*/
+
+/*=====================================================
+        STAT CARD
+======================================================*/
+
+.rds-stat {
+
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: .75rem;
+
+}
+
+
+/*=====================================================
+        STAT ICON
+======================================================*/
+
+.rds-stat-icon {
+
+        width: 64px;
+
+        height: 64px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 18px;
+
+        background: rgba(199, 164, 77, .10);
+
+        color: var(--secondary);
+
+        font-size: 1.5rem;
+
+}
+
+
+/*=====================================================
+        STAT NUMBER
+======================================================*/
+
+.rds-stat-number {
+
+        margin: 0;
+
+        color: var(--text);
+
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+        font-weight: 800;
+
+        line-height: 1;
+
+        letter-spacing: -.03em;
+
+}
+
+
+/*=====================================================
+        STAT LABEL
+======================================================*/
+
+.rds-stat-label {
+
+        margin: 0;
+
+        color: var(--text);
+
+        font-size: 1rem;
+
+        font-weight: 700;
+
+}
+
+
+/*=====================================================
+        STAT DESCRIPTION
+======================================================*/
+
+.rds-stat-description {
+
+        margin: 0;
+
+        color: var(--muted);
+
+        line-height: 1.8;
+
+        font-size: .95rem;
+
+}
+
+
+/*=====================================================
+        STAT META
+======================================================*/
+
+.rds-stat-meta {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: .5rem;
+
+        color: var(--muted);
+
+        font-size: .85rem;
+
+}
+
+/*=====================================================
+        STAT LAYOUTS
+======================================================*/
+
+/*=====================================================
+        LEFT
+======================================================*/
+
+.rds-stat-left {
+
+        align-items: flex-start;
+
+        text-align: left;
+
+}
+
+
+/*=====================================================
+        CENTER
+======================================================*/
+
+.rds-stat-center {
+
+        align-items: center;
+
+        text-align: center;
+
+}
+
+
+/*=====================================================
+        RIGHT
+======================================================*/
+
+.rds-stat-right {
+
+        align-items: flex-end;
+
+        text-align: right;
+
+}
+
+
+/*=====================================================
+        INLINE
+======================================================*/
+
+.rds-stat-inline {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 1.25rem;
+
+}
+
+.rds-stat-inline .rds-stat-content {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: .35rem;
+
+}
+
+
+/*=====================================================
+        COMPACT
+======================================================*/
+
+.rds-stat-compact {
+
+        gap: .5rem;
+
+}
+
+.rds-stat-compact .rds-stat-number {
+
+        font-size: 2rem;
+
+}
+
+
+/*=====================================================
+        DARK
+======================================================*/
+
+.rds-stat-dark .rds-stat-number,
+
+.rds-stat-dark .rds-stat-label {
+
+        color: #ffffff;
+
+}
+
+.rds-stat-dark .rds-stat-description,
+
+.rds-stat-dark .rds-stat-meta {
+
+        color: rgba(255, 255, 255, .75);
+
+}
+
+/*=====================================================
+        STAT DECORATIONS
+======================================================*/
+
+/*=====================================================
+        ACCENT LINE
+======================================================*/
+
+.rds-stat::before {
+
+        content: "";
+
+        width: 60px;
+
+        height: 4px;
+
+        border-radius: 999px;
+
+        background: var(--secondary);
+
+        margin-bottom: .5rem;
+
+}
+
+
+/*=====================================================
+        ICON HOVER
+======================================================*/
+
+.rds-stat-icon {
+
+        transition:
+                transform .4s ease,
+                background .4s ease,
+                color .4s ease;
+
+}
+
+.rds-stat:hover .rds-stat-icon {
+
+        transform: translateY(-4px) rotate(-6deg);
+
+        background: var(--primary);
+
+        color: #ffffff;
+
+}
+
+
+/*=====================================================
+        NUMBER HOVER
+======================================================*/
+
+.rds-stat-number {
+
+        transition:
+                color .35s ease,
+                transform .35s ease;
+
+}
+
+.rds-stat:hover .rds-stat-number {
+
+        color: var(--primary);
+
+        transform: scale(1.04);
+
+}
+
+
+/*=====================================================
+        LABEL HOVER
+======================================================*/
+
+.rds-stat-label {
+
+        transition: color .35s ease;
+
+}
+
+.rds-stat:hover .rds-stat-label {
+
+        color: var(--primary);
+
+}
+
+
+/*=====================================================
+        DESCRIPTION HOVER
+======================================================*/
+
+.rds-stat-description {
+
+        transition: opacity .35s ease;
+
+}
+
+.rds-stat:hover .rds-stat-description {
+
+        opacity: .9;
+
+}
+
+
+/*=====================================================
+        GLOW
+======================================================*/
+
+.rds-stat::after {
+
+        content: "";
+
+        position: absolute;
+
+        inset: -20px;
+
+        background:
+                radial-gradient(circle,
+                        rgba(199, 164, 77, .10),
+                        transparent 70%);
+
+        opacity: 0;
+
+        transition: opacity .4s ease;
+
+        pointer-events: none;
+
+        z-index: -1;
+
+}
+
+.rds-stat:hover::after {
+
+        opacity: 1;
+
+}
+
+/*=====================================================
+        STAT SIZES
+======================================================*/
+
+/*=====================================================
+        SMALL
+======================================================*/
+
+.rds-stat-sm {
+
+        gap: .5rem;
+
+}
+
+.rds-stat-sm .rds-stat-icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 1.2rem;
+
+}
+
+.rds-stat-sm .rds-stat-number {
+
+        font-size: 2rem;
+
+}
+
+
+/*=====================================================
+        MEDIUM
+======================================================*/
+
+.rds-stat-md {
+
+        gap: .75rem;
+
+}
+
+
+/*=====================================================
+        LARGE
+======================================================*/
+
+.rds-stat-lg {
+
+        gap: 1rem;
+
+}
+
+.rds-stat-lg .rds-stat-icon {
+
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 1.7rem;
+
+}
+
+.rds-stat-lg .rds-stat-number {
+
+        font-size: clamp(2.8rem, 6vw, 4.2rem);
+
+}
+
+
+/*=====================================================
+        CONTENT WIDTH
+======================================================*/
+
+.rds-stat-content-sm {
+
+        max-width: 180px;
+
+}
+
+.rds-stat-content-md {
+
+        max-width: 260px;
+
+}
+
+.rds-stat-content-lg {
+
+        max-width: 340px;
+
+}
+
+
+/*=====================================================
+        SPACING UTILITIES
+======================================================*/
+
+.rds-stat-gap-sm {
+
+        gap: .5rem;
+
+}
+
+.rds-stat-gap-md {
+
+        gap: 1rem;
+
+}
+
+.rds-stat-gap-lg {
+
+        gap: 1.5rem;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width:991px) {
+
+        .rds-stat-lg .rds-stat-number {
+
+                font-size: 3rem;
+
+        }
+
+}
+
+@media (max-width:576px) {
+
+        .rds-stat {
+
+                align-items: center;
+
+                text-align: center;
+
+        }
+
+        .rds-stat-inline {
+
+                flex-direction: column;
+
+        }
+
+        .rds-stat-number {
+
+                font-size: 2.3rem;
+
+        }
+
+}
+
+/*=====================================================
+        STAT ACCESSIBILITY
+======================================================*/
+
+/*=====================================================
+        FOCUS
+======================================================*/
+
+.rds-stat:focus-within {
+
+        outline: 2px solid var(--secondary);
+
+        outline-offset: 6px;
+
+}
+
+
+/*=====================================================
+        REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion:reduce) {
+
+        .rds-stat,
+        .rds-stat-icon,
+        .rds-stat-number {
+
+                transition: none;
+
+                animation: none;
+
+        }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE SPACING
+======================================================*/
+
+@media (max-width:767px) {
+
+        .rds-stat {
+
+                gap: .75rem;
+
+        }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width:576px) {
+
+        .rds-stat {
+
+                padding-inline: .5rem;
+
+        }
+
+        .rds-stat-icon {
+
+                margin-inline: auto;
+
+        }
+
+}
+
+
+/*=====================================================
+        SELECTION
+======================================================*/
+
+.rds-stat-number::selection {
+
+        background: var(--secondary);
+
+        color: #ffffff;
+
+}
+
+.rds-stat-label::selection {
+
+        background: var(--secondary);
+
+        color: #ffffff;
+
+}

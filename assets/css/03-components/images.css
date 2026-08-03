@@ -1,0 +1,1647 @@
+/*======================================================
+        02. IMAGE COMPONENTS
+======================================================*/
+
+
+/*======================================================
+        2.1 IMAGE FOUNDATION
+======================================================*/
+
+/*
+--------------------------------------------------------
+BASE IMAGE CONTAINER
+--------------------------------------------------------
+*/
+
+.rds-image {
+
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-radius: 2rem;
+
+  background: var(--surface);
+
+  transform: translateZ(0);
+
+  transition:
+    transform .55s ease,
+    box-shadow .55s ease;
+
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, .08),
+    0 40px 90px rgba(15, 23, 42, .10),
+    0 70px 140px rgba(15, 23, 42, .08);
+
+}
+
+
+/*
+--------------------------------------------------------
+IMAGE ELEMENT
+--------------------------------------------------------
+*/
+
+.rds-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  /*aspect-ratio: 14 / 11;*/
+
+  transition:
+    transform .8s ease,
+    filter .6s ease;
+
+}
+
+
+/*
+--------------------------------------------------------
+PRIMARY GOLD FRAME
+--------------------------------------------------------
+*/
+
+.rds-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 1.1rem;
+
+  border-radius: 1.45rem;
+
+  border: 1px solid rgba(199, 164, 77, .25);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(199, 164, 77, .08);
+
+  pointer-events: none;
+
+  transition:
+
+    inset .45s ease,
+
+    border-color .45s ease,
+
+    opacity .45s ease;
+
+}
+
+
+/*
+--------------------------------------------------------
+SECOND INNER FRAME
+--------------------------------------------------------
+*/
+
+.rds-image-frame {
+
+  position: absolute;
+
+  inset: 2rem;
+
+  border-radius: 1.2rem;
+
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  transition:
+    inset .45s ease,
+    border-color .45s ease,
+    opacity .45s ease;
+
+}
+
+
+/*
+--------------------------------------------------------
+IMAGE HOVER FOUNDATION
+--------------------------------------------------------
+*/
+
+.rds-image:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+
+    0 30px 70px rgba(15, 23, 42, .12),
+
+    0 60px 120px rgba(15, 23, 42, .12),
+
+    0 0 0 1px rgba(199, 164, 77, .12);
+
+}
+
+
+.rds-image:hover img {
+
+  transform: scale(1.05);
+
+  filter: saturate(1.05);
+
+}
+
+
+.rds-image:hover::after {
+
+  inset: 14px;
+
+  border-color: rgba(199, 164, 77, .55);
+
+}
+
+
+.rds-image:hover .rds-image-frame {
+
+  inset: 1.7rem;
+
+  border-color: rgba(255, 255, 255, .30);
+
+}
+
+
+/*
+--------------------------------------------------------
+PREMIUM IMAGE CONTAINERS
+--------------------------------------------------------
+*/
+
+.rds-image-sm {
+
+  border-radius: 1.25rem;
+
+}
+
+
+.rds-image-md {
+
+  border-radius: 1.6rem;
+
+}
+
+
+.rds-image-lg {
+
+  border-radius: 2rem;
+
+}
+
+
+.rds-image-xl {
+
+  border-radius: 2.4rem;
+
+}
+
+/*=====================================================
+        IMAGE SIZE MODIFIERS
+======================================================*/
+
+.rds-image-sm img {
+  height: 280px;
+}
+
+.rds-image-md img {
+  height: 380px;
+}
+
+.rds-image-lg img {
+  height: 480px;
+}
+
+.rds-image-xl img {
+  height: 620px;
+}
+
+.rds-image-hero img {
+  height: 760px;
+  min-height: 70vh;
+  max-height: 900px;
+}
+
+
+/*
+--------------------------------------------------------
+OPTIONAL ASPECT RATIOS
+--------------------------------------------------------
+*/
+
+.rds-image-landscape img {
+
+  aspect-ratio: 16 / 10;
+
+}
+
+
+.rds-image-portrait img {
+
+  aspect-ratio: 4 / 5;
+
+}
+
+
+.rds-image-square img {
+
+  aspect-ratio: 1;
+
+}
+
+
+/*
+--------------------------------------------------------
+FOCUS ACCESSIBILITY
+--------------------------------------------------------
+*/
+
+.rds-image:focus-within {
+
+  outline: 2px solid var(--secondary);
+
+  outline-offset: 8px;
+
+}
+
+/*======================================================
+        2.2 IMAGE CONTENT LAYER
+======================================================*/
+
+
+/*=====================================================
+        IMAGE OVERLAY
+======================================================*/
+
+.rds-image-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(to top,
+      rgba(11, 36, 56, .84) 0%,
+      rgba(11, 36, 56, .46) 42%,
+      rgba(11, 36, 56, .14) 72%,
+      transparent 100%);
+
+  transition:
+    opacity .45s ease,
+    background .45s ease;
+
+}
+
+
+.rds-image:hover .rds-image-overlay {
+
+  background:
+    linear-gradient(to top,
+      rgba(11, 36, 56, .90),
+      rgba(11, 36, 56, .54),
+      rgba(11, 36, 56, .08),
+      transparent);
+
+}
+
+
+/*=====================================================
+        IMAGE BADGE
+======================================================*/
+
+.rds-image-badge {
+
+  position: absolute;
+
+  top: 1.75rem;
+
+  left: 1.75rem;
+
+  z-index: 8;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .8rem;
+
+  padding: .85rem 1.25rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, .10);
+
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  color: var(--primary);
+
+  font-size: .74rem;
+
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+
+    transform .4s ease,
+
+    background .4s ease,
+
+    border-color .4s ease,
+
+    box-shadow .4s ease;
+
+}
+
+
+.rds-image-badge i {
+
+  color: var(--secondary);
+
+  font-size: 1rem;
+
+  transition:
+    transform .4s ease,
+    color .4s ease;
+
+}
+
+
+.rds-image:hover .rds-image-badge {
+
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, .15);
+
+  border-color: rgba(255, 255, 255, .30);
+
+  box-shadow:
+
+    0 12px 28px rgba(0, 0, 0, .18);
+
+}
+
+
+.rds-image:hover .rds-image-badge i {
+
+  transform: rotate(-10deg);
+
+}
+
+
+/*=====================================================
+        OPTIONAL BADGE VARIANTS
+======================================================*/
+
+.rds-image-badge-dark {
+
+  background:
+    rgba(11, 36, 56, .55);
+
+}
+
+
+.rds-image-badge-light {
+
+  background:
+    rgba(255, 255, 255, .16);
+
+}
+
+
+.rds-image-badge-gold {
+
+  background:
+    rgba(199, 164, 77, .18);
+
+}
+
+
+/*=====================================================
+        IMAGE CAPTION
+======================================================*/
+
+.rds-image-caption {
+
+  position: absolute;
+
+  left: 2.25rem;
+
+  bottom: 2.25rem;
+
+  z-index: 8;
+
+  max-width: 23rem;
+
+  transition:
+
+    transform .45s ease,
+
+    opacity .45s ease;
+
+}
+
+
+.rds-image-caption span {
+
+  display: block;
+
+  color: #fff;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: -.02em;
+
+  text-shadow:
+
+    0 8px 20px rgba(0, 0, 0, .35);
+
+  transition:
+
+    transform .4s ease,
+
+    color .4s ease;
+
+}
+
+
+.rds-image:hover .rds-image-caption {
+
+  transform: translateY(-5px);
+
+}
+
+
+/*=====================================================
+        OPTIONAL SUBTITLE
+======================================================*/
+
+.rds-image-subtitle {
+
+  display: block;
+
+  margin-bottom: .65rem;
+
+  color: rgba(255, 255, 255, .78);
+
+  font-size: .82rem;
+
+  font-weight: 600;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+  /*
+  background:
+    rgba(255, 255, 255, .10);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+
+  padding: 5px 5px;
+
+  border-radius: 999px;
+
+
+  z-index: 6;
+
+  transition:
+    transform .4s ease,
+    background .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease;
+*/
+}
+
+/*.rds-image-subtitle i {
+
+  color: var(--secondary);
+
+  font-size: 0.5rem;
+
+  transition: transform .4s ease;
+
+}*/
+
+
+.rds-image-title {
+
+  display: block;
+
+  color: #fff;
+
+  font-size: 1.65rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+}
+
+
+/*=====================================================
+        TEXT READABILITY
+======================================================*/
+
+.rds-image-caption::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: -1rem;
+
+  top: 0;
+
+  width: 3px;
+
+  height: 100%;
+
+  border-radius: 100px;
+
+  background:
+
+    linear-gradient(to bottom,
+
+      var(--secondary),
+
+      transparent);
+
+  opacity: .75;
+
+}
+
+
+/*=====================================================
+        CONTENT FADE
+======================================================*/
+
+.rds-image:hover .rds-image-title,
+
+.rds-image:hover .rds-image-subtitle,
+
+.rds-image:hover .rds-image-caption span {
+
+  color: #ffffff;
+
+}
+
+/*======================================================
+        2.3 PREMIUM DECORATIONS
+======================================================*/
+
+
+/*=====================================================
+        DECORATION LAYER
+======================================================*/
+
+.rds-image-decoration {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 2;
+
+}
+
+
+/*=====================================================
+        LUXURY GRID
+======================================================*/
+
+.rds-image-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(rgba(255, 255, 255, .10) 1px,
+      transparent 1px);
+
+  background-size: 28px 28px;
+
+  opacity: .18;
+
+  transition: opacity .45s ease;
+
+}
+
+
+/*=====================================================
+        AMBIENT GOLD GLOW
+======================================================*/
+
+.rds-image-glow {
+
+  position: absolute;
+
+  width: 220px;
+
+  aspect-ratio: 1;
+
+  top: -70px;
+
+  right: -70px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(rgba(199, 164, 77, .28),
+      transparent 70%);
+
+  filter: blur(18px);
+
+  opacity: .65;
+
+  transition:
+
+    transform .5s ease,
+
+    opacity .5s ease;
+
+}
+
+
+/*=====================================================
+        GOLD ORBIT
+======================================================*/
+
+.rds-image-orbit {
+
+  position: absolute;
+
+  left: -70px;
+
+  bottom: -70px;
+
+  width: 170px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 164, 77, .20);
+
+  transition:
+
+    transform .6s ease,
+
+    border-color .45s ease;
+
+}
+
+
+/*=====================================================
+        CORNER GLOW
+======================================================*/
+
+.rds-image-corner-glow {
+
+  position: absolute;
+
+  right: -35px;
+
+  bottom: -35px;
+
+  width: 120px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(rgba(199, 164, 77, .24),
+
+      transparent 70%);
+
+  transition:
+
+    transform .5s ease,
+
+    opacity .45s ease;
+
+}
+
+
+/*=====================================================
+        GOLD ACCENT DOT
+======================================================*/
+
+.rds-image-accent-dot {
+
+  position: absolute;
+
+  top: 30px;
+
+  right: 35px;
+
+  width: 12px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  box-shadow:
+
+    0 0 0 10px rgba(199, 164, 77, .08),
+
+    0 0 18px rgba(199, 164, 77, .45);
+
+}
+
+
+/*=====================================================
+        TOP ACCENT LINE
+======================================================*/
+
+.rds-image-accent-line {
+
+  position: absolute;
+
+  left: 2rem;
+
+  top: 0;
+
+  width: 140px;
+
+  height: 4px;
+
+  border-radius: 100px;
+
+  background:
+
+    linear-gradient(90deg,
+
+      var(--secondary),
+
+      rgba(199, 164, 77, .25),
+
+      transparent);
+
+}
+
+
+/*=====================================================
+        GOLD PARTICLE
+======================================================*/
+
+.rds-image-particle {
+
+  position: absolute;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  opacity: .4;
+
+}
+
+
+.rds-image-particle-1 {
+
+  top: 18%;
+
+  right: 18%;
+
+}
+
+
+.rds-image-particle-2 {
+
+  bottom: 20%;
+
+  left: 14%;
+
+}
+
+
+.rds-image-particle-3 {
+
+  top: 55%;
+
+  right: 8%;
+
+}
+
+
+/*=====================================================
+        DECORATIVE RINGS
+======================================================*/
+
+.rds-image-ring {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+
+.rds-image-ring-sm {
+
+  width: 70px;
+
+  aspect-ratio: 1;
+
+  left: 25px;
+
+  bottom: 35px;
+
+}
+
+
+.rds-image-ring-lg {
+
+  width: 180px;
+
+  aspect-ratio: 1;
+
+  top: -80px;
+
+  right: -80px;
+
+}
+
+
+/*=====================================================
+        HOVER POLISH
+======================================================*/
+
+.rds-image:hover .rds-image-grid {
+
+  opacity: .28;
+
+}
+
+
+.rds-image:hover .rds-image-glow {
+
+  transform: scale(1.25);
+
+  opacity: .9;
+
+}
+
+
+.rds-image:hover .rds-image-orbit {
+
+  transform:
+
+    rotate(18deg) scale(1.08);
+
+  border-color:
+
+    rgba(199, 164, 77, .35);
+
+}
+
+
+.rds-image:hover .rds-image-corner-glow {
+
+  transform: scale(1.35);
+
+}
+
+
+.rds-image:hover .rds-image-accent-dot {
+
+  transform: scale(1.2);
+
+}
+
+
+.rds-image:hover .rds-image-accent-line {
+
+  width: 180px;
+
+}
+
+/*======================================================
+        2.4 IMAGE INTERACTIONS & ANIMATIONS
+======================================================*/
+
+
+/*=====================================================
+        MASTER TRANSITIONS
+======================================================*/
+
+.rds-image,
+.rds-image img,
+.rds-image::before,
+.rds-image::after,
+.rds-image-overlay,
+.rds-image-badge,
+.rds-image-caption,
+.rds-image-grid,
+.rds-image-glow,
+.rds-image-orbit,
+.rds-image-corner-glow,
+.rds-image-accent-dot,
+.rds-image-accent-line {
+
+  transition:
+
+    all .45s ease;
+
+}
+
+
+/*=====================================================
+        IMAGE HOVER
+======================================================*/
+
+.rds-image:hover {
+
+  transform:
+
+    translateY(-8px);
+
+}
+
+
+.rds-image:hover img {
+
+  transform: scale(1.05);
+
+  filter:
+
+    saturate(1.08) contrast(1.03);
+
+}
+
+
+/*=====================================================
+        SHADOW
+======================================================*/
+
+.rds-image:hover {
+
+  box-shadow:
+
+    0 30px 70px rgba(15, 23, 42, .12),
+
+    0 60px 120px rgba(15, 23, 42, .12),
+
+    0 0 0 1px rgba(199, 164, 77, .10);
+
+}
+
+
+/*=====================================================
+        FRAME
+======================================================*/
+
+.rds-image:hover::after {
+
+  inset: 14px;
+
+  border-color:
+
+    rgba(199, 164, 77, .55);
+
+}
+
+
+/*=====================================================
+        SECOND FRAME
+======================================================*/
+
+.rds-image:hover::before {
+
+  inset: 28px;
+
+  border-color:
+
+    rgba(255, 255, 255, .28);
+
+}
+
+
+/*=====================================================
+        BADGE
+======================================================*/
+
+.rds-image:hover .rds-image-badge {
+
+  transform:
+
+    translateY(-6px);
+
+}
+
+
+/*=====================================================
+        CAPTION
+======================================================*/
+
+.rds-image:hover .rds-image-caption {
+
+  transform:
+
+    translateY(-6px);
+
+}
+
+
+/*=====================================================
+        IMAGE GLOW
+======================================================*/
+
+.rds-image:hover .rds-image-glow {
+
+  transform:
+
+    scale(1.25);
+
+  opacity: .9;
+
+}
+
+
+/*=====================================================
+        ORBIT
+======================================================*/
+
+.rds-image:hover .rds-image-orbit {
+
+  transform:
+
+    rotate(18deg) scale(1.08);
+
+}
+
+
+/*=====================================================
+        GRID
+======================================================*/
+
+.rds-image:hover .rds-image-grid {
+
+  opacity: .28;
+
+}
+
+
+/*=====================================================
+        CORNER GLOW
+======================================================*/
+
+.rds-image:hover .rds-image-corner-glow {
+
+  transform:
+
+    scale(1.3);
+
+}
+
+
+/*=====================================================
+        ACCENT LINE
+======================================================*/
+
+.rds-image:hover .rds-image-accent-line {
+
+  width: 180px;
+
+}
+
+
+/*=====================================================
+        DOT
+======================================================*/
+
+.rds-image:hover .rds-image-accent-dot {
+
+  transform: scale(1.25);
+
+}
+
+
+/*=====================================================
+        SECTION PARALLAX
+======================================================*/
+
+.rds-section-background {
+
+  perspective: 1400px;
+
+}
+
+
+.rds-section-background:hover .rds-image {
+
+  transform:
+
+    translateY(-8px);
+
+}
+
+
+.rds-section-background:hover .rds-business-content {
+
+  transform:
+
+    translateY(-3px);
+
+}
+
+
+/*=====================================================
+        PARTICLES
+======================================================*/
+
+.rds-image-particle-2 {
+
+  animation-delay: 2s;
+
+}
+
+.rds-image-particle-3 {
+
+  animation-delay: 4s;
+
+}
+
+
+/*=====================================================
+        SHINE EFFECT
+======================================================*/
+
+.rds-image:hover::before {
+
+  animation:
+
+    rdsImageShine 1.2s ease;
+
+}
+
+/* Gold Corner Frame */
+
+.rds-corner-accent {
+
+  position: absolute;
+
+  width: 115px;
+
+  height: 115px;
+
+  top: -18px;
+
+  left: -18px;
+
+  border-top: 3px solid var(--secondary);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: 24px 0 0 0;
+
+  z-index: 3;
+
+}
+
+.rds-corner-accent-bottom {
+
+  position: absolute;
+
+  width: 115px;
+
+  height: 115px;
+
+  right: -18px;
+
+  bottom: -18px;
+
+  border-right: 3px solid var(--secondary);
+
+  border-bottom: 3px solid var(--secondary);
+
+  border-radius: 0 0 24px 0;
+
+  z-index: 3;
+
+}
+
+/*======================================================
+        2.5 RESPONSIVE DESIGN
+======================================================*/
+
+
+/*=====================================================
+        LARGE TABLETS
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .rds-image {
+
+    border-radius: 1.75rem;
+
+  }
+
+  .rds-image::after {
+
+    inset: 16px;
+
+  }
+
+  .rds-image::before {
+
+    inset: 30px;
+
+  }
+
+  .rds-image-caption {
+
+    left: 2rem;
+
+    bottom: 2rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        TABLETS
+======================================================*/
+
+@media (max-width:991.98px) {
+
+  .rds-image {
+
+    border-radius: 1.5rem;
+
+  }
+
+  .rds-image img {
+
+    aspect-ratio: 16/11;
+
+  }
+
+  .rds-image::after {
+
+    inset: 14px;
+
+    border-radius: 1.2rem;
+
+  }
+
+  .rds-image::before {
+
+    inset: 24px;
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-image-badge {
+
+    top: 1.4rem;
+
+    left: 1.4rem;
+
+    padding: .75rem 1rem;
+
+    font-size: .72rem;
+
+    gap: .6rem;
+
+  }
+
+  .rds-image-badge i {
+
+    font-size: .9rem;
+
+  }
+
+  .rds-image-caption {
+
+    left: 1.7rem;
+
+    bottom: 1.7rem;
+
+    max-width: 18rem;
+
+  }
+
+  .rds-image-caption span {
+
+    font-size: 1.05rem;
+
+  }
+
+  .rds-image-glow {
+
+    width: 180px;
+
+  }
+
+  .rds-image-orbit {
+
+    width: 145px;
+
+  }
+
+  .rds-image-ring-lg {
+
+    width: 150px;
+
+  }
+
+  .rds-image-accent-line {
+
+    width: 110px;
+
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width:767.98px) {
+
+  .rds-image {
+
+    border-radius: 1.3rem;
+
+  }
+
+  .rds-image img {
+
+    aspect-ratio: 4/3;
+
+  }
+
+  .rds-image::after {
+
+    inset: 12px;
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-image::before {
+
+    inset: 20px;
+
+    border-radius: .9rem;
+
+  }
+
+  .rds-image-badge {
+
+    top: 1rem;
+
+    left: 1rem;
+
+    padding: .6rem .9rem;
+
+    font-size: .66rem;
+
+    letter-spacing: .08em;
+
+    gap: .45rem;
+
+  }
+
+  .rds-image-badge i {
+
+    font-size: .85rem;
+
+  }
+
+  .rds-image-caption {
+
+    left: 1.25rem;
+
+    right: 1.25rem;
+
+    bottom: 1.25rem;
+
+    max-width: none;
+
+  }
+
+  .rds-image-caption span {
+
+    font-size: .95rem;
+
+    line-height: 1.4;
+
+  }
+
+  .rds-image-glow {
+
+    width: 140px;
+
+    top: -50px;
+
+    right: -50px;
+
+  }
+
+  .rds-image-orbit {
+
+    width: 120px;
+
+    left: -45px;
+
+    bottom: -45px;
+
+  }
+
+  .rds-image-ring-lg {
+
+    display: none;
+
+  }
+
+  .rds-image-ring-sm {
+
+    width: 55px;
+
+  }
+
+  .rds-image-accent-line {
+
+    width: 90px;
+
+    height: 3px;
+
+  }
+
+  .rds-image-accent-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    top: 20px;
+
+    right: 20px;
+
+  }
+
+  .rds-image-particle {
+
+    display: none;
+
+  }
+
+}
+
+
+/*=====================================================
+        SMALL MOBILE
+======================================================*/
+
+@media (max-width:575.98px) {
+
+  .rds-image {
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-image img {
+
+    aspect-ratio: 1/1;
+
+  }
+
+  .rds-image::after {
+
+    inset: 10px;
+
+  }
+
+  .rds-image::before {
+
+    inset: 16px;
+
+  }
+
+  .rds-image-badge {
+
+    top: .9rem;
+
+    left: .9rem;
+
+    padding: .55rem .8rem;
+
+    font-size: .62rem;
+
+  }
+
+  .rds-image-caption {
+
+    left: 1rem;
+
+    right: 1rem;
+
+    bottom: 1rem;
+
+  }
+
+  .rds-image-caption span {
+
+    font-size: .88rem;
+
+  }
+
+  .rds-image-glow,
+
+  .rds-image-orbit,
+
+  .rds-image-corner-glow {
+
+    opacity: .5;
+
+    transform: scale(.8);
+
+  }
+
+}
+
+
+/*=====================================================
+        TOUCH DEVICES
+======================================================*/
+
+@media (hover:none) {
+
+  .rds-image:hover {
+
+    transform: none;
+
+  }
+
+  .rds-image:hover img {
+
+    transform: none;
+
+  }
+
+  .rds-image:hover::before,
+
+  .rds-image:hover::after {
+
+    inset: auto;
+
+    animation: none;
+
+  }
+
+}

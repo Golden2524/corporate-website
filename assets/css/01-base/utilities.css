@@ -1,0 +1,116 @@
+.rds-animate-float {
+  animation: rdsCardFloat 8s ease-in-out infinite;
+}
+
+.rds-animate-glow {
+  animation: rdsCardGlow 10s ease-in-out infinite alternate;
+}
+
+.rds-animate-ring {
+  animation: rdsCardRing 18s linear infinite;
+}
+
+.rds-animate-particle {
+  animation: rdsCardParticle 7s ease-in-out infinite;
+}
+
+.rds-animate-shine {
+  animation: rdsCardShine 1.2s ease;
+}
+
+.rds-floating-card {
+  animation: floatOne 5s ease-in-out infinite;
+}
+
+
+@media (prefers-reduced-motion:reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+/*=====================================================
+        REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion:reduce) {
+
+  .rds-image,
+  .rds-image *,
+  .rds-image::before,
+  .rds-image::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
+
+/*=====================================================
+        ACCESSIBILITY
+======================================================*/
+
+@media (prefers-reduced-motion:reduce) {
+
+  .rds-card,
+  .rds-card *,
+  .rds-card::before,
+  .rds-card::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
+
+/*=====================================================
+        REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion:reduce) {
+
+  .rds-btn,
+  .rds-btn *,
+  .rds-btn::before,
+  .rds-btn::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
+
+/*=====================================================
+        REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion:reduce) {
+
+  .rds-badge,
+  .rds-badge *,
+  .rds-badge::before,
+  .rds-badge::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}

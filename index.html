@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Home Demo</title>
+
+  <link rel="stylesheet" href="assets/css/general.css">
+
+  <link rel="stylesheet" href="assets/css/05-pages/index.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome Free CDN (All Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="rds-hero rds-hero-home">
+    <!-- NAVIVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+      <div class="container">
+
+        <!--  LOGO  -->
+        <a class="navbar-brand" href="index.html">
+
+          <!-- Mobile -->
+          <img src="images/mobile-logo.png" alt="ROGONTRA GROUP" class="d-md-none" height="42">
+
+          <!-- Desktop -->
+          <img src="images/main-logo.png" alt="ROGONTRA GROUP" class="d-none d-md-block" height="54">
+
+        </a>
+
+        <!--  RIGHT SIDE  -->
+        <div class="d-flex align-items-center ms-auto order-lg-last">
+
+          <a href="contact.html" class="rds-btn rds-btn-outline d-none d-lg-inline-flex">
+
+            Get In Touch
+
+          </a>
+
+          <button class="navbar-toggler custom-toggler d-lg-none ms-3" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-label="Toggle navigation">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+          </button>
+
+        </div>
+
+        <!--  DESKTOP NAVIGATION  -->
+        <ul class="navbar-nav ms-auto d-none d-lg-flex align-items-center">
+
+          <li class="nav-item">
+
+            <a class="nav-link active" href="index.html">
+
+              Home
+
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="about.html">
+
+              About
+
+            </a>
+
+          </li>
+
+          <!-- Businesses Dropdown -->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="business.html" data-bs-toggle="dropdown">
+
+              Our Businesses
+
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#technology">
+
+                  Technology
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#infrastructure">
+
+                  Infrastructure
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#logistics">
+
+                  Logistics
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#agriculture">
+
+                  Agriculture
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#hospitality">
+
+                  Hospitality
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item" href="business.html#strategic-investment">
+
+                  Trade
+
+                </a>
+
+              </li>
+
+              <li>
+
+                <hr class="dropdown-divider">
+
+              </li>
+
+              <li>
+
+                <a class="dropdown-item fw-semibold" href="business.html">
+
+                  View All Businesses →
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="investors.html">
+
+              Investors
+
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="career.html">
+
+              Careers
+
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="contact.html">
+
+              Contact Us
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <!--  EXECUTIVE OFFCANVAS  -->
+    <div class="offcanvas offcanvas-end executive-offcanvas" tabindex="-1" id="mobileMenu">
+
+      <!-- Header -->
+      <div class="offcanvas-header">
+
+        <div class="offcanvas-brand">
+
+          <!-- Background World Map -->
+          <img src="images/world.svg" alt="World Map" class="offcanvas-world-map">
+
+          <img src="images/mobile-logo.png" alt="ROGONTRA GROUP">
+
+          <h5>
+
+            ROGONTRA GROUP
+
+          </h5>
+
+          <span>
+
+            Building Tomorrow, Today.
+
+          </span>
+
+        </div>
+
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas">
+        </button>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="offcanvas-divider"></div>
+
+      <!-- Navigation -->
+      <div class="offcanvas-body">
+
+        <ul class="navbar-nav offcanvas-nav">
+
+          <li>
+
+            <a class="nav-link active" href="index.html">
+
+              Home
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="nav-link" href="about.html">
+
+              About
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="nav-link" href="business.html">
+
+              Our Businesses
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="nav-link" href="investors.html">
+
+              Investors
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="nav-link" href="career.html">
+
+              Careers
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="nav-link" href="contact.html">
+
+              Contact Us
+
+            </a>
+
+          </li>
+
+        </ul>
+
+        <!-- Bottom -->
+        <div class="offcanvas-footer">
+
+          <a href="contact.html" class="btn btn-nav-touch w-100">
+
+            Get In Touch
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Hero Content Body -->
+    <div class="rds-hero-surface">
+
+      <div class="rds-hero-background hero-content text-white">
+
+        <div class="rds-hero-grid"></div>
+
+        <div class="rds-hero-noise"></div>
+
+        <div class="rds-hero-shine"></div>
+
+        <div class="rds-hero-glow rds-hero-glow-left rds-animate-glow"></div>
+
+        <div class="rds-hero-glow rds-hero-glow-right rds-animate-glow"></div>
+
+        <div class="rds-hero-orb rds-hero-orb-top rds-animate-float"></div>
+
+        <div class="rds-hero-orb rds-hero-orb-bottom rds-animate-float"></div>
+
+        <div class="rds-hero-content">
+
+          <div class="container">
+
+            <div class="rds-hero-container rds-hero-left reveal reveal-up">
+
+              <span class="rds-label">
+
+                ROGONTRA GROUP
+
+              </span>
+
+              <h1 class="rds-hero-title">
+
+                Building the Future of Global Enterprise.
+
+              </h1>
+
+              <div class="rds-hero-divider">
+
+                <!-- Luxury Divider -->
+
+              </div>
+
+              <p class="rds-hero-description">
+
+                ROGONTRA GROUP transforms visionary ideas
+                into sustainable businesses across technology, trade, hospitality
+                and strategic investments—creating opportunities that empower communities
+                and shape tomorrow's economy.
+
+              </p>
+
+              <div class="rds-hero-actions">
+
+                <a href="#" class="rds-btn rds-btn-secondary">
+
+                  Explore Companies
+
+                </a>
+
+                <a href="#" class="rds-btn rds-btn-outline">
+
+                  Our Story
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Statistics Grid Counter Section-->
+    <section class="container stats-container mt-5 pt-4">
+      <div class="row g-2">
+
+        <!-- Stat 1 -->
+        <div class="col-6 col-md-3 reveal reveal-up">
+          <article class="stat-box">
+            <h2 class="stat-number counter" data-target="15">
+
+              0
+
+            </h2>
+            <p class="stat-label">Group Companies</p>
+          </article>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="col-6 col-md-3 reveal reveal-up">
+          <article class="stat-box">
+            <h2 class="stat-number counter" data-target="120">
+
+              0
+
+            </h2>
+            <p class="stat-label">Countries</p>
+          </article>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="col-6 col-md-3 reveal reveal-up">
+          <article class="stat-box">
+            <h2 class="stat-number counter" data-target="50">
+
+              0
+
+            </h2>
+            <p class="stat-label">Professionals</p>
+          </article>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="col-6 col-md-3 reveal reveal-up">
+          <article class="stat-box">
+            <h2 class="stat-number counter" data-target="250">
+
+              0
+
+            </h2>
+            <p class="stat-label">Strategic Partners</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--  HERO WAVE DIVIDER -->
+    <div class="hero-divider">
+
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+
+        <path
+          d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+        </path>
+
+      </svg>
+
+    </div>
+  </header>
+
+  <main>
+    <!--  ABOUT ROGONTRA PREVIEW  -->
+    <section class="rds-section-background rds-surface-light">
+
+      <!-- Decorative Elements -->
+
+      <div class="rds-section-glow rds-animate-glow rds-animate-float"></div>
+
+      <div class="rds-section-grid"></div>
+
+      <div class="container">
+
+        <div class="row align-items-center g-5">
+
+          <!--  LEFT CONTENT  -->
+          <div class="col-lg-6 reveal reveal-left">
+
+            <div class="rds-section-header rds-section-header-left rds-section-header-md">
+
+              <div class="rds-section-content rds-section-content-md">
+
+                <!-- Section Tag -->
+                <span class="rds-label">
+
+                  ABOUT ROGONTRA GROUP
+
+                </span>
+
+                <!-- Heading -->
+                <h2 class="rds-section-title">
+
+                  Building the Future Through
+                  Vision, Innovation &
+                  Enterprise
+
+                </h2>
+
+                <div class="rds-section-divider"></div>
+
+                <!-- Description -->
+                <p class="rds-section-description">
+
+                  ROGONTRA GROUP is a diversified corporate group committed
+                  to transforming visionary ideas into sustainable
+                  businesses. Through strategic investments, innovation
+                  and operational excellence, we create long-term value
+                  across multiple industries while contributing to
+                  economic growth and community development.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Feature List -->
+            <div class="about-features">
+
+              <div class="feature-item">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+
+                  Diversified Business Portfolio
+
+                </span>
+
+              </div>
+
+              <div class="feature-item">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+
+                  Strategic Investments
+
+                </span>
+
+              </div>
+
+              <div class="feature-item">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+
+                  Sustainable Long-Term Growth
+
+                </span>
+
+              </div>
+
+              <div class="feature-item">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+
+                  Global Vision & Innovation
+
+                </span>
+
+              </div>
+
+            </div>
+
+            <!-- Quick Facts -->
+            <div class="quick-facts">
+
+              <div class="fact-box">
+
+                <h5>Established</h5>
+
+                <span>20XX</span>
+
+              </div>
+
+              <div class="fact-box">
+
+                <h5>Business Model</h5>
+
+                <span>Diversified Group</span>
+
+              </div>
+
+              <div class="fact-box">
+
+                <h5>Focus</h5>
+
+                <span>Innovation & Investment</span>
+
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <a href="about.html" class="industry-btn mt-4">
+
+              Discover Our Story
+
+              <i class="bi bi-arrow-right ms-2"></i>
+
+            </a>
+
+          </div>
+
+          <!--  RIGHT CONTENT  -->
+          <div class="col-lg-6 reveal reveal-right">
+
+            <div class="rds-image rds-image-xl">
+
+              <!-- Replace with your image -->
+              <img src="images/about-preview.jpg" alt="ROGONTRA GROUP Headquarters">
+
+              <div class="rds-image-frame"></div>
+
+              <div class="rds-image-overlay"></div>
+
+              <div class="rds-image-decoration">
+
+                <div class="rds-image-grid"></div>
+
+                <div class="rds-image-glow rds-animate-move"></div>
+
+                <div class="rds-image-orbit rds-animate-rotate"></div>
+
+                <div class="rds-image-corner-glow"></div>
+
+                <div class="rds-image-accent-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-image-accent-line"></div>
+
+                <span class="rds-image-particle rds-image-particle-1 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-2 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-3 rds-animate-particle"></span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Floating Experience Card -->
+            <div
+              class="rds-floating-card rds-floating-card-md floating-top-left-md2 rds-floating-card-glass rds-animate-float">
+
+              <div class="rds-floating-decoration">
+
+                <div class="rds-floating-grid"></div>
+
+                <div class="rds-floating-glow"></div>
+
+                <div class="rds-floating-ring"></div>
+
+                <div class="rds-floating-accent-line"></div>
+
+                <div class="rds-floating-corner-glow"></div>
+
+              </div>
+
+              <div class="rds-floating-body">
+
+                <span class="rds-floating-badge">
+                  Corporate Snapshot
+                </span>
+
+                <div class="rds-floating-highlight">
+
+                  <span class="rds-floating-number">
+                    15+
+                  </span>
+
+                  <span class="rds-floating-label">
+                    Years of Excellence
+                  </span>
+
+                </div>
+
+                <div class="rds-floating-divider"></div>
+
+                <div class="rds-floating-stats">
+
+                  <div class="rds-floating-stat">
+
+                    <span class="rds-floating-number">
+                      12+
+                    </span>
+
+                    <span class="rds-floating-label">
+                      Countries
+                    </span>
+
+                  </div>
+
+                  <div class="rds-floating-stat">
+
+                    <span class="rds-floating-number">
+                      250+
+                    </span>
+
+                    <span class="rds-floating-label">
+                      Professionals
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Decorative Gold Circle -->
+            <div class="rds-gold-circle gold-circle-home"></div>
+
+            <!-- Decorative Dot Grid -->
+            <div class="rds-dot-grid dot-grid-home">
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--  FEATURED SUBSIDIARIES  -->
+    <section class="rds-section-background rds-surface-light">
+
+      <!-- Decorative Elements -->
+      <div class="rds-section-glow rds-animate-glow rds-animate-float"></div>
+
+      <div class="rds-section-grid"></div>
+
+      <div class="rds-section-orb"></div>
+
+      <div class="container">
+
+        <!-- Section Heading -->
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8 text-center reveal reveal-up">
+
+            <div class="rds-section-header rds-section-header-center rds-section-header-lg">
+
+              <div class="rds-section-content rds-section-content-lg">
+
+                <span class="rds-label">
+
+                  OUR SUBSIDIARIES
+
+                </span>
+
+                <h2 class="rds-section-title">
+
+                  Building Excellence
+                  Across Industries
+
+                </h2>
+
+                <div class="rds-section-divider">
+                </div>
+
+                <p class="rds-section-description">
+
+                  ROGONTRA GROUP brings together visionary companies
+                  operating across diverse industries, united by a
+                  commitment to innovation, excellence and sustainable
+                  growth.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Subsidiary Cards -->
+        <div class="row g-4 mt-3">
+
+          <!-- Card 1 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <!-- Replace with logo -->
+                    <i class="bi bi-cpu"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Technology
+
+                  </span>
+
+                </div>
+
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Technologies
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Delivering digital transformation through software,
+                  cloud infrastructure, AI and enterprise solutions.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="technology.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <i class="bi bi-building"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Infrastructure
+
+                  </span>
+
+                </div>
+
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Infrastructure
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Engineering sustainable developments and modern
+                  infrastructure for future generations.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="infrastructure.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <i class="bi bi-lightning-charge"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Energy
+
+                  </span>
+
+                </div>
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Energy
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Providing innovative energy solutions that support
+                  sustainability and long-term development.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="energy.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <i class="bi bi-tree"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Agriculture
+
+                  </span>
+
+                </div>
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Agriculture
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Advancing food security through sustainable farming,
+                  innovation and agribusiness investment.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="agriculture.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <i class="bi bi-building-check"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Hospitality
+
+                  </span>
+
+                </div>
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Hospitality
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Creating premium hospitality experiences through
+                  world-class hotels and tourism services.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="hospitality.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-6 col-xl-4">
+
+            <article class="rds-card rds-card-sm rds-card-light reveal reveal-up">
+
+              <div class="rds-card-decoration">
+
+                <div class="rds-card-top-line"></div>
+
+                <div class="rds-card-grid"></div>
+
+                <div class="rds-card-glow rds-animate-glow"></div>
+
+                <div class="rds-card-ring rds-animate-ring"></div>
+
+                <div class="rds-card-corner"></div>
+
+                <div class="rds-card-border-glow"></div>
+
+                <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-card-accent"></div>
+
+                <div class="rds-card-noise"></div>
+
+                <div class="rds-card-shine"></div>
+
+                <span class="rds-card-particle rds-card-particle-1"></span>
+
+                <span class="rds-card-particle rds-card-particle-2"></span>
+
+                <span class="rds-card-particle rds-card-particle-3"></span>
+
+              </div>
+
+              <div class="rds-card-body">
+
+                <div class="rds-card-header">
+
+                  <div class="rds-card-icon">
+
+                    <i class="bi bi-globe2"></i>
+
+                  </div>
+
+                  <span class="rds-card-badge">
+
+                    Trade & Commerce
+
+                  </span>
+
+                </div>
+
+                <h4 class="rds-card-subtitle">
+
+                  ROGONTRA Global Trade
+
+                </h4>
+
+                <p class="rds-card-description">
+
+                  Connecting markets through strategic trade,
+                  logistics and international business partnerships.
+
+                </p>
+
+                <div class="rds-card-footer">
+
+                  <a href="trade.html" class="rds-card-link">
+
+                    Learn More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- View All -->
+        <div class="text-center mt-5">
+
+          <a href="business.html" class="industry-btn">
+
+            View All Companies
+
+            <i class="bi bi-arrow-right ms-2"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INDUSTRIES WE BUILD -->
+    <section class="rds-section-background rds-surface-light">
+
+      <!-- Decorative Elements -->
+      <div class="rds-section-glow rds-animate-glow rds-animate-float"></div>
+
+      <div class="rds-section-grid"></div>
+
+      <div class="rds-section-orb"></div>
+
+      <div class="container">
+
+        <!-- Section Heading -->
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8 text-center reveal reveal-up">
+
+            <div class="rds-section-header rds-section-header-center rds-section-header-lg">
+
+              <div class="rds-section-content rds-section-content-lg">
+
+
+                <span class="rds-label">
+
+                  OUR INDUSTRIES
+
+                </span>
+
+                <h2 class="rds-section-title">
+
+                  Building Growth Across
+                  Multiple Industries
+
+                </h2>
+
+                <div class="rds-section-divider">
+                </div>
+
+                <p class="rds-section-description">
+
+                  From technology and infrastructure to agriculture,
+                  hospitality and energy, ROGONTRA GROUP builds
+                  businesses that drive innovation, sustainable
+                  development and long-term economic impact.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--  INDUSTRY 01  -->
+        <div class="industry-row row align-items-center gy-5">
+
+          <div class="col-lg-6 reveal reveal-left">
+
+            <div class="rds-image rds-image-md">
+
+              <img src="images/home/tech-home.jpg">
+
+              <div class="rds-image-overlay"></div>
+
+              <div class="rds-image-decoration">
+
+                <div class="rds-image-grid"></div>
+
+                <div class="rds-image-glow rds-animate-move"></div>
+
+                <div class="rds-image-orbit rds-animate-rotate"></div>
+
+                <div class="rds-image-corner-glow"></div>
+
+                <div class="rds-image-accent-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-image-accent-line"></div>
+
+                <span class="rds-image-particle rds-image-particle-1 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-2 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-3 rds-animate-particle"></span>
+
+              </div>
+
+              <!-- Replace with image -->
+              <div class="rds-image-badge">
+
+                <i class="bi bi-cpu-fill"></i>
+
+                <span>
+
+                  AI • Cloud • Software
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <span class="rds-badge rds-badge-sm rds-badge-outline">
+
+              Technology
+
+            </span>
+
+            <h3>
+
+              Digital Innovation
+              For Modern Business
+
+            </h3>
+
+            <p>
+
+              Delivering intelligent software,
+              cloud solutions, AI technologies
+              and enterprise platforms that help
+              businesses compete in a rapidly
+              evolving digital economy.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!--  INDUSTRY 02  -->
+        <div class="industry-row row align-items-center gy-5 flex-lg-row-reverse">
+
+          <div class="col-lg-6 reveal reveal-right">
+
+            <div class="rds-image rds-image-md">
+
+              <img src="images/home/infrastructure-home.jpg">
+
+              <div class="rds-image-overlay"></div>
+
+              <div class="rds-image-decoration">
+
+                <div class="rds-image-grid"></div>
+
+                <div class="rds-image-glow rds-animate-move"></div>
+
+                <div class="rds-image-orbit rds-animate-rotate"></div>
+
+                <div class="rds-image-corner-glow"></div>
+
+                <div class="rds-image-accent-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-image-accent-line"></div>
+
+                <span class="rds-image-particle rds-image-particle-1 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-2 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-3 rds-animate-particle"></span>
+
+              </div>
+
+              <div class="rds-image-badge">
+
+                <i class="bi bi-building-fill"></i>
+
+                <span>
+
+                  Engineering • Construction
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <span class="rds-badge rds-badge-sm rds-badge-outline">
+
+              Infrastructure
+
+            </span>
+
+            <h3>
+
+              Building Tomorrow's
+              Communities
+
+            </h3>
+
+            <p>
+
+              Developing sustainable
+              infrastructure projects that
+              strengthen cities, improve
+              connectivity and create
+              long-term value.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!--  INDUSTRY 03  -->
+        <div class="industry-row row align-items-center gy-5">
+
+          <div class="col-lg-6 reveal reveal-left">
+
+            <div class="rds-image rds-image-md">
+
+              <img src="images/home/energy-home.jpg">
+
+              <div class="rds-image-overlay"></div>
+
+              <div class="rds-image-decoration">
+
+                <div class="rds-image-grid"></div>
+
+                <div class="rds-image-glow rds-animate-move"></div>
+
+                <div class="rds-image-orbit rds-animate-rotate"></div>
+
+                <div class="rds-image-corner-glow"></div>
+
+                <div class="rds-image-accent-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-image-accent-line"></div>
+
+                <span class="rds-image-particle rds-image-particle-1 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-2 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-3 rds-animate-particle"></span>
+
+              </div>
+
+              <div class="rds-image-badge">
+
+                <i class="bi bi-lightning-charge-fill"></i>
+
+                <span>
+
+                  Renewable • Power
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <span class="rds-badge rds-badge-sm rds-badge-outline">
+
+              Energy
+
+            </span>
+
+            <h3>
+
+              Sustainable Energy
+              For Future Generations
+
+            </h3>
+
+            <p>
+
+              Investing in clean and
+              conventional energy
+              solutions that promote
+              resilience and responsible
+              growth.
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!--  CTA  -->
+        <div class="text-center mt-5">
+
+          <a href="business.html" class="industry-btn">
+
+            Explore All Industries
+
+            <i class="bi bi-arrow-right ms-2"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--  WHY LEADING ORGANIZATIONS CHOOSE ROGONTRA  -->
+    <section class="rds-section-background rds-surface-light">
+
+      <!-- Decorative Elements -->
+      <div class="rds-section-glow rds-animate-glow rds-animate-float"></div>
+
+      <div class="rds-section-grid"></div>
+
+      <div class="rds-section-orb"></div>
+
+      <div class="container">
+
+        <!-- Section Heading -->
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8 text-center reveal reveal-up">
+
+            <div class="rds-section-header rds-section-header-center rds-section-header-lg">
+
+              <div class="rds-section-content rds-section-content-lg">
+
+                <span class="rds-label">
+
+                  WHY ROGONTRA
+
+                </span>
+
+                <h2 class="rds-section-title">
+
+                  A Trusted Partner<br>
+                  For Sustainable Growth
+
+                </h2>
+
+                <div class="rds-section-divider">
+                </div>
+
+                <p class="rds-section-description">
+
+                  We combine visionary leadership, operational excellence and
+                  responsible innovation to deliver long-term value for our
+                  partners, investors, communities and future generations.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Trust Content -->
+        <div class="row align-items-center mt-5 gy-5">
+
+          <!-- Left Side -->
+          <div class="col-lg-6 reveal reveal-left">
+
+            <div class="rds-image rds-image-xl">
+
+              <div class="rds-corner-accent"></div>
+
+              <div class="rds-corner-accent-bottom"></div>
+
+              <img src="images/your-city-view.jpg" alt="Executive Leadership">
+
+              <div class="rds-image-frame"></div>
+
+              <div class="rds-image-overlay"></div>
+
+              <div class="rds-image-decoration">
+
+                <div class="rds-image-grid"></div>
+
+                <div class="rds-image-glow rds-animate-move"></div>
+
+                <div class="rds-image-orbit rds-animate-rotate"></div>
+
+                <div class="rds-image-corner-glow"></div>
+
+                <div class="rds-image-accent-dot rds-animate-shine rds-animate-float"></div>
+
+                <div class="rds-image-accent-line"></div>
+
+                <span class="rds-image-particle rds-image-particle-1 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-2 rds-animate-particle"></span>
+
+                <span class="rds-image-particle rds-image-particle-3 rds-animate-particle"></span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Floating Glass Card -->
+            <div
+              class="rds-floating-card rds-floating-card-lg floating-top-left-lg2 rds-floating-card-dark rds-animate-float">
+
+              <div class="rds-floating-decoration">
+
+                <div class="rds-floating-grid"></div>
+
+                <div class="rds-floating-glow"></div>
+
+                <div class="rds-floating-ring"></div>
+
+                <div class="rds-floating-accent-line"></div>
+
+                <div class="rds-floating-corner-glow"></div>
+
+              </div>
+
+              <div class="rds-floating-body">
+
+                <span class="rds-floating-badge">
+
+                  Trusted Worldwide
+
+                </span>
+
+                <div class="rds-floating-highlight">
+
+                  <h4 class="rds-floating-title">
+
+                    Building Relationships <br>
+                    That Last
+
+                  </h4>
+
+                  <p class="rds-floating-text">
+
+                    Driven by integrity, innovation
+                    <br> and sustainable growth.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Decorative Gold Circle -->
+            <div class="rds-gold-circle gold-circle-home2"></div>
+
+            <!-- Decorative Dot Grid -->
+            <div class="rds-dot-grid dot-grid-home2">
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+              <span></span>
+
+            </div>
+
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-lg-6">
+
+            <div class="row g-4">
+
+              <!-- Innovation -->
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                      </div>
+
+                    </div>
+
+                    <h5 class="rds-card-title">
+
+                      Innovation
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      We embrace forward-thinking ideas that create lasting competitive advantage.
+
+                    </p>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+              <!-- Integrity -->
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                      </div>
+
+                    </div>
+
+                    <h5 class="rds-card-title">
+
+                      Integrity
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      Ethical leadership and transparency guide every decision we make.
+
+                    </p>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+              <!-- Global Vision -->
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-globe2"></i>
+
+                      </div>
+
+                    </div>
+
+                    <h5 class="rds-card-title">
+
+                      Global Vision
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      We build businesses that create opportunities across international markets.
+
+                    </p>
+
+                    <div class="rds-card-footer"></div>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+              <!-- Sustainability -->
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-tree-fill"></i>
+
+                      </div>
+
+                    </div>
+
+                    <h5 class="rds-card-title">
+
+                      Sustainability
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      Responsible growth today creates stronger communities tomorrow.
+
+                    </p>
+
+                    <div class="rds-card-footer"></div>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+              <!-- Partnership -->
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-people-fill"></i>
+
+                      </div>
+
+                    </div>
+
+
+                    <h5 class="rds-card-title">
+
+                      Partnership
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      We build trusted relationships that unlock long-term success.
+
+                    </p>
+
+                    <div class="rds-card-footer"></div>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+              <!-- Excellence -->
+
+              <div class="col-md-6 reveal reveal-up">
+
+                <article class="rds-card rds-card-sm rds-card-dark">
+
+                  <div class="rds-card-decoration">
+
+                    <div class="rds-card-top-line"></div>
+
+                    <div class="rds-card-grid"></div>
+
+                    <div class="rds-card-glow rds-animate-glow"></div>
+
+                    <div class="rds-card-ring rds-animate-ring"></div>
+
+                    <div class="rds-card-corner"></div>
+
+                    <div class="rds-card-border-glow"></div>
+
+                    <div class="rds-card-dot rds-animate-shine rds-animate-float"></div>
+
+                    <div class="rds-card-accent"></div>
+
+                    <div class="rds-card-noise"></div>
+
+                    <div class="rds-card-shine"></div>
+
+                    <span class="rds-card-particle rds-card-particle-1"></span>
+
+                    <span class="rds-card-particle rds-card-particle-2"></span>
+
+                    <span class="rds-card-particle rds-card-particle-3"></span>
+
+                  </div>
+
+                  <div class="rds-card-body">
+
+                    <div class="rds-card-header">
+
+                      <div class="rds-card-icon">
+
+                        <i class="bi bi-award-fill"></i>
+
+                      </div>
+
+                    </div>
+
+                    <h5 class="rds-card-title">
+
+                      Excellence
+
+                    </h5>
+
+                    <p class="rds-card-description">
+
+                      Every project reflects our commitment to world-class quality and performance.
+
+                    </p>
+
+                    <div class="rds-card-footer"></div>
+
+                  </div>
+
+                </article>
+
+              </div>
+
+            </div>
+
+            <!-- Bottom Quote -->
+            <div class="trust-quote reveal reveal-up">
+
+              <blockquote>
+
+                "At <strong>ROGONTRA GROUP</strong>, trust is earned through consistent excellence,
+                responsible leadership and a relentless commitment to creating value."
+
+              </blockquote>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!--  EXECUTIVE FOOTER  -->
+  <footer class="footer-section">
+
+    <div class="container">
+
+      <!--  FOOTER TOP  -->
+      <div class="row gy-5">
+
+        <!-- Brand Column -->
+        <div class="col-lg-4">
+
+          <div class="footer-brand">
+
+            <img src="images/mobile-logo.png" alt="ROGONTRA GROUP Logo" class="footer-logo">
+
+            <h3>
+
+              ROGONTRA GROUP
+
+            </h3>
+
+            <div class="footer-brand-divider"></div>
+
+            <span class="footer-tagline">
+
+              Building Tomorrow, Today.
+
+            </span>
+
+            <p>
+
+              ROGONTRA GROUP is a diversified global enterprise
+              committed to innovation, sustainable development,
+              operational excellence and creating long-term value
+              across multiple industries.
+
+            </p>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+
+              <a href="#" aria-label="LinkedIn">
+
+                <i class="bi bi-linkedin"></i>
+
+              </a>
+
+              <a href="#" aria-label="Facebook">
+
+                <i class="bi bi-facebook"></i>
+
+              </a>
+
+              <a href="#" aria-label="Instagram">
+
+                <i class="bi bi-instagram"></i>
+
+              </a>
+
+              <a href="#" aria-label="X">
+
+                <i class="bi bi-twitter-x"></i>
+
+              </a>
+
+              <a href="#" aria-label="YouTube">
+
+                <i class="bi bi-youtube"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="col-lg-4">
+
+          <h5 class="footer-heading">
+
+            Explore
+
+          </h5>
+
+          <ul class="footer-links">
+
+            <li>
+
+              <a href="index.html">
+
+                Home
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="about.html">
+
+                About Us
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="business.html">
+
+                Our Businesses
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="investors.html">
+
+                Investors
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="career.html">
+
+                Careers
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="contact.html">
+
+                Contact
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4">
+
+          <h5 class="footer-heading">
+
+            Contact Desk
+
+          </h5>
+
+          <ul class="footer-contact">
+
+            <li>
+
+              <i class="bi bi-geo-alt-fill"></i>
+
+              <span>
+
+                Headquarters Address
+
+              </span>
+
+            </li>
+
+            <li>
+
+              <i class="bi bi-envelope-fill"></i>
+
+              <span>
+
+                contact@rogontra.com
+
+              </span>
+
+            </li>
+
+            <li>
+
+              <i class="bi bi-telephone-fill"></i>
+
+              <span>
+
+                +000 000 0000
+
+              </span>
+
+            </li>
+
+            <li>
+
+              <i class="bi bi-clock-fill"></i>
+
+              <span>
+
+                Monday – Friday
+                <br>
+                8:00 AM – 5:00 PM
+
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!--  CLOSING STATEMENT  -->
+      <div class="footer-cta">
+
+        <div class="footer-cta-line"></div>
+
+        <p>
+
+          Together, we're building businesses that inspire innovation,
+          strengthen communities and shape a better tomorrow.
+
+        </p>
+
+        <div class="footer-cta-line"></div>
+
+      </div>
+
+      <!--  FOOTER BOTTOM-->
+      <div class="footer-bottom">
+
+        <div class="footer-copyright">
+
+          © 2026 ROGONTRA GROUP.
+          All Rights Reserved.
+
+        </div>
+
+        <div class="footer-policy">
+
+          <a href="privacy.html">
+
+            Privacy Policy
+
+          </a>
+
+          <a href="terms.html">
+
+            Terms & Conditions
+
+          </a>
+
+          <a href="cookies.html">
+
+            Cookie Policy
+
+          </a>
+
+        </div>
+
+        <div class="footer-slogan">
+
+          Building Tomorrow, Today.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script type="module" src="scripts/annimations.js"></script>
+  <script type="module" src="scripts/general.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,679 @@
+/*=====================================================
+        08. HERO SECTION
+======================================================*/
+
+
+/*=====================================================
+        HERO WRAPPER
+======================================================*/
+
+.rds-hero {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+}
+
+
+/*=====================================================
+        HERO SURFACE
+======================================================*/
+
+.rds-hero-surface {
+
+  position: relative;
+
+  isolation: isolate;
+
+}
+
+
+/*=====================================================
+        HERO BACKGROUND
+======================================================*/
+
+.rds-hero-background {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+}
+
+
+/*=====================================================
+        HERO OVERLAY
+======================================================*/
+
+.rds-hero-background::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(90deg,
+      rgba(8, 26, 44, .88) 0%,
+      rgba(8, 26, 44, .60) 45%,
+      rgba(8, 26, 44, .22) 100%);
+
+  z-index: 1;
+
+}
+
+
+/*=====================================================
+        HERO CONTENT
+======================================================*/
+
+.rds-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  padding-block: 10rem 7rem;
+
+}
+
+
+/*=====================================================
+        HERO CONTAINER
+======================================================*/
+
+.rds-hero-container {
+
+  max-width: 760px;
+
+}
+
+
+/*=====================================================
+        HERO CENTER
+======================================================*/
+
+.rds-hero-center {
+
+  margin-inline: auto;
+
+  text-align: center;
+
+}
+
+
+/*=====================================================
+        HERO LEFT
+======================================================*/
+
+.rds-hero-left {
+
+  text-align: left;
+
+}
+
+
+/*=====================================================
+        HERO RIGHT
+======================================================*/
+
+.rds-hero-right {
+
+  margin-left: auto;
+
+  text-align: right;
+
+}
+
+/*=====================================================
+        HERO LABEL
+======================================================*/
+
+.rds-hero-label {
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+/*=====================================================
+        HERO TITLE
+======================================================*/
+
+.rds-hero-title {
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -.03em;
+
+}
+
+
+/*=====================================================
+        HERO DIVIDER
+======================================================*/
+
+.rds-hero-divider {
+
+  margin: 2rem 0;
+
+}
+
+
+/*=====================================================
+        HERO DESCRIPTION
+======================================================*/
+
+.rds-hero-description {
+
+  max-width: 680px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, .82);
+
+  font-size: 1.12rem;
+
+  line-height: 1.9;
+
+}
+
+
+/*=====================================================
+        HERO BUTTON GROUP
+======================================================*/
+
+.rds-hero-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 2.5rem;
+
+}
+
+
+/*=====================================================
+        HERO CENTER SUPPORT
+======================================================*/
+
+.rds-hero-center .rds-hero-description {
+
+  margin-inline: auto;
+
+}
+
+.rds-hero-center .rds-hero-actions {
+
+  justify-content: center;
+
+}
+
+
+/*=====================================================
+        HERO RIGHT SUPPORT
+======================================================*/
+
+.rds-hero-right .rds-hero-description {
+
+  margin-left: auto;
+
+}
+
+.rds-hero-right .rds-hero-actions {
+
+  justify-content: flex-end;
+
+}
+
+/*=====================================================
+        HERO VARIANTS
+======================================================*/
+
+
+/*=====================================================
+        HOMEPAGE HERO
+======================================================*/
+
+.rds-hero-home .rds-hero-background {
+
+  min-height: 100vh;
+
+}
+
+
+/*=====================================================
+        INNER PAGE HERO
+======================================================*/
+
+.rds-hero-page .rds-hero-background {
+
+  min-height: 68vh;
+
+}
+
+
+/*=====================================================
+        COMPACT HERO
+======================================================*/
+
+.rds-hero-compact .rds-hero-background {
+
+  min-height: 55vh;
+
+}
+
+
+/*=====================================================
+        SPLIT HERO
+======================================================*/
+
+.rds-hero-split .rds-hero-container {
+
+  max-width: none;
+
+}
+
+
+/*=====================================================
+        FULLSCREEN HERO
+======================================================*/
+
+.rds-hero-fullscreen .rds-hero-background {
+
+  min-height: 100svh;
+
+}
+
+
+/*=====================================================
+        CONTENT WIDTH
+======================================================*/
+
+.rds-hero-narrow .rds-hero-container {
+
+  max-width: 640px;
+
+}
+
+.rds-hero-wide .rds-hero-container {
+
+  max-width: 900px;
+
+}
+
+
+/*=====================================================
+        VERTICAL ALIGNMENT
+======================================================*/
+
+.rds-hero-top .rds-hero-background {
+
+  align-items: flex-start;
+
+}
+
+.rds-hero-middle .rds-hero-background {
+
+  align-items: center;
+
+}
+
+.rds-hero-bottom .rds-hero-background {
+
+  align-items: flex-end;
+
+}
+
+
+/*=====================================================
+        HERO GLOWS
+======================================================*/
+
+.rds-hero-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+.rds-hero-glow-left {
+
+  top: -120px;
+
+  left: -120px;
+
+  width: 420px;
+
+  height: 420px;
+
+  background: rgba(199, 164, 77, .18);
+
+}
+
+.rds-hero-glow-right {
+
+  right: -150px;
+
+  bottom: -120px;
+
+  width: 380px;
+
+  height: 380px;
+
+  background: rgba(11, 129, 255, .16);
+
+}
+
+
+/*=====================================================
+        HERO GRID
+======================================================*/
+
+.rds-hero-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, .45),
+      transparent);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+
+/*=====================================================
+        HERO NOISE
+======================================================*/
+
+.rds-hero-noise {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .04;
+
+  mix-blend-mode: soft-light;
+
+  background: url("../images/noise.png");
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+
+/*=====================================================
+        HERO SHINE
+======================================================*/
+
+.rds-hero-shine {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(115deg,
+
+      transparent 30%,
+
+      rgba(255, 255, 255, .06) 50%,
+
+      transparent 70%);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+
+/*=====================================================
+        HERO ORB
+======================================================*/
+
+.rds-hero-orb {
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  box-shadow: 0 0 35px rgba(199, 164, 77, .6);
+
+  z-index: 1;
+
+}
+
+.rds-hero-orb-top {
+
+  top: 18%;
+
+  right: 12%;
+
+}
+
+.rds-hero-orb-bottom {
+
+  bottom: 18%;
+
+  left: 8%;
+
+}
+
+/*=====================================================
+        HERO RESPONSIVE
+======================================================*/
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width:991px) {
+
+  .rds-hero-background {
+
+    min-height: auto;
+
+  }
+
+  .rds-hero-content {
+
+    padding-block: 8rem 5rem;
+
+  }
+
+  .rds-hero-container {
+
+    max-width: 700px;
+
+    margin-inline: auto;
+
+    text-align: center;
+
+  }
+
+  .rds-hero-title {
+
+    font-size: clamp(2.8rem, 6vw, 3.8rem);
+
+  }
+
+  .rds-hero-description {
+
+    max-width: 600px;
+
+    margin-inline: auto;
+
+  }
+
+  .rds-hero-actions {
+
+    justify-content: center;
+
+  }
+
+  .rds-hero-grid {
+
+    background-size: 50px 50px;
+
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width:767px) {
+
+  .rds-hero-content {
+
+    padding-block: 7rem 4rem;
+
+  }
+
+  .rds-hero-title {
+
+    font-size: 2.5rem;
+
+    line-height: 1.15;
+
+  }
+
+  .rds-hero-description {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+  }
+
+  .rds-hero-actions {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+  }
+
+  .rds-hero-actions .rds-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+  }
+
+}
+
+
+/*=====================================================
+        SMALL MOBILE
+======================================================*/
+
+@media (max-width:576px) {
+
+  .rds-hero-content {
+
+    padding-block: 6.5rem 3.5rem;
+
+  }
+
+  .rds-hero-title {
+
+    font-size: 2rem;
+
+  }
+
+  .rds-hero-description {
+
+    font-size: .96rem;
+
+  }
+
+  .rds-hero-glow {
+
+    transform: scale(.75);
+
+  }
+
+  .rds-hero-orb {
+
+    display: none;
+
+  }
+
+  .rds-hero-grid {
+
+    background-size: 40px 40px;
+
+  }
+
+}

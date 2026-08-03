@@ -1,0 +1,584 @@
+/*======================================================
+                EXECUTIVE NAVBAR
+======================================================*/
+
+.navbar {
+
+  padding: 20px 0;
+
+  background: rgba(8, 26, 44, .78);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: all .4s ease;
+
+  z-index: 9999;
+
+}
+
+.navbar.scrolled {
+
+  padding: 12px 0;
+
+  background: rgba(8, 26, 44, .95);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+
+}
+
+/*======================================================
+                    LOGO
+======================================================*/
+
+.navbar-brand img {
+
+  transition: all .35s ease;
+
+}
+
+.navbar.scrolled .navbar-brand img {
+
+  transform: scale(.92);
+
+}
+
+/*======================================================
+                NAVIGATION LINKS
+======================================================*/
+
+.navbar-nav {
+
+  gap: 12px;
+
+}
+
+.navbar-nav .nav-link {
+
+  position: relative;
+
+  color: rgba(255, 255, 255, .82);
+
+  font-weight: 500;
+
+  font-size: .95rem;
+
+  letter-spacing: .3px;
+
+  padding: .8rem .9rem;
+
+  transition: all .35s ease;
+
+}
+
+.navbar-nav .nav-link:hover {
+
+  color: #ffffff;
+
+}
+
+/*======================================================
+            GOLD UNDERLINE EFFECT
+======================================================*/
+
+.navbar-nav .nav-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--secondary);
+
+  border-radius: 50px;
+
+  transform: translateX(-50%);
+
+  transition: all .35s ease;
+
+}
+
+.navbar-nav .nav-link:hover::after,
+
+.navbar-nav .nav-link.active::after {
+
+  width: 70%;
+
+}
+
+.navbar-nav .nav-link.active {
+
+  color: #ffffff;
+
+}
+
+
+/*======================================================
+                CTA BUTTON
+======================================================*/
+
+.btn-nav-touch {
+
+  padding: 12px 28px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+
+  color: #ffffff;
+
+  background: transparent;
+
+  font-weight: 600;
+
+  transition: all .35s ease;
+
+}
+
+.btn-nav-touch:hover {
+
+  background: var(--secondary);
+
+  border-color: var(--secondary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(199, 164, 77, .25);
+
+}
+
+/*======================================================
+            EXECUTIVE HAMBURGER
+======================================================*/
+
+.custom-toggler {
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+  background: rgba(255, 255, 255, .06);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all var(--transition);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0;
+
+  box-shadow: none;
+
+}
+
+.custom-toggler:focus {
+
+  box-shadow: none;
+
+}
+
+.custom-toggler span {
+
+  width: 26px;
+
+  height: 2px;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+
+  transition: all .35s ease;
+
+}
+
+/* Hover */
+
+.custom-toggler:hover span {
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+            OPEN STATE
+======================================================*/
+
+.custom-toggler.active span:nth-child(1) {
+
+  transform:
+    rotate(45deg) translate(6px, 6px);
+
+}
+
+.custom-toggler.active span:nth-child(2) {
+
+  opacity: 0;
+
+}
+
+.custom-toggler.active span:nth-child(3) {
+
+  transform:
+    rotate(-45deg) translate(5px, -5px);
+
+}
+
+/*======================================================
+                DROPDOWN
+======================================================*/
+
+.dropdown-menu {
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  padding: 12px;
+
+  min-width: 260px;
+
+  background: rgba(255, 255, 255, .96);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+
+  animation: dropdownFade .28s ease;
+
+}
+
+.dropdown-menu .dropdown-item {
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  color: var(--text-light);
+
+  font-weight: 500;
+
+  transition: all .3s ease;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--primary);
+
+  padding-left: 24px;
+
+}
+
+.dropdown-divider {
+
+  margin: 10px 0;
+
+}
+
+/*======================================================
+            EXECUTIVE OFFCANVAS
+======================================================*/
+
+.executive-offcanvas {
+
+  --bs-offcanvas-width: 280px;
+
+  background: #081A2C;
+
+  color: #fff;
+
+  margin-top: 70px;
+
+}
+
+/*=====================================*/
+
+.offcanvas-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 28px;
+
+}
+
+/*=====================================*/
+
+.offcanvas-brand img {
+
+  width: 58px;
+
+  margin-bottom: 18px;
+
+}
+
+.offcanvas-brand h5 {
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  color: #fff;
+
+  margin-bottom: 6px;
+
+}
+
+.offcanvas-brand span {
+
+  color: var(--secondary);
+
+  font-size: .9rem;
+
+}
+
+/*=====================================*/
+
+.offcanvas-divider {
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, .08);
+
+  margin: 0 28px;
+
+}
+
+/*=====================================*/
+
+.offcanvas-body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 30px 28px;
+
+}
+
+/*=====================================*/
+
+.offcanvas-nav {
+
+  gap: 6px;
+
+}
+
+.offcanvas-nav .nav-link {
+
+  position: relative;
+
+  padding: 16px 18px;
+
+  border-radius: 12px;
+
+  color: var(--text-light);
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  transition: all .3s ease;
+
+}
+
+/* Reduce desktop underline */
+
+.offcanvas-nav .nav-link:hover::after,
+
+.offcanvas-nav .nav-link.active::after {
+
+  width: 10%;
+
+}
+
+/* Hover */
+
+.offcanvas-nav .nav-link:hover {
+
+  background: rgba(255, 255, 255, .05);
+
+  color: var(--secondary);
+
+  padding-left: 26px;
+
+}
+
+/* Active */
+
+.offcanvas-nav .nav-link.active {
+
+  background: rgba(199, 164, 77, .12);
+
+  color: var(--primary);
+
+  border-left: 3px solid var(--secondary);
+
+}
+
+/*=====================================*/
+
+.offcanvas-footer {
+
+  margin-top: 40px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.offcanvas-footer:hover .btn {
+  border: 1px solid var(--primary);
+}
+
+/*Animations*/
+.executive-offcanvas {
+
+  animation-duration: .45s;
+
+}
+
+/*======================================================
+            WORLD MAP
+======================================================*/
+
+.offcanvas-brand {
+
+  position: relative;
+
+  text-align: center;
+
+  padding: 18px 0 12px;
+
+}
+
+/* Background Map */
+
+.offcanvas-world-map {
+
+  position: absolute;
+
+  top: -5px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+
+  opacity: .05;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  animation: worldFloat 8s ease-in-out infinite;
+
+}
+
+/* Logo */
+
+.offcanvas-logo {
+
+  position: relative;
+
+  width: 60px;
+
+  margin-bottom: 18px;
+
+  z-index: 2;
+
+}
+
+/* Text */
+
+.offcanvas-brand h5 {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.offcanvas-brand span {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.offcanvas-backdrop.show {
+
+  backdrop-filter: blur(6px);
+
+  -webkit-backdrop-filter: blur(6px);
+
+  background: rgba(0, 0, 0, .35);
+
+}
+
+/*======================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .navbar {
+
+    padding: 14px 0;
+
+  }
+
+  /*.ms-auto .btn-nav-touch {
+
+    display: none;
+
+  }*/
+
+}
+
+
+@media(min-width:767px) {
+  .offcanvas {
+    margin-top: 80px;
+  }
+}
+
+@media(max-width:576px) {}

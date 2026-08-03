@@ -1,0 +1,2944 @@
+/*======================================================
+        03. CARD COMPONENTS
+======================================================*/
+
+
+/*======================================================
+        3.1 CARD FOUNDATION
+======================================================*/
+
+/*=====================================================
+        BASE CARD
+======================================================*/
+
+.rds-card {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background: var(--white);
+
+  border-radius: 4px;
+
+  border: 1px solid rgba(199, 164, 77, .10);
+
+  box-shadow:
+
+    0 18px 40px rgba(15, 23, 42, .06),
+
+    0 35px 80px rgba(15, 23, 42, .08);
+
+  transition:
+
+    transform .45s ease,
+
+    box-shadow .45s ease,
+
+    border-color .45s ease;
+
+}
+
+.rds-card.reveal.active:hover {
+  transform: translateY(-10px);
+}
+
+.rds-card:hover {
+  background: var(--primary);
+  transform: translateY(-10px);
+  border-color: var(--secondary);
+  box-shadow: 0 35px 80px rgba(11, 36, 56, .18);
+}
+
+/*=====================================================
+        CARD CONTAINER
+======================================================*/
+
+.rds-card-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+}
+
+
+/*=====================================================
+        CARD BODY
+======================================================*/
+
+.rds-card-body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 2.5rem;
+
+}
+
+
+/*=====================================================
+        CARD SIZES
+======================================================*/
+
+.rds-card-sm {
+  max-width: 380px;
+  min-height: 220px;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.rds-card-md {
+  max-width: 480px;
+  min-height: 300px;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.rds-card-lg {
+  max-width: 580px;
+  min-height: 400px;
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+.rds-card-xl {
+  max-width: 680px;
+  min-height: 500px;
+  padding: 3rem;
+  border-radius: 4px;
+}
+
+
+/*=====================================================
+        CARD VARIANTS
+======================================================*/
+
+.rds-card-light {
+
+  background: #ffffff;
+
+}
+
+.rds-card-soft {
+
+  background: #fafbfd;
+
+}
+
+.rds-card-dark {
+
+  background: var(--primary);
+
+  color: #ffffff;
+
+}
+
+
+/*=====================================================
+        CARD LAYOUT
+======================================================*/
+
+.rds-card-horizontal {
+
+  display: flex;
+
+  flex-direction: row;
+
+}
+
+.rds-card-vertical {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+/*=====================================================
+        CARD SPACING
+======================================================*/
+
+.rds-card-padding-sm {
+
+  padding: 1.5rem;
+
+}
+
+.rds-card-padding-md {
+
+  padding: 2rem;
+
+}
+
+.rds-card-padding-lg {
+
+  padding: 2.5rem;
+
+}
+
+.rds-card-padding-xl {
+
+  padding: 3rem;
+
+}
+
+
+/*=====================================================
+        CARD BORDER STYLES
+======================================================*/
+
+.rds-card-border {
+
+  border: 1px solid rgba(199, 164, 77, .12);
+
+}
+
+.rds-card-border-none {
+
+  border: none;
+
+}
+
+
+/*=====================================================
+        CARD SHADOWS
+======================================================*/
+
+.rds-card-shadow-sm {
+
+  box-shadow:
+
+    0 10px 25px rgba(15, 23, 42, .05);
+
+}
+
+.rds-card-shadow-md {
+
+  box-shadow:
+
+    0 20px 45px rgba(15, 23, 42, .08);
+
+}
+
+.rds-card-shadow-lg {
+
+  box-shadow:
+
+    0 30px 70px rgba(15, 23, 42, .10);
+
+}
+
+/*=====================================================
+        CARD SHADOWS
+======================================================
+
+.rds-card-shadow-sm {
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, .08),
+    0 4px 10px rgba(15, 23, 42, .04);
+
+}
+
+
+.rds-card-shadow-md {
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, .12),
+    0 8px 18px rgba(15, 23, 42, .06);
+
+}
+
+
+.rds-card-shadow-lg {
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, .15),
+    0 12px 30px rgba(15, 23, 42, .08);
+
+}*/
+
+
+/*=====================================================
+        CARD HOVER SHADOW
+======================================================*/
+
+.rds-card-shadow-sm:hover {
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, .14),
+    0 8px 20px rgba(15, 23, 42, .07);
+
+}
+
+
+.rds-card-shadow-md:hover {
+
+  box-shadow:
+    0 28px 65px rgba(15, 23, 42, .18),
+    0 12px 28px rgba(15, 23, 42, .09);
+
+}
+
+
+.rds-card-shadow-lg:hover {
+
+  box-shadow:
+    0 38px 90px rgba(15, 23, 42, .22),
+    0 16px 35px rgba(15, 23, 42, .10);
+
+}
+
+
+/*=====================================================
+        CARD WIDTH
+======================================================*/
+
+.rds-card-full {
+
+  width: 100%;
+
+}
+
+.rds-card-auto {
+
+  width: auto;
+
+}
+
+
+/*=====================================================
+        CARD HEIGHT
+======================================================*/
+
+.rds-card-equal {
+
+  height: 100%;
+
+}
+
+.rds-card-auto-height {
+
+  height: auto;
+
+}
+
+
+/*=====================================================
+        CARD DIVIDER
+======================================================*/
+
+.rds-card-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  background:
+
+    rgba(15, 23, 42, .08);
+
+  margin: 2rem 0;
+
+}
+
+
+/*=====================================================
+        CARD FOCUS
+======================================================*/
+
+.rds-card:focus-within {
+
+  outline: 2px solid var(--secondary);
+
+  outline-offset: 6px;
+
+}
+
+
+/*=====================================================
+        PREMIUM FOUNDATION
+======================================================*/
+
+.rds-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(180deg,
+
+      rgba(255, 255, 255, .02),
+
+      transparent);
+
+  pointer-events: none;
+
+  opacity: .6;
+
+}
+
+.rds-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  box-shadow:
+
+    inset 0 1px 0 rgba(255, 255, 255, .35);
+
+  opacity: .45;
+
+}
+
+/*======================================================
+        3.2 CARD CONTENT LAYER
+======================================================*/
+
+
+/*=====================================================
+        CARD HEADER
+======================================================*/
+
+.rds-card-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+
+}
+
+
+/*=====================================================
+        CARD HEADER STACK
+======================================================*/
+
+.rds-card-header-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .65rem;
+
+  flex: 1;
+
+}
+
+
+/*=====================================================
+        CARD BODY
+======================================================*/
+
+.rds-card-body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+}
+
+
+/*=====================================================
+        CARD FOOTER
+======================================================*/
+
+.rds-card-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-top: auto;
+
+  padding-top: 2rem;
+
+}
+
+
+/*=====================================================
+        CARD BADGE
+======================================================*/
+
+.rds-card-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  gap: .55rem;
+
+  padding: .55rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+}
+
+
+/*=====================================================
+        CARD ICON
+======================================================*/
+
+.rds-card-icon {
+
+  width: 5rem;
+
+  height: 5rem;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 1.35rem;
+
+  background: rgba(199, 164, 77, .10);
+
+  flex-shrink: 0;
+
+  transition: all .45s ease;
+
+}
+
+
+.rds-card-icon i {
+
+  font-size: 2rem;
+
+  color: var(--secondary);
+
+  transition: all .45s ease;
+
+}
+
+
+/*=====================================================
+        CARD NUMBER
+======================================================*/
+
+.rds-card-number {
+
+  position: absolute;
+
+  top: 1.25rem;
+
+  right: 1.5rem;
+
+  font-size: 4.5rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: rgba(11, 36, 56, .04);
+
+  pointer-events: none;
+
+  user-select: none;
+
+  transition: all .45s ease;
+
+}
+
+
+/*=====================================================
+        CARD TITLE
+======================================================*/
+
+.rds-card-title {
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 1.55rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: -.02em;
+
+}
+
+
+/*=====================================================
+        CARD SUBTITLE
+======================================================*/
+
+.rds-card-subtitle {
+
+  color: var(--secondary);
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+}
+
+
+/*=====================================================
+        CARD DESCRIPTION
+======================================================*/
+
+.rds-card-description {
+
+  margin-top: 1.35rem;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+
+  flex: 1;
+
+}
+
+
+/*=====================================================
+        CARD META
+======================================================*/
+
+.rds-card-meta {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+
+}
+
+
+.rds-card-meta-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: .55rem;
+
+  color: var(--muted);
+
+  font-size: .88rem;
+
+}
+
+
+.rds-card-meta-item i {
+
+  color: var(--secondary);
+
+}
+
+
+/*=====================================================
+        CARD LINK
+======================================================*/
+
+.rds-card-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  position: relative;
+
+  gap: .65rem;
+
+  margin-top: 2rem;
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all .35s ease;
+
+}
+
+
+.rds-card-link i {
+
+  transition: transform .35s ease;
+
+}
+
+.rds-card-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -4px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--secondary);
+
+  transition: .35s;
+
+}
+
+
+.rds-card:hover .rds-card-link::after {
+
+  width: 100%;
+
+}
+
+
+/*=====================================================
+        CARD BUTTON GROUP
+======================================================*/
+
+.rds-card-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  flex-wrap: wrap;
+
+}
+
+
+/*=====================================================
+        CARD STAT
+======================================================*/
+
+.rds-card-stat {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .35rem;
+
+}
+
+
+.rds-card-stat-value {
+
+  color: var(--secondary);
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+}
+
+
+.rds-card-stat-label {
+
+  color: var(--muted);
+
+  font-size: .85rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+}
+
+
+/*=====================================================
+        CARD TAG GROUP
+======================================================*/
+
+.rds-card-tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .65rem;
+
+  margin-top: 1.75rem;
+
+}
+
+
+.rds-card-tag {
+
+  padding: .45rem .9rem;
+
+  border-radius: 999px;
+
+  background: rgba(11, 36, 56, .05);
+
+  color: var(--text);
+
+  font-size: .8rem;
+
+  font-weight: 600;
+
+}
+
+.rds-card:hover .rds-card-tag {
+  color: var(--white);
+  background: var(--text-light);
+}
+
+/*=====================================================
+        DARK CARD SUPPORT
+======================================================*/
+
+.rds-card-dark .rds-card-title,
+
+.rds-card-dark .rds-card-link {
+
+  color: #ffffff;
+
+}
+
+
+.rds-card-dark .rds-card-description,
+
+.rds-card-dark .rds-card-meta-item,
+
+.rds-card-dark .rds-card-stat-label {
+
+  color: rgba(255, 255, 255, .72);
+
+}
+
+
+.rds-card-dark .rds-card-tag {
+
+  background: rgba(255, 255, 255, .08);
+
+  color: #ffffff;
+
+}
+
+
+/*=====================================================
+        DARK CARD — FINAL HOVER OVERRIDE
+======================================================*/
+
+.rds-card.rds-card-dark:hover {
+
+  background: var(--secondary);
+
+  border-color: var(--text);
+
+  box-shadow:
+    0 35px 80px rgba(199, 164, 77, .28);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-title,
+.rds-card.rds-card-dark:hover .rds-card-description,
+.rds-card.rds-card-dark:hover .rds-card-subtitle,
+.rds-card.rds-card-dark:hover .rds-card-link {
+
+  color: var(--primary);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-badge {
+
+  color: var(--primary);
+
+  background: rgba(11, 36, 56, .10);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-icon {
+
+  background: var(--primary);
+
+  transform: rotate(-8deg) scale(1.08);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-icon i {
+
+  color: var(--secondary);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-number {
+
+  color: rgba(11, 36, 56, .12);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-top-line {
+
+  background: linear-gradient(90deg,
+      transparent,
+      var(--primary),
+      transparent);
+
+}
+
+
+.rds-card.rds-card-dark:hover .rds-card-border-glow {
+
+  opacity: 1;
+
+}
+
+.rds-card.rds-card-dark:hover .rds-card-link::after {
+
+  width: 100%;
+
+}
+
+/*======================================================
+        3.3 CARD DECORATIVE LAYER
+======================================================*/
+
+
+/*=====================================================
+        TOP GOLD ACCENT
+======================================================*/
+
+.rds-card-top-line {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background:
+
+    linear-gradient(90deg,
+      transparent,
+      var(--secondary),
+      transparent);
+
+  z-index: 3;
+
+}
+
+/* Top Line */
+.rds-card:hover .rds-card-top-line {
+  opacity: 1;
+}
+
+/*=====================================================
+        GOLD GLOW
+======================================================*/
+
+.rds-card-glow {
+
+  position: absolute;
+
+  width: 240px;
+
+  aspect-ratio: 1;
+
+  top: -90px;
+
+  right: -90px;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(rgba(199, 164, 77, .18),
+      transparent 70%);
+
+  filter: blur(20px);
+
+  opacity: .65;
+
+  pointer-events: none;
+
+  transition:
+    transform .5s ease,
+    opacity .5s ease;
+
+}
+
+
+/*=====================================================
+        DECORATIVE GRID
+======================================================*/
+
+.rds-card-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+
+    radial-gradient(rgba(199, 164, 77, .06) 1px,
+
+      transparent 1px);
+
+  background-size: 30px 30px;
+
+  opacity: .16;
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        GOLD CORNER
+======================================================*/
+
+.rds-card-corner {
+
+  position: absolute;
+
+  width: 110px;
+
+  height: 110px;
+
+  right: -35px;
+
+  bottom: -35px;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(rgba(199, 164, 77, .18),
+
+      transparent 70%);
+
+  pointer-events: none;
+
+  transition: .45s ease;
+
+}
+
+
+/*=====================================================
+        DECORATIVE RING
+======================================================*/
+
+.rds-card-ring {
+
+  position: absolute;
+
+  width: 160px;
+
+  aspect-ratio: 1;
+
+  left: -70px;
+
+  bottom: -70px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 164, 77, .18);
+
+  pointer-events: none;
+
+  transition: .45s ease;
+
+}
+
+
+/*=====================================================
+        GOLD DOT
+======================================================*/
+
+.rds-card-dot {
+
+  position: absolute;
+
+  top: 24px;
+
+  right: 28px;
+
+  width: 10px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  box-shadow:
+
+    0 0 0 8px rgba(199, 164, 77, .08);
+
+}
+
+
+/*=====================================================
+        GOLD BORDER GLOW
+======================================================*/
+
+.rds-card-border-glow {
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  border: 1px solid transparent;
+
+  background:
+
+    linear-gradient(rgba(199, 164, 77, .12),
+      rgba(199, 164, 77, 0)) border-box;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: opacity .45s ease;
+
+}
+
+
+/*=====================================================
+        SHINE LAYER
+======================================================*/
+
+.rds-card-shine {
+
+  position: absolute;
+
+  top: -150%;
+
+  left: -40%;
+
+  width: 45%;
+
+  height: 300%;
+
+  background:
+
+    linear-gradient(90deg,
+
+      transparent,
+
+      rgba(255, 255, 255, .18),
+
+      transparent);
+
+  transform: rotate(18deg);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        ACCENT LINE
+======================================================*/
+
+.rds-card-accent {
+
+  position: absolute;
+
+  left: 2rem;
+
+  bottom: 0;
+
+  width: 110px;
+
+  height: 4px;
+
+  border-radius: 100px;
+
+  background:
+
+    linear-gradient(90deg,
+
+      var(--secondary),
+
+      rgba(199, 164, 77, .18),
+
+      transparent);
+
+}
+
+
+/*=====================================================
+        GOLD PARTICLES
+======================================================*/
+
+.rds-card-particle {
+
+  position: absolute;
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  opacity: .35;
+
+}
+
+
+.rds-card-particle-1 {
+
+  top: 18%;
+
+  right: 18%;
+
+}
+
+.rds-card-particle-2 {
+
+  bottom: 18%;
+
+  left: 12%;
+
+}
+
+.rds-card-particle-3 {
+
+  top: 62%;
+
+  right: 10%;
+
+}
+
+
+/*=====================================================
+        DECORATIVE NOISE
+======================================================*/
+
+.rds-card-noise {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .03;
+
+  background-image:
+
+    radial-gradient(#000 1px,
+
+      transparent 1px);
+
+  background-size: 8px 8px;
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        SECTION VARIANTS
+======================================================*/
+
+.rds-card-investor {
+
+  --card-accent: var(--secondary);
+
+}
+
+.rds-card-business {
+
+  --card-accent: #0b2438;
+
+}
+
+.rds-card-news {
+
+  --card-accent: #3d6cf5;
+
+}
+
+.rds-card-service {
+
+  --card-accent: #2f855a;
+
+}
+
+
+/*=====================================================
+        HOVER DECORATIONS
+======================================================*/
+
+.rds-card:hover .rds-card-glow {
+
+  transform: scale(1.25);
+
+  opacity: .9;
+
+}
+
+
+.rds-card:hover .rds-card-ring {
+
+  transform:
+
+    rotate(18deg) scale(1.08);
+
+  border-color:
+
+    rgba(199, 164, 77, .35);
+
+}
+
+
+.rds-card:hover .rds-card-corner {
+
+  transform: scale(1.35);
+
+}
+
+
+.rds-card:hover .rds-card-grid {
+
+  opacity: .24;
+
+}
+
+
+.rds-card:hover .rds-card-border-glow {
+
+  opacity: 1;
+
+}
+
+
+.rds-card:hover .rds-card-dot {
+
+  transform: scale(1.2);
+
+}
+
+
+.rds-card:hover .rds-card-accent {
+
+  width: 160px;
+
+}
+
+/*======================================================
+        3.4 CARD MOTION SYSTEM
+======================================================*/
+
+
+/*=====================================================
+        MASTER TRANSITIONS
+======================================================*/
+
+.rds-card,
+.rds-card *,
+.rds-card::before,
+.rds-card::after {
+
+  transition:
+
+    all .45s ease;
+
+}
+
+
+/*=====================================================
+        CARD LIFT
+======================================================*/
+
+.rds-card:hover {
+
+  transform:
+
+    translateY(-10px);
+
+  border-color:
+
+    rgba(199, 164, 77, .22);
+
+  box-shadow:
+
+    0 28px 70px rgba(15, 23, 42, .12),
+
+    0 55px 120px rgba(15, 23, 42, .08);
+
+  /*transform: translateY(-8px);
+
+  border-color: rgba(199, 164, 77, .22);
+
+  box-shadow:
+    0 25px 55px rgba(15, 23, 42, .16),
+    0 45px 100px rgba(15, 23, 42, .10);*/
+
+}
+
+
+/*=====================================================
+        ICON
+======================================================*/
+
+.rds-card:hover .rds-card-icon {
+
+  /*background: var(--secondary);
+
+  transform:
+
+    rotate(-8deg) scale(1.08);*/
+  background: rgba(255, 255, 255, .12);
+  color: var(--secondary);
+  transform: rotate(-8deg) scale(1.08);
+
+}
+
+
+.rds-card:hover .rds-card-icon i {
+
+  color: var(--secondary);
+
+}
+
+
+/*=====================================================
+        NUMBER
+======================================================*/
+
+.rds-card:hover .rds-card-number {
+
+  transform: scale(1.08);
+
+  /*color: rgba(199, 164, 77, .12);*/
+
+  color: rgba(255, 255, 255, .18);
+
+}
+
+
+/*=====================================================
+        TITLE
+======================================================*/
+
+.rds-card:hover .rds-card-title {
+
+  /*color: var(--primary);*/
+  color: var(--white);
+
+}
+
+/* Description */
+.rds-card:hover .rds-card-description {
+  color: rgba(255, 255, 255, .82);
+}
+
+/* Subtitle */
+.rds-card:hover .rds-card-subtitle {
+  color: var(--secondary);
+}
+
+/*=====================================================
+        BADGE
+======================================================*/
+
+.rds-card:hover .rds-card-badge {
+
+  /*background:
+
+    rgba(199, 164, 77, .16);*/
+  background: rgba(255, 255, 255, .12);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, .2);
+
+}
+
+
+/*=====================================================
+        LINK
+======================================================*/
+
+.rds-card:hover .rds-card-link {
+
+  color: var(--secondary);
+
+}
+
+
+.rds-card:hover .rds-card-link i {
+
+  transform:
+
+    translateX(.45rem);
+
+}
+
+
+/*=====================================================
+        DECORATIVE GLOW
+======================================================*/
+
+.rds-card:hover .rds-card-glow {
+
+  transform:
+
+    scale(1.25);
+
+  opacity: .9;
+
+}
+
+
+/*=====================================================
+        GRID
+======================================================*/
+
+.rds-card:hover .rds-card-grid {
+
+  opacity: .24;
+
+}
+
+
+/*=====================================================
+        RING
+======================================================*/
+
+.rds-card:hover .rds-card-ring {
+
+  transform:
+
+    rotate(18deg) scale(1.08);
+
+}
+
+
+/*=====================================================
+        CORNER
+======================================================*/
+
+.rds-card:hover .rds-card-corner {
+
+  transform:
+
+    scale(1.35);
+
+}
+
+
+/*=====================================================
+        ACCENT LINE
+======================================================*/
+
+.rds-card:hover .rds-card-accent {
+
+  width: 170px;
+
+}
+
+
+/*=====================================================
+        GOLD DOT
+======================================================*/
+
+.rds-card:hover .rds-card-dot {
+
+  transform: scale(1.25);
+
+}
+
+
+/*=====================================================
+        BORDER GLOW
+======================================================*/
+
+.rds-card:hover .rds-card-border-glow {
+
+  opacity: 1;
+
+}
+
+
+/*=====================================================
+        PARTICLES
+======================================================*/
+
+.rds-card-particle-2 {
+
+  animation-delay: 2s;
+
+}
+
+.rds-card-particle-3 {
+
+  animation-delay: 4s;
+
+}
+
+/*======================================================
+        3.5 RESPONSIVE DESIGN
+======================================================*/
+
+
+/*=====================================================
+        LARGE DEVICES
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .rds-card {
+
+    padding: 2.5rem;
+
+  }
+
+  .rds-card-title {
+
+    font-size: 1.5rem;
+
+  }
+
+  .rds-card-number {
+
+    font-size: 4rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        TABLETS
+======================================================*/
+
+@media (max-width:991.98px) {
+
+  .rds-card {
+
+    padding: 2.25rem;
+
+  }
+
+  .rds-card-icon {
+
+    width: 4.5rem;
+    height: 4.5rem;
+
+  }
+
+  .rds-card-icon i {
+
+    font-size: 1.8rem;
+
+  }
+
+  .rds-card-title {
+
+    font-size: 1.4rem;
+
+  }
+
+  .rds-card-number {
+
+    font-size: 3.5rem;
+
+    top: 1.2rem;
+    right: 1.4rem;
+
+  }
+
+  .rds-card-glow {
+
+    width: 180px;
+
+  }
+
+  .rds-card-ring {
+
+    width: 130px;
+
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width:767.98px) {
+
+  .rds-card {
+
+    padding: 2rem 1.5rem;
+
+    border-radius: 2;
+
+  }
+
+  .rds-card-icon {
+
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-card-icon i {
+
+    font-size: 1.5rem;
+
+  }
+
+  .rds-card-title {
+
+    font-size: 1.3rem;
+
+  }
+
+  .rds-card-description {
+
+    font-size: .97rem;
+
+    line-height: 1.8;
+
+  }
+
+  .rds-card-number {
+
+    font-size: 3rem;
+
+  }
+
+  .rds-card-badge {
+
+    font-size: .68rem;
+
+    padding: .45rem .85rem;
+
+  }
+
+  .rds-card-link {
+
+    font-size: .95rem;
+
+  }
+
+  .rds-card-glow {
+
+    width: 150px;
+
+  }
+
+  .rds-card-ring {
+
+    width: 110px;
+
+  }
+
+}
+
+
+/*=====================================================
+        SMALL MOBILE
+======================================================*/
+
+@media (max-width:575.98px) {
+
+  .rds-card {
+
+    padding: 1.75rem 1.35rem;
+
+    margin-inline: auto;
+
+  }
+
+  .rds-card-title {
+
+    font-size: 1.2rem;
+
+  }
+
+  .rds-card-description {
+
+    font-size: .94rem;
+
+  }
+
+  .rds-card-number {
+
+    font-size: 2.5rem;
+
+  }
+
+  .rds-card-icon {
+
+    width: 3.6rem;
+    height: 3.6rem;
+
+  }
+
+  .rds-card-icon i {
+
+    font-size: 1.35rem;
+
+  }
+
+  .rds-card-glow,
+  .rds-card-ring,
+  .rds-card-corner {
+
+    display: none;
+
+  }
+
+}
+
+
+/*=====================================================
+        EXTRA SMALL DEVICES
+======================================================*/
+
+@media (max-width:399.98px) {
+
+  .rds-card {
+
+    padding: 1.5rem 1.25rem;
+
+    margin-inline: auto;
+
+  }
+
+  .rds-card-title {
+
+    font-size: 1.1rem;
+
+  }
+
+  .rds-card-number {
+
+    font-size: 2rem;
+
+  }
+
+  .rds-card-badge {
+
+    letter-spacing: .05em;
+
+  }
+
+  .rds-card-link {
+
+    gap: .45rem;
+
+  }
+
+}
+
+/*=====================================================
+        FLOATING CARD FOUNDATION
+======================================================*/
+
+.rds-floating-card {
+
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  padding: 1.5rem 1.75rem;
+
+  background: rgba(255, 255, 255, .94);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, .65);
+
+  border-radius: 1.75rem;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, .10),
+    0 35px 80px rgba(15, 23, 42, .08);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
+
+  z-index: 10;
+
+}
+
+
+/*=====================================================
+        FLOATING CARD SIZES
+======================================================*/
+
+.rds-floating-card-sm {
+
+  padding: 1rem 1.25rem;
+
+  border-radius: 1.25rem;
+
+}
+
+.rds-floating-card-md {
+
+  padding: 1.5rem 1.75rem;
+
+}
+
+.rds-floating-card-lg {
+
+  padding: 2rem 2.25rem;
+
+  min-height: 200px;
+
+}
+
+/*=====================================================
+        FLOATING CARD HOVER
+======================================================*/
+
+.rds-floating-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: rgba(199, 164, 77, .35);
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, .12),
+    0 50px 110px rgba(15, 23, 42, .10);
+
+}
+
+/*=====================================================
+        FLOATING CARD BODY
+======================================================*/
+
+.rds-floating-body {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .4rem;
+
+  flex: 1;
+
+}
+
+/*=====================================================
+        FLOATING ICON
+======================================================*/
+
+.rds-floating-icon {
+
+  width: 4rem;
+
+  height: 4rem;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  color: var(--secondary);
+
+  font-size: 1.4rem;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .08);
+
+}
+
+/*=====================================================
+        FLOATING BADGE
+======================================================*/
+
+.rds-floating-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .5rem;
+
+  width: max-content;
+
+  padding: .45rem .9rem;
+
+  border-radius: 999px;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+}
+
+/*=====================================================
+        FLOATING SUBTITLE
+======================================================*/
+
+.rds-floating-subtitle {
+
+  color: var(--secondary);
+
+  font-size: .8rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+}
+
+/*=====================================================
+        FLOATING TITLE
+======================================================*/
+
+.rds-floating-title {
+
+  color: var(--text);
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
+
+  margin: 0;
+
+}
+
+/*=====================================================
+        FLOATING DESCRIPTION
+======================================================*/
+
+.rds-floating-text {
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+
+}
+
+/*=====================================================
+        FLOATING STAT
+======================================================*/
+
+.rds-floating-stat {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .2rem;
+
+}
+
+/*=====================================================
+        FLOATING NUMBER
+======================================================*/
+
+.rds-floating-number {
+
+  color: var(--secondary);
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+}
+
+/*=====================================================
+        FLOATING LABEL
+======================================================*/
+
+.rds-floating-label {
+
+  color: var(--muted);
+
+  font-size: .95rem;
+
+  font-weight: 500;
+
+}
+
+/*=====================================================
+        FLOATING DECORATION
+======================================================*/
+
+.rds-floating-decoration {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  border-radius: inherit;
+
+}
+
+/*=====================================================
+        FLOATING GRID
+======================================================*/
+
+.rds-floating-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(rgba(199, 164, 77, .08) 1px,
+      transparent 1px);
+
+  background-size: 22px 22px;
+
+  opacity: .25;
+
+}
+
+/*=====================================================
+        FLOATING GLOW
+======================================================*/
+
+.rds-floating-glow {
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  top: -70px;
+
+  right: -70px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(199, 164, 77, .22),
+      transparent 70%);
+
+  filter: blur(18px);
+
+  opacity: .7;
+
+}
+
+/*=====================================================
+        FLOATING RING
+======================================================*/
+
+.rds-floating-ring {
+
+  position: absolute;
+
+  width: 120px;
+
+  height: 120px;
+
+  left: -50px;
+
+  bottom: -50px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 164, 77, .20);
+
+}
+
+/*=====================================================
+        FLOATING ACCENT LINE
+======================================================*/
+
+.rds-floating-accent-line {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 110px;
+
+  height: 4px;
+
+  border-radius: 100px;
+
+  background:
+    linear-gradient(90deg,
+      var(--secondary),
+      rgba(199, 164, 77, .25),
+      transparent);
+
+}
+
+/*=====================================================
+        FLOATING ACCENT DOT
+======================================================*/
+
+.rds-floating-accent-dot {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 24px;
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  box-shadow:
+    0 0 0 8px rgba(199, 164, 77, .08);
+
+}
+
+/*=====================================================
+        FLOATING CORNER GLOW
+======================================================*/
+
+.rds-floating-corner-glow {
+
+  position: absolute;
+
+  width: 90px;
+
+  height: 90px;
+
+  right: -25px;
+
+  bottom: -25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(199, 164, 77, .22),
+      transparent 70%);
+
+}
+
+/*=====================================================
+        FLOATING NOISE
+======================================================*/
+
+.rds-floating-noise {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .03;
+
+  background-image:
+    radial-gradient(circle, #000 1px, transparent 1px);
+
+  background-size: 8px 8px;
+
+}
+
+/*=====================================================
+        FLOATING SHINE
+======================================================*/
+
+.rds-floating-shine {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+}
+
+.rds-floating-shine::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+
+  left: -35%;
+
+  width: 40%;
+
+  height: 300%;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, .25),
+      transparent);
+
+  transform: rotate(18deg);
+
+  opacity: 0;
+
+}
+
+/*=====================================================
+        FLOATING CARD HOVER
+======================================================*/
+
+.rds-floating-card {
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
+
+}
+
+.rds-floating-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: rgba(199, 164, 77, .35);
+
+  box-shadow:
+    0 28px 60px rgba(15, 23, 42, .12),
+    0 50px 100px rgba(15, 23, 42, .10);
+
+}
+
+/*=====================================================
+        ICON
+======================================================*/
+
+.rds-floating-icon {
+
+  transition:
+    transform .45s ease,
+    background .45s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-icon {
+
+  transform: rotate(-8deg) scale(1.08);
+
+}
+
+/*=====================================================
+        TITLE
+======================================================*/
+
+.rds-floating-title {
+
+  transition:
+    color .35s ease,
+    transform .35s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-title {
+
+  color: var(--secondary);
+
+  transform: translateX(4px);
+
+}
+
+/*=====================================================
+        GLOW
+======================================================*/
+
+.rds-floating-glow {
+
+  transition:
+    transform .5s ease,
+    opacity .5s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-glow {
+
+  transform: scale(1.2);
+
+  opacity: .95;
+
+}
+
+/*=====================================================
+        RING
+======================================================*/
+
+.rds-floating-ring {
+
+  transition:
+    transform .6s ease,
+    border-color .6s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-ring {
+
+  transform: rotate(18deg) scale(1.08);
+
+  border-color: rgba(199, 164, 77, .35);
+
+}
+
+/*=====================================================
+        CORNER GLOW
+======================================================*/
+
+.rds-floating-corner-glow {
+
+  transition:
+    transform .45s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-corner-glow {
+
+  transform: scale(1.25);
+
+}
+
+/*=====================================================
+        GRID
+======================================================*/
+
+.rds-floating-grid {
+
+  transition: opacity .45s ease;
+
+}
+
+.rds-floating-card:hover .rds-floating-grid {
+
+  opacity: .35;
+
+}
+
+/*=====================================================
+        SHINE
+======================================================*/
+
+.rds-floating-card:hover .rds-floating-shine::before {
+
+  opacity: 1;
+
+  animation: rdsFloatingShine 1.2s ease;
+
+}
+
+/*=====================================================
+        FLOATING DIVIDER
+======================================================*/
+
+.rds-floating-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  margin: 1rem 0;
+
+  background: rgba(15, 23, 42, .08);
+
+}
+
+/*=====================================================
+        DARK FLOATING CARD
+======================================================*/
+
+.rds-floating-card-dark {
+
+  background: rgba(11, 36, 56, .94);
+
+  color: #fff;
+
+  border: 1px solid rgba(199, 164, 77, .18);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 25px 60px rgba(11, 36, 56, .30),
+    0 0 0 1px rgba(199, 164, 77, .08);
+
+}
+
+.rds-floating-card-dark .rds-floating-title {
+
+  color: #ffffff;
+
+}
+
+.rds-floating-card-dark .rds-floating-subtitle,
+
+.rds-floating-card-dark .rds-floating-text,
+
+.rds-floating-card-dark .rds-floating-label {
+
+  color: rgba(255, 255, 255, .78);
+
+}
+
+.rds-floating-card-dark .rds-floating-number {
+
+  color: var(--secondary);
+
+}
+
+.rds-floating-card-dark .rds-floating-badge {
+
+  background: rgba(255, 255, 255, .08);
+
+  color: var(--secondary);
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+}
+
+.rds-floating-card-dark .rds-floating-divider {
+
+  background: rgba(255, 255, 255, .12);
+
+}
+
+.rds-floating-card-dark .rds-floating-icon {
+
+  background: rgba(255, 255, 255, .08);
+
+  color: var(--secondary);
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+}
+
+
+/*=====================================================
+        GLASS FLOATING CARD
+======================================================*/
+
+.rds-floating-card-glass {
+
+  background: rgba(255, 255, 255, .10);
+
+  backdrop-filter: blur(24px);
+
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .18);
+
+}
+
+.rds-floating-card-glass .rds-floating-title {
+
+  color: #fff;
+
+}
+
+.rds-floating-card-glass .rds-floating-subtitle,
+
+.rds-floating-card-glass .rds-floating-text,
+
+.rds-floating-card-glass .rds-floating-label {
+
+  color: rgba(255, 255, 255, .82);
+
+}
+
+.rds-floating-card-glass .rds-floating-number {
+
+  color: var(--secondary);
+
+}
+
+.rds-floating-card-glass .rds-floating-badge {
+
+  background: rgba(199, 164, 77, .14);
+
+  color: var(--secondary);
+
+  border: 1px solid rgba(199, 164, 77, .28);
+
+}
+
+.rds-floating-card-glass .rds-floating-divider {
+
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, .45),
+      transparent);
+
+}
+
+.rds-floating-card-glass .rds-floating-icon {
+
+  background: rgba(199, 164, 77, .12);
+
+  color: var(--secondary);
+
+  border: 1px solid rgba(199, 164, 77, .28);
+
+}
+
+/*=====================================================
+        GLASS CARD HOVER
+======================================================*/
+
+.rds-floating-card-glass {
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease,
+    background .45s ease;
+
+}
+
+.rds-floating-card-glass:hover {
+
+  transform: translateY(-8px);
+
+  background: rgba(255, 255, 255, .14);
+
+  border-color: rgba(199, 164, 77, .35);
+
+  box-shadow:
+    0 30px 70px rgba(15, 23, 42, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .22);
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-number {
+
+  color: #fff;
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-badge {
+
+  background: rgba(199, 164, 77, .22);
+
+  border-color: rgba(199, 164, 77, .45);
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-icon {
+
+  transform: rotate(8deg) scale(1.05);
+
+  background: rgba(199, 164, 77, .20);
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-glow {
+
+  opacity: 1;
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-ring {
+
+  transform: scale(1.05);
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-divider {
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(199, 164, 77, .75),
+      transparent);
+
+}
+
+
+/*=====================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width:991px) {
+
+  .rds-floating-card {
+
+    padding: 1.25rem 1.5rem;
+
+    gap: 1rem;
+
+  }
+
+  .rds-floating-card-lg {
+
+    padding: 1.5rem 1.75rem;
+
+  }
+
+  .rds-floating-icon {
+
+    width: 3.5rem;
+
+    height: 3.5rem;
+
+    font-size: 1.2rem;
+
+  }
+
+  .rds-floating-title {
+
+    font-size: 1.15rem;
+
+  }
+
+  .rds-floating-text {
+
+    font-size: .95rem;
+
+  }
+
+  .rds-floating-number {
+
+    font-size: 1.7rem;
+
+  }
+
+  .rds-floating-glow {
+
+    width: 150px;
+
+    height: 150px;
+
+  }
+
+  .rds-floating-ring {
+
+    width: 100px;
+
+    height: 100px;
+
+  }
+
+}
+
+@media (max-width:767px) {
+
+  .rds-floating-card {
+
+    padding: 1rem 1.25rem;
+
+    gap: .85rem;
+
+    border-radius: 1.25rem;
+
+  }
+
+  .rds-floating-icon {
+
+    width: 3rem;
+
+    height: 3rem;
+
+    font-size: 1rem;
+
+  }
+
+  .rds-floating-title {
+
+    font-size: 1rem;
+
+  }
+
+  .rds-floating-text {
+
+    font-size: .9rem;
+
+    line-height: 1.6;
+
+  }
+
+  .rds-floating-number {
+
+    font-size: 1.5rem;
+
+  }
+
+  .rds-floating-label {
+
+    font-size: .85rem;
+
+  }
+
+  .rds-floating-badge {
+
+    font-size: .65rem;
+
+    padding: .35rem .7rem;
+
+  }
+
+  .rds-floating-accent-line {
+
+    width: 80px;
+
+  }
+
+  .rds-floating-glow,
+
+  .rds-floating-ring,
+
+  .rds-floating-corner-glow {
+
+    display: none;
+
+  }
+
+}
+
+@media (max-width:575px) {
+
+  .rds-floating-card {
+
+    padding: .9rem 1rem;
+
+    max-width: 220px;
+
+    padding: 1rem;
+
+  }
+
+  .rds-floating-body {
+
+    gap: .3rem;
+
+  }
+
+}

@@ -1,0 +1,2254 @@
+/* Remove all default browser edge spacing */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*======================================================
+                    HERO SECTION  
+======================================================*/
+.hero-section {
+
+  position: relative;
+
+  width: 100%;
+
+  background: var(--primary);
+
+  overflow: hidden;
+
+}
+
+.hero-content {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(8, 26, 44, .75),
+      rgba(8, 26, 44, .55)),
+    url("../../../images/your-city-own-view.jpg");
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  padding-top: 170px;
+
+  padding-bottom: 120px;
+
+}
+
+.hero-content h1 {
+
+  color: var(--white);
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+
+  animation: fadeUp .9s ease;
+
+}
+
+.hero-content p {
+
+  color: rgba(255, 255, 255, .82);
+
+  font-size: 1.15rem;
+
+  line-height: 2;
+
+  margin: 35px 0;
+
+  animation: fadeUp 1.2s ease;
+
+}
+
+/*======================================================
+                    HERO BUTTONS
+======================================================*/
+
+.hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+}
+
+.btn-gold {
+
+  background: var(--secondary);
+
+  color: var(--primary);
+
+  padding: 16px 34px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+
+  border: none;
+
+}
+
+.btn-gold:hover {
+
+  background: #d6b462;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 18px 40px rgba(199, 164, 77, .35);
+
+}
+
+.btn-outline-light {
+
+  padding: 16px 34px;
+
+  border-radius: 12px;
+
+  transition: var(--transition);
+
+}
+
+.btn-outline-light:hover {
+
+  transform: translateY(-4px);
+
+}
+
+/*======================================================
+                    HERO STATISTICS
+======================================================*/
+
+.stats-container {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: 40px;
+
+  padding-bottom: 80px;
+
+}
+
+.stat-box {
+
+  background: rgba(255, 255, 255, .08);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  border-radius: 18px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  transition: var(--transition);
+
+  height: 100%;
+
+}
+
+.stat-box:hover {
+
+  transform: translateY(-10px);
+
+  border-color: rgba(199, 164, 77, .35);
+
+  background: rgba(255, 0, 0, 0.06);
+}
+
+.stat-number {
+
+  color: var(--secondary);
+
+  font-size: 2.3rem;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+
+}
+
+.stat-label {
+
+  color: rgba(255, 255, 255, .82);
+
+  margin: 0;
+
+  font-size: .95rem;
+
+  line-height: 1.6;
+
+}
+
+/*======================================================
+                HERO RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .hero-content {
+
+    padding-top: 140px;
+
+    text-align: center;
+
+    margin: auto;
+
+  }
+
+  .hero-buttons {
+
+    justify-content: center;
+
+  }
+
+  .stats-container {
+
+    margin-top: 20px;
+
+  }
+
+}
+
+@media(max-width:767px) {
+
+  .hero-content {
+
+    padding-top: 120px;
+
+    padding-bottom: 70px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 2.6rem;
+
+  }
+
+  .hero-content p {
+
+    font-size: 1rem;
+
+  }
+
+  .stat-box {
+
+    padding: 22px 15px;
+
+  }
+
+  .stat-number {
+
+    font-size: 1.8rem;
+
+  }
+
+}
+
+/*======================================================
+                HERO DIVIDER
+======================================================*/
+
+.hero-divider {
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  line-height: 0;
+
+  z-index: 6;
+
+}
+
+.hero-divider svg {
+
+  display: block;
+
+  width: 100%;
+
+  height: 90px;
+
+}
+
+.hero-divider path {
+
+  fill: var(--surface);
+
+}
+
+@media(max-width:767px) {
+
+  .hero-divider svg {
+
+    height: 55px;
+
+  }
+
+}
+
+/*======================================================
+            ABOUT PREVIEW SECTION
+======================================================*/
+
+.about-preview-section {
+
+  position: relative;
+
+  padding: 120px 0;
+
+  background: var(--surface);
+
+  overflow: hidden;
+
+}
+
+.about-preview-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 120px;
+
+  height: 4px;
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+                    LEFT CONTENT
+======================================================*/
+
+.section-tag {
+
+  display: inline-block;
+
+  color: var(--secondary);
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+
+}
+
+.section-title {
+
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: var(--primary);
+
+  margin-bottom: 28px;
+
+}
+
+.section-description {
+
+  font-size: 1.05rem;
+
+  line-height: 2;
+
+  color: var(--text);
+
+  margin: 35px 0;
+
+}
+
+.industry-btn:hover {
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+}
+
+/*======================================================
+                    FEATURE LIST
+======================================================*/
+
+.about-features {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin: 45px 0;
+
+}
+
+.feature-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+}
+
+.feature-item i {
+
+  color: var(--secondary);
+
+  font-size: 1.2rem;
+
+}
+
+/*======================================================
+                    QUICK FACTS
+======================================================*/
+
+.quick-facts {
+
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin-top: 45px;
+
+}
+
+.fact-box {
+
+  flex: 1;
+
+  min-width: 160px;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  padding: 22px;
+
+  border: 1px solid rgba(0, 0, 0, .06);
+
+  transition: var(--transition);
+
+}
+
+.fact-box:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+
+}
+
+.fact-box h5 {
+
+  font-size: .8rem;
+
+  color: var(--secondary);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+
+}
+
+.fact-box span {
+
+  color: var(--primary);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+}
+
+/*======================================================
+                RIGHT IMAGE
+======================================================*/
+
+.about-preview-image {
+
+  position: relative;
+
+}
+
+.about-preview-image img {
+
+  width: 100%;
+
+  height: 680px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  display: block;
+
+  box-shadow: 0 35px 80px rgba(0, 0, 0, .18);
+
+}
+
+
+/*======================================================
+            IMAGE PLACEHOLDER
+======================================================*/
+
+.image-placeholder {
+
+  width: 100%;
+
+  height: 680px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(135deg, #dfe7ef, #f5f7fa);
+
+  border: 2px dashed rgba(0, 0, 0, .12);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.image-placeholder i {
+
+  font-size: 4rem;
+
+  color: var(--secondary);
+
+  margin-bottom: 20px;
+
+}
+
+.image-placeholder h5 {
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+}
+
+.image-placeholder span {
+
+  color: #7b8794;
+
+}
+
+/*======================================================
+                EXPERIENCE CARD
+======================================================*/
+
+/*=========================================
+        EXECUTIVE GLASS EXPERIENCE CARD
+=========================================*/
+
+.experience-card {
+
+  position: absolute;
+
+  bottom: 35px;
+
+  left: -45px;
+
+  width: 300px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: rgba(9, 32, 63, .78);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, .25),
+    inset 0 1px 0 rgba(255, 255, 255, .08);
+
+}
+
+.experience-title {
+
+  color: rgba(255, 255, 255, .75);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: .75rem;
+
+  margin-bottom: 22px;
+
+  font-weight: 600;
+
+}
+
+.experience-metric {
+
+  margin-bottom: 22px;
+
+}
+
+.experience-metric h2 {
+
+  color: var(--secondary);
+
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+
+  line-height: 1;
+
+}
+
+.experience-metric span {
+
+  color: #ffffff;
+
+  font-size: .95rem;
+
+  opacity: .9;
+
+}
+
+.experience-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, .12);
+
+  margin: 24px 0;
+
+}
+
+.experience-stats {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+}
+
+.mini-stat {
+
+  text-align: center;
+
+  flex: 1;
+
+}
+
+.mini-stat h4 {
+
+  color: var(--secondary);
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+
+}
+
+.mini-stat p {
+
+  color: rgba(255, 255, 255, .75);
+
+  font-size: .72rem;
+
+  margin: 0;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+}
+
+.experience-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: 24px;
+
+  padding: 1px;
+
+  background: linear-gradient(135deg,
+      rgba(199, 164, 77, .8),
+      rgba(255, 255, 255, .08),
+      rgba(199, 164, 77, .35));
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+}
+
+.experience-card {
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.about-preview-image:hover .experience-card {
+
+  transform:
+    translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, .30);
+
+}
+
+.counter::after {
+
+  content: "+";
+
+  color: var(--secondary);
+
+}
+
+/*======================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .about-preview-section {
+
+    padding: 90px 0;
+
+  }
+
+  .about-features {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .about-preview-image {
+
+    margin-top: 60px;
+
+  }
+
+  .about-preview-image img,
+
+  .image-placeholder {
+
+    height: 520px;
+
+  }
+
+  .experience-card {
+
+    left: 20px;
+
+    bottom: 20px;
+
+  }
+
+}
+
+@media(max-width:767px) {
+
+  .about-preview-section {
+
+    padding: 70px 0;
+
+  }
+
+  .section-title {
+
+    font-size: 2rem;
+
+  }
+
+  .quick-facts {
+
+    flex-direction: column;
+
+  }
+
+  .about-preview-image img,
+
+  .image-placeholder {
+
+    height: 420px;
+
+  }
+
+  .experience-card {
+
+    position: relative;
+
+    left: 0;
+
+    bottom: 0;
+
+    margin-top: 25px;
+
+    width: 100%;
+
+  }
+
+}
+
+/*======================================================
+            FEATURED SUBSIDIARIES SECTION
+======================================================*/
+
+.subsidiaries-section {
+
+  position: relative;
+
+  padding: 120px 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+}
+
+.subsidiaries-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 120px;
+
+  height: 4px;
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+                SUBSIDIARY CARD
+======================================================*/
+
+.subsidiary-card {
+
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 40px 35px;
+
+  height: 100%;
+
+  border: 1px solid rgba(0, 0, 0, .06);
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
+
+  transition: all .45s ease;
+
+  overflow: hidden;
+
+}
+
+.subsidiary-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background: linear-gradient(90deg,
+      var(--secondary),
+      #f5d98b);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: .45s;
+
+}
+
+.subsidiary-card:hover::before {
+
+  transform: scaleX(1);
+
+}
+
+.subsidiary-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .10);
+
+}
+
+/*======================================================
+                LOGO PLACEHOLDER
+======================================================*/
+
+.subsidiary-logo {
+
+  width: 82px;
+
+  height: 82px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg,
+      rgba(199, 164, 77, .12),
+      rgba(9, 32, 63, .06));
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(199, 164, 77, .20);
+
+}
+
+.subsidiary-logo i {
+
+  font-size: 2rem;
+
+  color: var(--secondary);
+
+}
+
+/* Future logo image */
+
+.subsidiary-logo img {
+
+  width: 75%;
+
+  height: 75%;
+
+  object-fit: contain;
+
+}
+
+/*======================================================
+                INDUSTRY BADGE
+======================================================*/
+
+.industry-badge {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 22px;
+
+}
+
+/*======================================================
+                CARD CONTENT
+======================================================*/
+
+.subsidiary-card h4 {
+
+  color: var(--primary);
+
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+}
+
+.subsidiary-card p {
+
+  color: var(--text);
+
+  line-height: 1.9;
+
+  margin-bottom: 35px;
+
+}
+
+/*======================================================
+                CARD LINK
+======================================================*/
+
+.card-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: .35s;
+
+}
+
+.card-link i {
+
+  transition: .35s;
+
+  color: var(--secondary);
+
+}
+
+.card-link:hover {
+
+  color: var(--secondary);
+
+}
+
+.card-link:hover i {
+
+  transform: translateX(8px);
+
+}
+
+/*======================================================
+            SOFT BACKGROUND DECORATION
+======================================================*/
+
+.subsidiaries-section::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -140px;
+
+  top: 120px;
+
+  width: 380px;
+
+  height: 380px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(rgba(199, 164, 77, .08),
+
+      transparent 70%);
+
+  pointer-events: none;
+
+}
+
+/*======================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .subsidiaries-section {
+
+    padding: 90px 0;
+
+  }
+
+  .subsidiary-card {
+
+    padding: 35px 30px;
+
+  }
+
+}
+
+@media(max-width:767px) {
+
+  .subsidiaries-section {
+
+    padding: 70px 0;
+
+  }
+
+  .subsidiary-card {
+
+    padding: 30px 25px;
+
+  }
+
+  .subsidiary-logo {
+
+    width: 72px;
+
+    height: 72px;
+
+  }
+
+  .subsidiary-card h4 {
+
+    font-size: 1.25rem;
+
+  }
+
+}
+
+/*======================================================
+            INDUSTRY ACCENT COLORS
+======================================================*/
+
+/* Technology */
+
+.tech-card::before {
+
+  background: #2F80ED;
+
+}
+
+/* Infrastructure */
+
+.infrastructure-card::before {
+
+  background: #6C757D;
+
+}
+
+/* Energy */
+
+.energy-card::before {
+
+  background: #D4AF37;
+
+}
+
+/* Agriculture */
+
+.agriculture-card::before {
+
+  background: #4CAF50;
+
+}
+
+/* Hospitality */
+
+.hospitality-card::before {
+
+  background: #C8A96A;
+
+}
+
+/* Trade */
+
+.trade-card::before {
+
+  background: #0A2342;
+
+}
+
+/*======================================================
+                BADGE COLORS
+======================================================*/
+
+.tech-card .industry-badge {
+
+  background: rgba(47, 128, 237, .12);
+
+  color: #2F80ED;
+
+}
+
+.infrastructure-card .industry-badge {
+
+  background: rgba(108, 117, 125, .12);
+
+  color: #6C757D;
+
+}
+
+.energy-card .industry-badge {
+
+  background: rgba(212, 175, 55, .15);
+
+  color: #B8860B;
+
+}
+
+.agriculture-card .industry-badge {
+
+  background: rgba(76, 175, 80, .12);
+
+  color: #388E3C;
+
+}
+
+.hospitality-card .industry-badge {
+
+  background: rgba(200, 169, 106, .18);
+
+  color: #A67C2E;
+
+}
+
+.trade-card .industry-badge {
+
+  background: rgba(10, 35, 66, .10);
+
+  color: #0A2342;
+
+}
+
+.tech-card .subsidiary-logo {
+
+  background: rgba(47, 128, 237, .08);
+
+}
+
+.infrastructure-card .subsidiary-logo {
+
+  background: rgba(108, 117, 125, .08);
+
+}
+
+.energy-card .subsidiary-logo {
+
+  background: rgba(212, 175, 55, .08);
+
+}
+
+.agriculture-card .subsidiary-logo {
+
+  background: rgba(76, 175, 80, .08);
+
+}
+
+.hospitality-card .subsidiary-logo {
+
+  background: rgba(200, 169, 106, .10);
+
+}
+
+.trade-card .subsidiary-logo {
+
+  background: rgba(10, 35, 66, .08);
+
+}
+
+/* FLOATING CARD POSITIONING */
+
+.floating-top-left-md2 {
+
+  top: 11%;
+
+  left: -3%;
+
+}
+
+.floating-top-left-lg2 {
+
+  top: -18%;
+
+  left: 20%;
+
+}
+
+
+
+/*======================================================
+                INDUSTRIES SECTION
+======================================================*/
+
+.industries-section {
+
+  position: relative;
+
+  padding: 120px 0;
+
+  background: var(--surface);
+
+  overflow: hidden;
+
+}
+
+.industries-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 120px;
+
+  height: 4px;
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+                INDUSTRY ROW
+======================================================*/
+
+.industry-row {
+
+  margin-top: 90px;
+
+  margin-bottom: 20px;
+
+}
+
+.industry-row:first-of-type {
+
+  margin-top: 70px;
+
+}
+
+/*======================================================
+                IMAGE
+======================================================*/
+
+.industry-image {
+
+  position: relative;
+
+}
+
+.industry-image img {
+
+  width: 100%;
+
+  height: 460px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 24px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .15);
+
+}
+
+/*======================================================
+            IMAGE PLACEHOLDER
+======================================================*/
+
+.industry-placeholder {
+
+  width: 100%;
+
+  height: 460px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(135deg,
+      #eef3f8,
+      #dce5ee);
+
+  border: 2px dashed rgba(0, 0, 0, .08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.industry-placeholder i {
+
+  font-size: 4rem;
+
+  color: var(--secondary);
+
+  margin-bottom: 20px;
+
+}
+
+.industry-placeholder h5 {
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+}
+
+/*======================================================
+                LABEL
+======================================================*/
+
+.industry-label {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: rgba(199, 164, 77, .12);
+
+  color: var(--secondary);
+
+  border-radius: 50px;
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+
+}
+
+/*======================================================
+                CONTENT
+======================================================*/
+
+.industry-row h3 {
+
+  color: var(--primary);
+
+  font-size: clamp(2rem, 3vw, 2.7rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  margin-bottom: 24px;
+
+  margin-top: 24px;
+
+}
+
+.industry-row p {
+
+  color: var(--text);
+
+  font-size: 1.05rem;
+
+  line-height: 2;
+
+  max-width: 520px;
+
+}
+
+/*======================================================
+            DECORATIVE GOLD LINE
+======================================================*/
+
+.industry-row h3::after {
+
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 3px;
+
+  background: var(--secondary);
+
+  margin-top: 22px;
+
+}
+
+/*======================================================
+                IMAGE HOVER
+======================================================*/
+
+.industry-image {
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+}
+
+.industry-image img {
+
+  transition: transform .8s ease;
+
+}
+
+.industry-image:hover img {
+
+  transform: scale(1.05);
+
+}
+
+/*======================================================
+            FLOATING GOLD SQUARE
+======================================================*/
+
+.industry-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+
+  height: 70px;
+
+  right: -18px;
+
+  bottom: 35px;
+
+  background: var(--secondary);
+
+  border-radius: 18px;
+
+  opacity: .12;
+
+}
+
+/*======================================================
+            SECTION CTA
+======================================================*/
+
+.industries-section .industry-btn {
+
+  margin-top: 25px;
+
+}
+
+/*======================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .industries-section {
+
+    padding: 90px 0;
+
+  }
+
+  .industry-row {
+
+    margin-top: 70px;
+
+  }
+
+  .industry-image {
+
+    margin-bottom: 25px;
+
+  }
+
+  .industry-image img,
+
+  .industry-placeholder {
+
+    height: 380px;
+
+  }
+
+}
+
+@media(max-width:767px) {
+
+  .industries-section {
+
+    padding: 70px 0;
+
+  }
+
+  .industry-row {
+
+    margin-top: 60px;
+
+  }
+
+  .industry-image img,
+
+  .industry-placeholder {
+
+    height: 300px;
+
+  }
+
+  .industry-row h3 {
+
+    font-size: 1.8rem;
+
+  }
+
+  .industry-row p {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+  }
+
+  .industry-image::after {
+
+    display: none;
+
+  }
+
+}
+
+@media(max-width:576px) {
+  .floating-top-left-md2 {
+
+    top: 11%;
+
+    left: 3%;
+
+  }
+}
+
+/*======================================================
+            FLOATING GLASS BADGE
+======================================================*/
+
+.industry-badge-card {
+
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  border-radius: 18px;
+
+  background: rgba(10, 35, 66, .82);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, .25);
+
+}
+
+.industry-badge-card i {
+
+  color: var(--secondary);
+
+  font-size: 1.2rem;
+
+}
+
+.industry-badge-card span {
+
+  color: #ffffff;
+
+  font-size: .82rem;
+
+  font-weight: 600;
+
+  letter-spacing: .5px;
+
+}
+
+@media(max-width:767px) {
+
+  .industry-badge-card {
+
+    left: 15px;
+
+    bottom: 15px;
+
+    padding: 12px 16px;
+
+  }
+
+  .industry-badge-card span {
+
+    font-size: .75rem;
+
+  }
+
+}
+
+/*======================================================
+                TRUST SECTION
+======================================================*/
+
+.trust-section {
+
+  position: relative;
+
+  padding: 120px 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+}
+
+.trust-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 120px;
+
+  height: 4px;
+
+  background: var(--secondary);
+
+}
+
+/*======================================================
+                IMAGE WRAPPER
+======================================================*/
+
+.trust-image-wrapper {
+
+  position: relative;
+
+  overflow: visible;
+
+  border-radius: 36px;
+}
+
+.trust-image-wrapper img {
+
+  width: 100%;
+
+  height: 720px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 30px;
+
+  transition:
+
+    transform .8s ease,
+
+    filter .8s ease,
+
+    box-shadow .8s ease;
+
+
+  box-shadow: 0 35px 80px rgba(12, 35, 65, .12);
+
+}
+
+.trust-image-wrapper:hover img {
+
+  transform: scale(1.03);
+
+  filter: brightness(1.03);
+
+  box-shadow:
+
+    0 45px 110px rgba(12, 35, 65, .16);
+
+}
+
+/*======================================================
+            PLACEHOLDER
+======================================================*/
+
+.trust-image-placeholder {
+
+  width: 100%;
+
+  height: 680px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(135deg,
+      #edf3f8,
+      #dce7f1);
+
+  border: 2px dashed rgba(0, 0, 0, .08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.trust-image-placeholder i {
+
+  font-size: 4.5rem;
+
+  color: var(--secondary);
+
+  margin-bottom: 25px;
+
+}
+
+.trust-image-placeholder h4 {
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+}
+
+.trust-image-placeholder span {
+
+  color: var(--text-muted);
+
+}
+
+/*======================================================
+            FLOATING GLASS CARD
+======================================================*/
+
+.trust-floating-card {
+
+  position: absolute;
+
+  bottom: 35px;
+
+  left: 35px;
+
+  max-width: 320px;
+
+  padding: 28px;
+
+  border-radius: 22px;
+
+  background: rgba(10, 35, 66, .85);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+
+}
+
+.trust-label {
+
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  padding: 7px 16px;
+
+  border-radius: 50px;
+
+  background: rgba(199, 164, 77, .15);
+
+  color: var(--secondary);
+
+  font-size: .75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+}
+
+.trust-floating-card h4 {
+
+  color: #ffffff;
+
+  margin-bottom: 15px;
+
+  font-size: 1.4rem;
+
+}
+
+.trust-floating-card p {
+
+  color: rgba(255, 255, 255, .75);
+
+  margin: 0;
+
+  line-height: 1.8;
+
+}
+
+/* DECORATIVE DOT FOR FIRST SECTION */
+
+.dot-grid-home {
+
+  top: -8%;
+
+  right: 7%;
+}
+
+.gold-circle-home {
+
+  bottom: -6%;
+
+  right: 17%;
+}
+
+/* DECORATIVE DOT FOR FORTH SECTION */
+
+.dot-grid-home2 {
+
+  top: -8%;
+
+  left: 7%;
+
+}
+
+.gold-circle-home2 {
+
+  bottom: -6%;
+
+  left: 40%;
+
+}
+
+/*======================================================
+                TRUST CARDS
+======================================================*/
+
+.trust-card {
+
+  transition: .45s;
+
+  background: rgba(255, 255, 255, .06);
+
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  border-radius: var(--radius);
+
+  padding: 45px 30px;
+
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+
+  transition: var(--transition);
+
+  height: 100%;
+
+
+}
+
+.trust-card:hover {
+
+  transform: translateY(-12px);
+
+  background: rgba(255, 255, 255, .10);
+
+  border-color: rgba(199, 164, 77, .35);
+
+}
+
+.trust-icon {
+
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  background: rgba(199, 164, 77, .10);
+
+}
+
+.trust-icon i {
+
+  color: var(--secondary);
+
+  font-size: 1.8rem;
+
+}
+
+.trust-card h5 {
+
+  color: var(--primary);
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+}
+
+.trust-card p {
+
+  color: var(--text);
+
+  line-height: 1.8;
+
+  margin-bottom: 0;
+
+}
+
+/*======================================================
+                QUOTE
+======================================================*/
+
+.trust-quote {
+
+  margin-top: 50px;
+
+  padding: 40px;
+
+  border-left: 4px solid var(--secondary);
+
+  background: var(--surface);
+
+  border-radius: 0 22px 22px 0;
+
+}
+
+.trust-quote blockquote {
+
+  margin: 0;
+
+  color: var(--primary);
+
+  font-size: 1.2rem;
+
+  font-style: italic;
+
+  line-height: 2;
+
+}
+
+/*======================================================
+            BACKGROUND DECORATION
+======================================================*/
+
+.trust-section::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -180px;
+
+  bottom: -180px;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(rgba(199, 164, 77, .08),
+
+      transparent 70%);
+
+  pointer-events: none;
+
+}
+
+
+/*======================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:991px) {
+
+  .trust-section {
+
+    padding: 90px 0;
+
+  }
+
+  .trust-image-wrapper {
+
+    margin-bottom: 40px;
+
+  }
+
+  .trust-image-wrapper img,
+
+  .trust-image-placeholder {
+
+    height: 520px;
+
+  }
+
+}
+
+@media(max-width:767px) {
+
+  .trust-section {
+
+    padding: 70px 0;
+
+  }
+
+  .trust-image-wrapper img,
+
+  .trust-image-placeholder {
+
+    height: 380px;
+
+  }
+
+  .trust-floating-card {
+
+    left: 20px;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    max-width: none;
+
+    padding: 22px;
+
+  }
+
+  .trust-card {
+
+    padding: 28px;
+
+  }
+
+  .trust-quote {
+
+    padding: 28px;
+
+  }
+
+  .trust-quote blockquote {
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+  }
+
+}

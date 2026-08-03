@@ -1,0 +1,949 @@
+/*------------------------------------
+        PULSE
+-------------------------------------*/
+
+@keyframes pulse {
+
+  0% {
+
+    transform: scale(1);
+
+    box-shadow: 0 0 0 0 rgba(199, 164, 77, .6);
+
+  }
+
+  70% {
+
+    box-shadow: 0 0 0 18px rgba(199, 164, 77, 0);
+
+  }
+
+  100% {
+
+    transform: scale(1);
+
+    box-shadow: 0 0 0 0 rgba(199, 164, 77, 0);
+
+  }
+
+}
+
+
+@keyframes userPulse {
+
+  0% {
+
+    transform: scale(1);
+
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, .6);
+
+  }
+
+  70% {
+
+    box-shadow: 0 0 0 22px rgba(0, 229, 255, 0);
+
+  }
+
+  100% {
+
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+
+  }
+
+}
+
+
+@keyframes networkMove {
+
+  to {
+
+    stroke-dashoffset: 0;
+
+  }
+
+}
+
+
+@keyframes nodeGlow {
+
+  0%,
+  100% {
+
+    transform: scale(1);
+
+    opacity: .8;
+
+  }
+
+  50% {
+
+    transform: scale(1.7);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+@keyframes mapGlow {
+
+  from {
+
+    transform: translateX(-120%);
+
+  }
+
+  to {
+
+    transform: translateX(120%);
+
+  }
+
+}
+
+
+@keyframes floatCard {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+}
+
+@keyframes dashMove {
+
+  from {
+
+    stroke-dashoffset: 100;
+
+  }
+
+  to {
+
+    stroke-dashoffset: 0;
+
+  }
+
+}
+
+
+@keyframes scrollMove {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translate(-50%, 0);
+
+  }
+
+  30% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translate(-50%, 22px);
+
+  }
+
+}
+
+/*======================================================
+                REVEAL ANIMATIONS
+======================================================*/
+
+.reveal {
+
+  opacity: 0;
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+  will-change: opacity, transform;
+
+}
+
+/* Left */
+
+.reveal-left {
+
+  transform: translateX(-60px);
+
+}
+
+/* Right */
+
+.reveal-right {
+
+  transform: translateX(60px);
+
+}
+
+/* Bottom */
+
+.reveal-up {
+
+  transform: translateY(60px);
+
+}
+
+/* Top */
+
+.reveal-down {
+
+  transform: translateY(-60px);
+
+}
+
+/* Scale */
+
+.reveal-scale {
+
+  transform: scale(.92);
+
+}
+
+/* Active State */
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform: none;
+
+}
+
+/*======================================================
+                DROPDOWN ANIMATION
+======================================================*/
+
+@keyframes dropdownFade {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+@keyframes worldFloat {
+
+  0% {
+
+    transform:
+      translateX(-50%) translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-50%) translateY(-8px);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(-50%) translateY(0);
+
+  }
+
+}
+
+@keyframes badgeShine {
+
+  0% {
+
+    left: -120%;
+
+  }
+
+  40% {
+
+    left: 140%;
+
+  }
+
+  100% {
+
+    left: 140%;
+
+  }
+
+}
+
+@keyframes dividerGlow {
+
+  0%,
+  100% {
+
+    opacity: .7;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes waveMove {
+
+  from {
+
+    stroke-dashoffset: 0;
+
+  }
+
+  to {
+
+    stroke-dashoffset: -240;
+
+  }
+
+}
+
+@keyframes connectorFlow {
+
+  from {
+
+    left: -25%;
+
+  }
+
+  to {
+
+    left: 125%;
+
+  }
+
+}
+
+@keyframes iconFloat {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-6px);
+
+  }
+
+}
+
+@keyframes roadmapGlow {
+
+  0% {
+
+    filter: brightness(1);
+
+  }
+
+  50% {
+
+    filter: brightness(1.7);
+
+  }
+
+  100% {
+
+    filter: brightness(1);
+
+  }
+
+}
+
+@keyframes roadmapFlow {
+
+  from {
+
+    left: -20%;
+
+  }
+
+  to {
+
+    left: 120%;
+
+  }
+
+}
+
+
+/*======================================================
+                CONNECTOR ANIMATION
+======================================================*/
+
+@keyframes connectorFlow {
+
+  from {
+
+    left: -30%;
+
+  }
+
+  to {
+
+    left: 130%;
+
+  }
+
+}
+
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-12px);
+
+  }
+
+}
+
+
+@keyframes investmentOrb {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+}
+
+
+/*=====================================================
+                ANIMATIONS
+======================================================*/
+
+@keyframes roadmapFlow {
+
+  0% {
+
+    left: -25%;
+  }
+
+  100% {
+
+    left: 125%;
+  }
+
+}
+
+
+@keyframes glowMove {
+
+  from {
+
+    transform:
+
+      translateY(0);
+
+  }
+
+  to {
+
+    transform:
+
+      translateY(18px);
+
+  }
+
+}
+
+@keyframes ringMove {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes sectorIconFloat {
+
+  0% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-5px);
+
+  }
+
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+@keyframes imageShine {
+
+  from {
+
+    transform:
+      translateX(-220%) rotate(18deg);
+
+  }
+
+  to {
+
+    transform:
+      translateX(420%) rotate(18deg);
+
+  }
+
+}
+
+
+@keyframes buttonShine {
+
+  from {
+
+    left: -120%;
+
+  }
+
+  to {
+
+    left: 180%;
+
+  }
+
+}
+
+
+@keyframes glowFloat {
+
+  from {
+
+    transform: translateY(0);
+
+  }
+
+  to {
+
+    transform: translateY(35px);
+
+  }
+
+}
+
+
+
+@keyframes orbFloat {
+
+  from {
+
+    transform:
+
+      translateX(0) translateY(0);
+
+  }
+
+  to {
+
+    transform:
+
+      translateX(20px) translateY(-30px);
+
+  }
+
+}
+
+
+@keyframes showcaseFloat {
+
+  0% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-5px);
+
+  }
+
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+}
+
+/*=====================================================
+        KEYFRAMES
+======================================================*/
+
+@keyframes rdsImageFloat {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-6px);
+
+  }
+
+}
+
+
+@keyframes rdsGlowMove {
+
+  from {
+
+    transform:
+
+      translate(0, 0) scale(1);
+
+  }
+
+  to {
+
+    transform:
+
+      translate(-20px, 15px) scale(1.12);
+
+  }
+
+}
+
+
+@keyframes rdsOrbitRotate {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes rdsParticleFloat {
+
+  0%,
+  100% {
+
+    transform:
+
+      translateY(0);
+
+    opacity: .45;
+
+  }
+
+  50% {
+
+    transform:
+
+      translateY(-12px);
+
+    opacity: .8;
+
+  }
+
+}
+
+
+@keyframes rdsImageShine {
+
+  from {
+
+    transform:
+
+      translateX(-220%) rotate(18deg);
+
+  }
+
+  to {
+
+    transform:
+
+      translateX(420%) rotate(18deg);
+
+  }
+
+}
+
+/*=====================================================
+        KEYFRAMES
+======================================================*/
+
+@keyframes rdsCardFloat {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-4px);
+
+  }
+
+}
+
+
+@keyframes rdsCardGlow {
+
+  from {
+
+    transform:
+
+      translate(0, 0) scale(1);
+
+  }
+
+  to {
+
+    transform:
+
+      translate(-18px, 12px) scale(1.12);
+
+  }
+
+}
+
+
+@keyframes rdsCardRing {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes rdsCardParticle {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+    opacity: .35;
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+    opacity: .8;
+
+  }
+
+}
+
+
+@keyframes rdsCardShine {
+
+  from {
+
+    transform:
+
+      translateX(-220%) rotate(18deg);
+
+  }
+
+  to {
+
+    transform:
+
+      translateX(420%) rotate(18deg);
+
+  }
+
+}
+
+@keyframes floatOne {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+}
+
+@keyframes floatTwo {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(8px);
+
+  }
+
+}
+
+@keyframes floatThree {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-8px);
+
+  }
+
+}
+
+/*=====================================================
+        BUTTON KEYFRAMES
+======================================================*/
+
+@keyframes rdsButtonLoading {
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes rdsBadgeShine {
+
+  from {
+
+    transform:
+      translateX(-120%) rotate(20deg);
+
+  }
+
+  to {
+
+    transform:
+      translateX(320%) rotate(20deg);
+
+  }
+
+}
+
+@keyframes rdsBadgeWave {
+
+  from {
+
+    transform: translateX(-130%);
+
+  }
+
+  to {
+
+    transform: translateX(130%);
+
+  }
+
+}

@@ -1,0 +1,642 @@
+/*=====================================================
+        04. BUTTON COMPONENTS
+======================================================*/
+
+/*=====================================================
+        BUTTON FOUNDATION
+======================================================*/
+
+.rds-btn {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: .75rem;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 12px;
+
+  padding: 1rem 2rem;
+
+  font-size: .95rem;
+
+  font-weight: 700;
+
+  letter-spacing: .02em;
+
+  line-height: 1;
+
+  transition:
+    transform .35s ease,
+    color .35s ease,
+    background-color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+
+}
+
+/*=====================================================
+        BUTTON ICON
+======================================================*/
+
+.rds-btn i {
+
+  font-size: 1rem;
+
+  transition:
+    transform .35s ease;
+
+}
+
+/*=====================================================
+        BUTTON HOVER
+======================================================*/
+
+.rds-btn:hover {
+
+  text-decoration: none;
+
+  transform: translateY(-3px);
+
+}
+
+/*=====================================================
+        BUTTON ACTIVE
+======================================================*/
+
+.rds-btn:active {
+
+  transform: translateY(0);
+
+}
+
+/*=====================================================
+        BUTTON FOCUS
+======================================================*/
+
+.rds-btn:focus-visible {
+
+  outline: 2px solid rgba(199, 164, 77, .45);
+
+  outline-offset: 4px;
+
+}
+
+/*=====================================================
+        BUTTON DISABLED
+======================================================*/
+
+.rds-btn:disabled,
+
+.rds-btn.disabled {
+
+  opacity: .6;
+
+  pointer-events: none;
+
+}
+
+/*=====================================================
+        BUTTON VARIANTS
+======================================================*/
+
+/*=====================================================
+        PRIMARY
+======================================================*/
+
+.rds-btn-primary {
+
+  background: var(--primary);
+
+  color: #fff;
+
+  box-shadow:
+    0 14px 35px rgba(11, 36, 56, .18);
+
+}
+
+.rds-btn-primary:hover {
+
+  background: #123552;
+
+  color: #fff;
+
+  box-shadow:
+    0 20px 45px rgba(11, 36, 56, .24);
+
+}
+
+.rds-btn-primary:hover i {
+
+  transform: translateX(4px);
+
+}
+
+
+/*=====================================================
+        SECONDARY
+======================================================*/
+
+.rds-btn-secondary {
+
+  background: var(--secondary);
+
+  color: var(--primary);
+
+  box-shadow:
+    0 14px 35px rgba(199, 164, 77, .22);
+
+}
+
+.rds-btn-secondary:hover {
+
+  background: #d7b45d;
+
+  color: var(--primary);
+
+  box-shadow:
+    0 20px 45px rgba(199, 164, 77, .30);
+
+}
+
+.rds-btn-secondary:hover i {
+
+  transform: translateX(4px);
+
+}
+
+
+/*=====================================================
+        OUTLINE
+======================================================*/
+
+.rds-btn-outline {
+
+  background: transparent;
+
+  color: rgba(199, 164, 77, .35);
+
+  border: 1px solid rgba(199, 164, 77, .12);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .03);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    transform .35s ease;
+
+}
+
+.rds-btn-outline:hover {
+
+  background: rgba(11, 36, 56, .9);
+
+  color: var(--secondary);
+
+  border-color: rgba(199, 164, 77, .45);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .22),
+    0 0 18px rgba(199, 164, 77, .08);
+
+  transform: translateY(-2px);
+
+}
+
+.rds-btn-outline:hover i {
+
+  transform: translateX(4px);
+
+}
+
+
+/*=====================================================
+        DARK
+======================================================*/
+
+.rds-btn-dark {
+
+  background: #081a29;
+
+  color: #fff;
+
+}
+
+.rds-btn-dark:hover {
+
+  background: #102f49;
+
+  color: #fff;
+
+}
+
+
+/*=====================================================
+        LIGHT
+======================================================*/
+
+.rds-btn-light {
+
+  background: #fff;
+
+  color: var(--primary);
+
+  border: 1px solid rgba(11, 36, 56, .08);
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, .08);
+
+}
+
+.rds-btn-light:hover {
+
+  background: #f8fafc;
+
+  color: var(--primary);
+
+}
+
+/*=====================================================
+        BUTTON DECORATIONS
+======================================================*/
+
+/*=====================================================
+        BUTTON SHINE
+======================================================*/
+
+.rds-btn-shine {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+}
+
+.rds-btn-shine::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+
+  left: -40%;
+
+  width: 40%;
+
+  height: 300%;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, .35),
+      transparent);
+
+  transform: rotate(20deg);
+
+  opacity: 0;
+
+}
+
+.rds-btn:hover .rds-btn-shine::before {
+
+  opacity: 1;
+
+  animation: rdsButtonShine 1.1s ease;
+
+}
+
+/*=====================================================
+        BUTTON GLOW
+======================================================*/
+
+.rds-btn-glow {
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(circle at center,
+      rgba(199, 164, 77, .18),
+      transparent 70%);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity .35s ease;
+
+}
+
+.rds-btn:hover .rds-btn-glow {
+
+  opacity: 1;
+
+}
+
+/*=====================================================
+        BUTTON CONTENT
+======================================================*/
+
+.rds-btn-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .75rem;
+
+}
+
+/*=====================================================
+        BUTTON SIZE MODIFIERS
+======================================================*/
+
+/* Small */
+
+.rds-btn-sm {
+
+  padding: .75rem 1.5rem;
+
+  font-size: .85rem;
+
+  gap: .5rem;
+
+}
+
+/* Medium (Default) */
+
+.rds-btn-md {
+
+  padding: 1rem 2rem;
+
+  font-size: .95rem;
+
+  gap: .75rem;
+
+}
+
+/* Large */
+
+.rds-btn-lg {
+
+  padding: 1.15rem 2.5rem;
+
+  font-size: 1rem;
+
+  gap: .85rem;
+
+}
+
+/* Extra Large */
+
+.rds-btn-xl {
+
+  padding: 1.35rem 3rem;
+
+  font-size: 1.05rem;
+
+  gap: 1rem;
+
+}
+
+
+/*=====================================================
+        BUTTON WIDTH MODIFIERS
+======================================================*/
+
+.rds-btn-block {
+
+  display: flex;
+
+  width: 100%;
+
+  justify-content: center;
+
+}
+
+.rds-btn-auto {
+
+  width: auto;
+
+}
+
+
+/*=====================================================
+        BUTTON GROUP
+======================================================*/
+
+.rds-btn-group {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 1rem;
+
+}
+
+
+/*=====================================================
+        BUTTON WITH ICON ONLY
+======================================================*/
+
+.rds-btn-icon {
+
+  width: 56px;
+
+  height: 56px;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  justify-content: center;
+
+}
+
+.rds-btn-icon i {
+
+  margin: 0;
+
+  font-size: 1.15rem;
+
+}
+
+
+/*=====================================================
+        BUTTON WITH LEADING ICON
+======================================================*/
+
+.rds-btn-icon-left {
+
+  flex-direction: row;
+
+}
+
+
+/*=====================================================
+        BUTTON WITH TRAILING ICON
+======================================================*/
+
+.rds-btn-icon-right {
+
+  flex-direction: row;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width:767px) {
+
+  .rds-btn {
+
+    width: 100%;
+
+    justify-content: center;
+
+  }
+
+  .rds-btn-group {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+}
+
+/*=====================================================
+        BUTTON ACCESSIBILITY
+======================================================*/
+
+.rds-btn:focus-visible {
+
+  outline: 2px solid rgba(199, 164, 77, .45);
+
+  outline-offset: 4px;
+
+}
+
+
+/*=====================================================
+        BUTTON DISABLED
+======================================================*/
+
+.rds-btn:disabled,
+
+.rds-btn.disabled {
+
+  opacity: .6;
+
+  cursor: not-allowed;
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        BUTTON LOADING
+======================================================*/
+
+.rds-btn-loading {
+
+  pointer-events: none;
+
+  opacity: .8;
+
+}
+
+.rds-btn-loading i {
+
+  animation: rdsButtonLoading 1s linear infinite;
+
+}
+
+
+/*=====================================================
+        BUTTON HOVER UTILITIES
+======================================================*/
+
+.rds-btn-hover-lift:hover {
+
+  transform: translateY(-4px);
+
+}
+
+.rds-btn-hover-scale:hover {
+
+  transform: scale(1.04);
+
+}
+
+.rds-btn-hover-glow:hover {
+
+  box-shadow:
+    0 20px 45px rgba(199, 164, 77, .22);
+
+}
+
+
+/*=====================================================
+        BUTTON TRANSITIONS
+======================================================*/
+
+.rds-btn {
+
+  transition:
+    transform .35s ease,
+    background-color .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    opacity .35s ease;
+
+}

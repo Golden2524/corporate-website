@@ -1,0 +1,63 @@
+/*======================================================
+           ROGONTRA DESIGN SYSTEM (RDS).
+======================================================*/
+
+
+
+/* 01. BACKGROUND DECORATIONS */
+
+/*==============================
+    DECORATIVE DOT GRID
+===============================*/
+
+.rds-dot-grid {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 10px);
+
+  gap: 10px;
+
+}
+
+.rds-dot-grid span {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: var(--radius-circle);
+
+  background: var(--secondary);
+
+}
+
+/*==============================
+    DECORATIVE GOLD CIRCLE
+===============================*/
+
+.rds-gold-circle {
+
+  position: absolute;
+
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: var(--radius-circle);
+
+  background: var(--secondary);
+
+  opacity: .15;
+
+  bottom: 40px;
+
+  right: 90px;
+
+}
