@@ -554,7 +554,7 @@
 
   .rds-hero-container {
 
-    max-width: 700px;
+    max-width: 100%;
 
     margin-inline: auto;
 
@@ -601,6 +601,10 @@
 
     padding-block: 7rem 4rem;
 
+  }
+
+  .rds-hero-container {
+    padding: 0 5px;
   }
 
   .rds-hero-title {
@@ -650,6 +654,10 @@
 
     padding-block: 6.5rem 3.5rem;
 
+  }
+
+  .rds-hero-container {
+    padding: 0 3px;
   }
 
   .rds-hero-title {

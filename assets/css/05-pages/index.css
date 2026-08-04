@@ -162,6 +162,8 @@ body {
 
   backdrop-filter: blur(12px);
 
+  -webkit-backdrop-filter: blur(12px);
+
   border: 1px solid rgba(255, 255, 255, .10);
 
   border-radius: 18px;
@@ -208,72 +210,6 @@ body {
   line-height: 1.6;
 
 }
-
-/*======================================================
-                HERO RESPONSIVE
-======================================================
-
-@media(max-width:991px) {
-
-  .hero-content {
-
-    padding-top: 140px;
-
-    text-align: center;
-
-    margin: auto;
-
-  }
-
-  .hero-buttons {
-
-    justify-content: center;
-
-  }
-
-  .stats-container {
-
-    margin-top: 20px;
-
-  }
-
-}
-
-@media(max-width:767px) {
-
-  .hero-content {
-
-    padding-top: 120px;
-
-    padding-bottom: 70px;
-
-  }
-
-  .hero-content h1 {
-
-    font-size: 2.6rem;
-
-  }
-
-  .hero-content p {
-
-    font-size: 1rem;
-
-  }
-
-  .stat-box {
-
-    padding: 22px 15px;
-
-  }
-
-  .stat-number {
-
-    font-size: 1.8rem;
-
-  }
-
-}*/
 
 /*======================================================
         HOMEPAGE HERO RESPONSIVE
@@ -2384,6 +2320,8 @@ body {
   text-align: center;
 
   backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
 
   transition: var(--transition);
 

@@ -518,45 +518,7 @@ FOCUS ACCESSIBILITY
 
   text-transform: uppercase;
 
-  /*
-  background:
-    rgba(255, 255, 255, .10);
-
-  backdrop-filter: blur(15px);
-
-  -webkit-backdrop-filter: blur(15px);
-
-  border: 1px solid rgba(255, 255, 255, .18);
-
-  display: inline-flex;
-  align-items: center;
-  gap: .75rem;
-
-  padding: 5px 5px;
-
-  border-radius: 999px;
-
-
-  z-index: 6;
-
-  transition:
-    transform .4s ease,
-    background .4s ease,
-    border-color .4s ease,
-    box-shadow .4s ease;
-*/
 }
-
-/*.rds-image-subtitle i {
-
-  color: var(--secondary);
-
-  font-size: 0.5rem;
-
-  transition: transform .4s ease;
-
-}*/
-
 
 .rds-image-title {
 

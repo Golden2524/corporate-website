@@ -214,6 +214,8 @@
 
   backdrop-filter: blur(15px);
 
+  -webkit-backdrop-filter: blur(15px);
+
   position: relative;
 
 }
@@ -407,6 +409,8 @@
   border: 1px solid rgba(255, 255, 255, .15);
 
   backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
 
   color: #fff;
 
@@ -3111,6 +3115,8 @@
       rgba(255, 255, 255, .03));
 
   backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
 
   border: 1px solid rgba(255, 255, 255, .10);
 
