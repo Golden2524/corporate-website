@@ -220,11 +220,11 @@ PREMIUM IMAGE CONTAINERS
 }
 
 .rds-image-lg img {
-  height: 480px;
+  min-height: 560px;
 }
 
 .rds-image-xl img {
-  height: 620px;
+  height: 680px;
 }
 
 .rds-image-hero img {

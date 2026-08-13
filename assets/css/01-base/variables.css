@@ -131,3 +131,15 @@
   --container-width: 1320px;
 
 }
+
+/* Color Palette & Custom Styling variables */
+.text-gold-accent {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  font: var(--font-primary);
+}
+
+.text-dark-navy {
+  color: var(--primary);
+  font: var(--font-heading);
+}

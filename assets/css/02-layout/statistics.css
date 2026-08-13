@@ -8,13 +8,21 @@
 
 .rds-stat {
 
-        position: relative;
+        /*position: relative;
 
         display: flex;
 
         flex-direction: column;
 
-        gap: .75rem;
+        gap: .75rem;*/
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 2.5rem;
+
+        margin: 3rem 0;
 
 }
 
@@ -168,11 +176,13 @@
 
 .rds-stat-inline {
 
-        flex-direction: row;
+        /*flex-direction: row;
 
         align-items: center;
 
-        gap: 1.25rem;
+        gap: 1.25rem;*/
+
+        position: relative;
 
 }
 
@@ -183,6 +193,52 @@
         flex-direction: column;
 
         gap: .35rem;
+
+}
+
+.rds-stat-inline:not(:last-child)::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+
+        right: -1.3rem;
+
+        width: 1px;
+
+        height: 45px;
+
+        background: rgba(0, 0, 0, .08);
+
+        transform: translateY(-50%);
+
+}
+
+.rds-stat-inline h3 {
+
+        margin: 0;
+
+        color: var(--primary);
+
+        font-size: clamp(2rem, 3vw, 2.8rem);
+
+        font-weight: 700;
+
+        line-height: 1;
+
+}
+
+.rds-stat-inline span {
+
+        display: block;
+
+        margin-top: .55rem;
+
+        color: var(--text-light);
+
+        font-size: .9rem;
 
 }
 
@@ -603,5 +659,588 @@
         background: var(--secondary);
 
         color: #ffffff;
+
+}
+
+
+/*=====================================================
+        RDS METRICS
+        Reusable Corporate Metrics Component
+======================================================*/
+
+
+/*=====================================================
+        01. METRICS FOUNDATION
+======================================================*/
+
+.rds-metrics {
+
+        display: grid;
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 1rem;
+
+        width: 100%;
+
+        margin-top: 50px;
+
+        margin-bottom: 50px;
+
+}
+
+
+/*=====================================================
+        02. METRIC ITEM
+======================================================*/
+
+.rds-metric {
+
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        min-width: 0;
+
+        padding: 1.75rem 1.5rem;
+
+        background: rgba(255, 255, 255, .04);
+
+        border: 1px solid rgba(255, 255, 255, .10);
+
+        border-radius: var(--radius-lg, 1.25rem);
+
+        overflow: hidden;
+
+        isolation: isolate;
+
+        transition:
+                transform .35s ease,
+                background-color .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+
+}
+
+
+/*=====================================================
+        03. METRIC ACCENT
+======================================================*/
+
+.rds-metric::before {
+
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 2px;
+
+        background:
+                linear-gradient(90deg,
+                        transparent,
+                        var(--secondary),
+                        transparent);
+
+        opacity: .65;
+
+}
+
+
+/*=====================================================
+        04. METRIC NUMBER
+======================================================*/
+
+.rds-metric-number {
+
+        margin: 0;
+
+        color: var(--secondary);
+
+        font-size: clamp(2rem, 3vw, 3rem);
+
+        font-weight: 800;
+
+        line-height: 1;
+
+        letter-spacing: -.03em;
+
+}
+
+
+/*=====================================================
+        05. METRIC PREFIX / SUFFIX
+======================================================*/
+
+.rds-metric-prefix,
+.rds-metric-suffix {
+
+        color: var(--secondary);
+
+        font-size: .55em;
+
+        font-weight: 700;
+
+        vertical-align: middle;
+
+}
+
+
+/*=====================================================
+        06. METRIC LABEL
+======================================================*/
+
+.rds-metric-label {
+
+        margin: .7rem 0 0;
+
+        color: var(--primary);
+
+        font-size: .82rem;
+
+        font-weight: 600;
+
+        line-height: 1.5;
+
+        letter-spacing: .08em;
+
+        text-transform: uppercase;
+
+}
+
+
+/*=====================================================
+        07. METRIC DESCRIPTION
+======================================================*/
+
+.rds-metric-description {
+
+        margin: .5rem 0 0;
+
+        color: var(--muted);
+
+        font-size: .85rem;
+
+        line-height: 1.6;
+
+}
+
+
+/*=====================================================
+        08. METRIC ICON
+======================================================*/
+
+.rds-metric-icon {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 2.5rem;
+
+        height: 2.5rem;
+
+        margin-bottom: 1.15rem;
+
+        border-radius: 50%;
+
+        background: rgba(199, 164, 77, .10);
+
+        border: 1px solid rgba(199, 164, 77, .20);
+
+        color: var(--secondary);
+
+        font-size: 1rem;
+
+        flex-shrink: 0;
+
+}
+
+
+/*=====================================================
+        09. METRIC DIVIDER
+======================================================*/
+
+.rds-metric-divider {
+
+        width: 36px;
+
+        height: 1px;
+
+        margin-top: 1rem;
+
+        background:
+                linear-gradient(90deg,
+                        var(--secondary),
+                        transparent);
+
+        opacity: .55;
+
+}
+
+
+/*=====================================================
+        10. METRIC HOVER
+======================================================*/
+
+.rds-metric:hover {
+
+        transform: translateY(-5px);
+
+        background: rgba(255, 255, 255, .07);
+
+        border-color: rgba(199, 164, 77, .28);
+
+        box-shadow:
+                0 20px 45px rgba(0, 0, 0, .12);
+
+}
+
+
+/*=====================================================
+        11. METRIC HOVER ICON
+======================================================*/
+
+.rds-metric:hover .rds-metric-icon {
+
+        transform: translateY(-2px);
+
+        background: rgba(199, 164, 77, .16);
+
+}
+
+
+/*=====================================================
+        12. LIGHT VARIANT
+======================================================*/
+
+.rds-metrics-light .rds-metric {
+
+        background: #fff;
+
+        border-color: rgba(11, 36, 56, .08);
+
+        box-shadow:
+                0 12px 30px rgba(11, 36, 56, .06);
+
+}
+
+.rds-metrics-light .rds-metric-label {
+
+        color: var(--primary);
+
+}
+
+.rds-metrics-light .rds-metric-description {
+
+        color: var(--text-muted, #6b7a88);
+
+}
+
+
+/*=====================================================
+        13. DARK VARIANT
+======================================================*/
+
+.rds-metrics-dark .rds-metric {
+
+        background: var(--primary);
+
+        border-color: rgba(255, 255, 255, .10);
+
+}
+
+
+/*=====================================================
+        14. GLASS VARIANT
+======================================================*/
+
+.rds-metrics-glass .rds-metric {
+
+        background: rgba(255, 255, 255, .06);
+
+        backdrop-filter: blur(18px);
+
+        -webkit-backdrop-filter: blur(18px);
+
+        border-color: rgba(255, 255, 255, .12);
+
+}
+
+
+/*=====================================================
+        15. CENTERED METRICS
+======================================================*/
+
+.rds-metrics-center .rds-metric {
+
+        align-items: center;
+
+        text-align: center;
+
+}
+
+.rds-metrics-center .rds-metric-divider {
+
+        margin-inline: auto;
+
+}
+
+
+/*=====================================================
+        16. COMPACT METRICS
+======================================================*/
+
+.rds-metrics-compact {
+
+        gap: .75rem;
+
+}
+
+.rds-metrics-compact .rds-metric {
+
+        padding: 1.25rem;
+
+}
+
+.rds-metrics-compact .rds-metric-icon {
+
+        width: 2.15rem;
+
+        height: 2.15rem;
+
+        margin-bottom: .85rem;
+
+}
+
+
+/*=====================================================
+        17. LARGE METRICS
+======================================================*/
+
+.rds-metrics-lg .rds-metric {
+
+        padding: 2.25rem 2rem;
+
+}
+
+.rds-metrics-lg .rds-metric-number {
+
+        font-size: clamp(2.4rem, 4vw, 3.5rem);
+
+}
+
+
+/*=====================================================
+        18. METRIC GROUP
+======================================================*/
+
+.rds-metrics-group {
+
+        display: flex;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+}
+
+
+/*=====================================================
+        19. RESPONSIVE — LARGE TABLET
+======================================================*/
+
+@media (max-width: 1199.98px) {
+
+        .rds-metrics {
+
+                grid-template-columns:
+                        repeat(2, minmax(0, 1fr));
+
+        }
+
+}
+
+
+/*=====================================================
+        20. RESPONSIVE — TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+        .rds-metric {
+
+                padding: 1.5rem 1.35rem;
+
+        }
+
+        .rds-metric-number {
+
+                font-size: clamp(1.9rem, 5vw, 2.7rem);
+
+        }
+
+        .rds-metric-label {
+
+                font-size: .78rem;
+
+        }
+
+}
+
+
+/*=====================================================
+        21. RESPONSIVE — MOBILE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+        .rds-metrics {
+
+                grid-template-columns:
+                        repeat(2, minmax(0, 1fr));
+
+                gap: .75rem;
+
+        }
+
+        .rds-metric {
+
+                padding: 1.35rem 1.15rem;
+
+                border-radius: 1rem;
+
+        }
+
+        .rds-metric-icon {
+
+                width: 2.25rem;
+
+                height: 2.25rem;
+
+        }
+
+}
+
+
+/*=====================================================
+        22. RESPONSIVE — SMALL MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+        .rds-metrics {
+
+                gap: .65rem;
+
+        }
+
+        .rds-metric {
+
+                padding: 1.15rem 1rem;
+
+        }
+
+        .rds-metric-number {
+
+                font-size: 1.9rem;
+
+        }
+
+        .rds-metric-label {
+
+                margin-top: .55rem;
+
+                font-size: .7rem;
+
+                letter-spacing: .06em;
+
+        }
+
+        .rds-metric-description {
+
+                font-size: .78rem;
+
+        }
+
+}
+
+
+/*=====================================================
+        23. RESPONSIVE — EXTRA SMALL
+======================================================*/
+
+@media (max-width: 399.98px) {
+
+        .rds-metrics {
+
+                grid-template-columns: 1fr;
+
+        }
+
+        .rds-metric {
+
+                padding: 1.25rem;
+
+        }
+
+        .rds-metric-number {
+
+                font-size: 2rem;
+
+        }
+
+        .rds-metric-label {
+
+                font-size: .75rem;
+
+        }
+
+}
+
+
+/*=====================================================
+        24. ACCESSIBILITY
+======================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+        .rds-metric {
+
+                transition: none;
+
+        }
+
+        .rds-metric:hover {
+
+                transform: none;
+
+        }
+
+}
+
+
+/*=====================================================
+        25. FOCUS
+======================================================*/
+
+.rds-metric:focus-within {
+
+        outline: 2px solid rgba(199, 164, 77, .45);
+
+        outline-offset: 4px;
 
 }

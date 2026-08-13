@@ -165,72 +165,6 @@
 }
 
 /*======================================================
-                REVEAL ANIMATIONS
-======================================================*/
-
-.reveal {
-
-  opacity: 0;
-
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
-
-  will-change: opacity, transform;
-
-}
-
-/* Left */
-
-.reveal-left {
-
-  transform: translateX(-60px);
-
-}
-
-/* Right */
-
-.reveal-right {
-
-  transform: translateX(60px);
-
-}
-
-/* Bottom */
-
-.reveal-up {
-
-  transform: translateY(60px);
-
-}
-
-/* Top */
-
-.reveal-down {
-
-  transform: translateY(-60px);
-
-}
-
-/* Scale */
-
-.reveal-scale {
-
-  transform: scale(.92);
-
-}
-
-/* Active State */
-
-.reveal.active {
-
-  opacity: 1;
-
-  transform: none;
-
-}
-
-/*======================================================
                 DROPDOWN ANIMATION
 ======================================================*/
 
@@ -944,6 +878,107 @@
 
     transform: translateX(130%);
 
+  }
+
+}
+
+/*=====================================================
+        RDS MAP ANIMATIONS
+======================================================*/
+
+@keyframes rdsNetworkMove {
+
+  to {
+
+    stroke-dashoffset: -100;
+
+  }
+
+}
+
+
+@keyframes rdsMapNodeGlow {
+
+  0%,
+  100% {
+
+    opacity: .65;
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.35);
+
+  }
+
+}
+
+
+@keyframes rdsMapPinPulse {
+
+  0%,
+  100% {
+
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 4px rgba(199, 164, 77, .12),
+      0 0 15px rgba(199, 164, 77, .45);
+
+  }
+
+  50% {
+
+    transform: scale(1.18);
+
+    box-shadow:
+      0 0 0 7px rgba(199, 164, 77, .06),
+      0 0 25px rgba(199, 164, 77, .75);
+
+  }
+
+}
+
+
+@keyframes rdsMapShine {
+
+  0% {
+
+    transform: translateX(-100%);
+
+  }
+
+  100% {
+
+    transform: translateX(100%);
+
+  }
+
+}
+
+
+@keyframes rdsMapUserPinPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 3px #C7A44D,
+      0 0 0 7px rgba(199, 164, 77, .16),
+      0 0 24px rgba(199, 164, 77, .75);
+  }
+
+  50% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 3px #C7A44D,
+      0 0 0 10px rgba(199, 164, 77, .08),
+      0 0 32px rgba(199, 164, 77, .95);
   }
 
 }

@@ -13,6 +13,7 @@
 @import url("03-components/forms.css");
 @import url("03-components/images.css");
 @import url("03-components/luxury-components.css");
+@import url("03-components/map.css");
 @import url("04-effects/animations.css");
 @import url("04-effects/reveal.css");
 
@@ -21,20 +22,6 @@
 .container {
   width: var(--container-width);
 }
-
-
-/* Color Palette & Custom Styling variables */
-.text-gold-accent {
-  color: var(--secondary);
-  font-size: 0.85rem;
-  font: var(--font-primary);
-}
-
-.text-dark-navy {
-  color: var(--primary);
-  font: var(--font-heading);
-}
-
 
 
 /* CSS color filter matrix that converts black downloaded SVG icons to brand goold (#D4AF37) */

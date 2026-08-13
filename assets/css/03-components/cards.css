@@ -9,7 +9,7 @@
 
 /*=====================================================
         BASE CARD
-======================================================*/
+======================================================
 
 .rds-card {
 
@@ -56,6 +56,136 @@
   transform: translateY(-10px);
   border-color: var(--secondary);
   box-shadow: 0 35px 80px rgba(11, 36, 56, .18);
+}
+
+/*======================================================
+               CARD
+======================================================*/
+
+.rds-card {
+
+  position: relative;
+
+  min-height: 540px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg, 24px);
+
+  background: var(--primary);
+
+  isolation: isolate;
+
+  box-shadow:
+    0 20px 50px rgba(8, 26, 44, .10);
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.rds-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 30px 70px rgba(8, 26, 44, .18);
+
+}
+
+/*======================================================
+                CARD IMAGE
+======================================================*/
+
+.rds-card-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+}
+
+.rds-card-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform .8s cubic-bezier(.2, .7, .2, 1),
+    filter .8s ease;
+
+}
+
+.rds-card:hover .rds-card-image img {
+
+  transform: scale(1.07);
+
+  filter: brightness(1.05);
+
+}
+
+/*======================================================
+                CARD OVERLAY
+======================================================*/
+
+.rds-card-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(8, 26, 44, .12) 0%,
+      rgba(8, 26, 44, .38) 35%,
+      rgba(8, 26, 44, .92) 100%);
+
+  transition:
+    background .45s ease;
+
+}
+
+.rds-card:hover .rds-card-overlay {
+
+  background:
+    linear-gradient(to bottom,
+      rgba(8, 26, 44, .10) 0%,
+      rgba(8, 26, 44, .32) 30%,
+      rgba(8, 26, 44, .95) 100%);
+
+}
+
+
+/*======================================================
+                CARD CONTENT
+======================================================*/
+
+.rds-card-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 540px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 2rem;
+
+  color: var(--white);
+
 }
 
 /*=====================================================
@@ -370,7 +500,7 @@
 
 }
 
-.rds-card::after {
+/*.rds-card::after {
 
   content: "";
 
@@ -387,6 +517,50 @@
     inset 0 1px 0 rgba(255, 255, 255, .35);
 
   opacity: .45;
+
+}*/
+
+/*======================================================
+                CARD GOLD ACCENT
+======================================================*/
+
+.rds-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 2rem;
+
+  right: 2rem;
+
+  bottom: 0;
+
+  height: 2px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      var(--secondary),
+      transparent);
+
+  opacity: .65;
+
+  transform:
+    scaleX(.45);
+
+  transition:
+    transform .45s ease,
+    opacity .45s ease;
+
+}
+
+.rds-card:hover::after {
+
+  transform:
+    scaleX(1);
+
+  opacity: 1;
 
 }
 
@@ -504,7 +678,7 @@
 
 /*=====================================================
         CARD ICON
-======================================================*/
+======================================================
 
 .rds-card-icon {
 
@@ -535,12 +709,67 @@
 
   transition: all .45s ease;
 
+}*/
+
+/*======================================================
+                CARD ICON
+======================================================*/
+
+.rds-card-icon {
+
+  position: absolute;
+
+  top: 2rem;
+
+  left: 2rem;
+
+  width: 54px;
+
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  color: var(--primary);
+
+  background:
+    linear-gradient(135deg,
+      var(--secondary),
+      #e1c477);
+
+  box-shadow:
+    0 12px 30px rgba(199, 164, 77, .22);
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+}
+
+.rds-card:hover .rds-card-icon {
+
+  transform: translateY(-4px) rotate(-3deg);
+
+  box-shadow:
+    0 18px 35px rgba(199, 164, 77, .32);
+
+}
+
+.rds-card-icon i {
+
+  font-size: 1.2rem;
+
 }
 
 
 /*=====================================================
         CARD NUMBER
-======================================================*/
+======================================================
 
 .rds-card-number {
 
@@ -564,12 +793,34 @@
 
   transition: all .45s ease;
 
+}*/
+
+/*======================================================
+                CARD NUMBER
+======================================================*/
+
+.rds-card-number {
+
+  position: absolute;
+
+  top: 2rem;
+
+  right: 2rem;
+
+  color: rgba(255, 255, 255, .48);
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  letter-spacing: .18rem;
+
 }
 
 
 /*=====================================================
         CARD TITLE
-======================================================*/
+======================================================
 
 .rds-card-title {
 
@@ -590,7 +841,7 @@
 
 /*=====================================================
         CARD SUBTITLE
-======================================================*/
+======================================================
 
 .rds-card-subtitle {
 
@@ -609,7 +860,7 @@
 
 /*=====================================================
         CARD DESCRIPTION
-======================================================*/
+======================================================
 
 .rds-card-description {
 
@@ -622,6 +873,43 @@
   line-height: 1.9;
 
   flex: 1;
+
+}*/
+
+/*======================================================
+                CARD HEADING
+======================================================*/
+
+.rds-card h3 {
+
+  margin: 0 0 .8rem;
+
+  color: var(--white);
+
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+}
+
+
+/*======================================================
+                CARD DESCRIPTION
+======================================================*/
+
+.rds-card p {
+
+  margin: 0 0 1.5rem;
+
+  max-width: 430px;
+
+  color: rgba(255, 255, 255, .76);
+
+  font-size: .94rem;
+
+  line-height: 1.75;
 
 }
 
@@ -671,7 +959,7 @@
 
 .rds-card-link {
 
-  display: inline-flex;
+  /*display: inline-flex;
 
   align-items: center;
 
@@ -687,7 +975,30 @@
 
   text-decoration: none;
 
-  transition: all .35s ease;
+  transition: all .35s ease;*/
+
+
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  gap: .65rem;
+
+  color: var(--secondary);
+
+  text-decoration: none;
+
+  font-size: .88rem;
+
+  font-weight: 700;
+
+  letter-spacing: .02rem;
+
+  transition:
+    color .3s ease,
+    gap .3s ease;
 
 }
 
@@ -1668,7 +1979,21 @@
 
   }
 
+  .rds-card-image {
+    height: 320px;
+  }
+
+  .rds-card-content {
+    padding: 26px;
+  }
+
   .rds-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  /*.rds-card-icon {
 
     width: 4.5rem;
     height: 4.5rem;
@@ -1679,6 +2004,10 @@
 
     font-size: 1.8rem;
 
+  }*/
+
+  .rds-card-number {
+    font-size: .78rem;
   }
 
   .rds-card-title {
@@ -1687,14 +2016,14 @@
 
   }
 
-  .rds-card-number {
+  /*.rds-card-number {
 
     font-size: 3.5rem;
 
     top: 1.2rem;
     right: 1.4rem;
 
-  }
+  }*/
 
   .rds-card-glow {
 
@@ -1725,7 +2054,20 @@
 
   }
 
+  .rds-card-image {
+    height: 300px;
+  }
+
+  .rds-card-content {
+    padding: 24px;
+  }
+
   .rds-card-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  /*.rds-card-icon {
 
     width: 4rem;
     height: 4rem;
@@ -1738,6 +2080,10 @@
 
     font-size: 1.5rem;
 
+  }*/
+
+  .rds-card-number {
+    font-size: .75rem;
   }
 
   .rds-card-title {
@@ -1754,11 +2100,11 @@
 
   }
 
-  .rds-card-number {
+  /*.rds-card-number {
 
     font-size: 3rem;
 
-  }
+  }*/
 
   .rds-card-badge {
 
@@ -1803,6 +2149,24 @@
 
   }
 
+  .rds-card-image {
+    height: 280px;
+  }
+
+  .rds-card-content {
+    padding: 22px;
+  }
+
+  .rds-card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: .95rem;
+  }
+
+  .rds-card-number {
+    font-size: .72rem;
+  }
+
   .rds-card-title {
 
     font-size: 1.2rem;
@@ -1815,11 +2179,11 @@
 
   }
 
-  .rds-card-number {
+  /*.rds-card-number {
 
     font-size: 2.5rem;
 
-  }
+  }*/
 
   .rds-card-icon {
 
@@ -1859,17 +2223,34 @@
 
   }
 
+  .rds-card-image {
+    height: 250px;
+  }
+
+  .rds-card-content {
+    padding: 20px;
+  }
+
+  .rds-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .rds-card-number {
+    font-size: .7rem;
+  }
+
   .rds-card-title {
 
     font-size: 1.1rem;
 
   }
 
-  .rds-card-number {
+  /*.rds-card-number {
 
     font-size: 2rem;
 
-  }
+  }*/
 
   .rds-card-badge {
 
@@ -1884,6 +2265,193 @@
   }
 
 }
+
+/*======================================================
+                CARD LINK
+======================================================
+
+.rds-business-card-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  gap: .65rem;
+
+  color: var(--secondary);
+
+  text-decoration: none;
+
+  font-size: .88rem;
+
+  font-weight: 700;
+
+  letter-spacing: .02rem;
+
+  transition:
+    color .3s ease,
+    gap .3s ease;
+
+}
+
+.rds-business-card-link i {
+
+  font-size: .9rem;
+
+  transition:
+    transform .3s ease;
+
+}
+
+.rds-business-card-link:hover {
+
+  color: #f0d58d;
+
+  gap: .9rem;
+
+}
+
+.rds-business-card-link:hover i {
+
+  transform: translate(2px, -2px);
+
+}*/
+
+/*======================================================
+        RDS BUSINESS CARD — RESPONSIVE
+======================================================*/
+
+/*======================================================
+        TABLET — 991.98px
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .rds-business-card {
+    border-radius: 22px;
+  }
+
+  .rds-business-card-image {
+    height: 320px;
+  }
+
+  .rds-business-card-content {
+    padding: 26px;
+  }
+
+  .rds-business-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .rds-business-card-number {
+    font-size: .78rem;
+  }
+
+}
+
+
+/*======================================================
+        MOBILE — 767.98px
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-business-card {
+    border-radius: 20px;
+  }
+
+  .rds-business-card-image {
+    height: 300px;
+  }
+
+  .rds-business-card-content {
+    padding: 24px;
+  }
+
+  .rds-business-card-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .rds-business-card-number {
+    font-size: .75rem;
+  }
+
+  .rds-business-card-link {
+    font-size: .9rem;
+  }
+
+}
+
+
+/*======================================================
+        SMALL MOBILE — 575.98px
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-business-card {
+    border-radius: 18px;
+  }
+
+  .rds-business-card-image {
+    height: 280px;
+  }
+
+  .rds-business-card-content {
+    padding: 22px;
+  }
+
+  .rds-business-card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: .95rem;
+  }
+
+  .rds-business-card-number {
+    font-size: .72rem;
+  }
+
+}
+
+
+/*======================================================
+        EXTRA SMALL MOBILE — 399.98px
+======================================================*/
+
+@media (max-width: 399.98px) {
+
+  .rds-business-card {
+    border-radius: 16px;
+  }
+
+  .rds-business-card-image {
+    height: 250px;
+  }
+
+  .rds-business-card-content {
+    padding: 20px;
+  }
+
+  .rds-business-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .rds-business-card-number {
+    font-size: .7rem;
+  }
+
+  .rds-business-card-link {
+    font-size: .85rem;
+  }
+
+}
+
 
 /*=====================================================
         FLOATING CARD FOUNDATION
@@ -1927,7 +2495,6 @@
   z-index: 10;
 
 }
-
 
 /*=====================================================
         FLOATING CARD SIZES
@@ -2606,12 +3173,51 @@
 
 }
 
+.rds-floating-label {
+
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: var(--secondary);
+
+  text-transform: uppercase;
+
+  letter-spacing: .18rem;
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+}
+
+.rds-floating-card h3 {
+
+  margin-bottom: .9rem;
+
+  color: var(--primary);
+
+  font-size: 1.45rem;
+
+}
+
+.rds-floating-card p {
+
+  margin: 0;
+
+  color: var(--text-light);
+
+  line-height: 1.7;
+
+  font-size: .96rem;
+
+}
 
 /*=====================================================
         GLASS FLOATING CARD
 ======================================================*/
 
-.rds-floating-card-glass {
+/*.rds-floating-card-glass {
 
   background: rgba(255, 255, 255, .10);
 
@@ -2625,6 +3231,22 @@
     0 20px 50px rgba(15, 23, 42, .22),
     inset 0 1px 0 rgba(255, 255, 255, .18);
 
+}*/
+
+.rds-floating-card-glass {
+
+  background: rgba(255, 255, 255, .82);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, .35);
+
+  box-shadow:
+
+    0 25px 60px rgba(8, 26, 44, .12);
+
 }
 
 .rds-floating-card-glass .rds-floating-title {
@@ -2633,13 +3255,17 @@
 
 }
 
-.rds-floating-card-glass .rds-floating-subtitle,
+.rds-floating-card-glass .rds-floating-subtitle {
+  color: var(--primary);
+}
 
-.rds-floating-card-glass .rds-floating-text,
+.rds-floating-card-glass .rds-floating-text {
+  color: var(--muted);
+}
 
 .rds-floating-card-glass .rds-floating-label {
 
-  color: rgba(255, 255, 255, .82);
+  color: var(--secondary);
 
 }
 
@@ -2748,6 +3374,32 @@
       transparent,
       rgba(199, 164, 77, .75),
       transparent);
+
+}
+
+.rds-floating-card-glass:hover .rds-floating-text {
+  color: var(--white);
+}
+
+/*======================================================
+      FIRST & SECOND FLOATING CARD
+======================================================*/
+
+.rds-floating-card-1 {
+
+  left: -2%;
+
+  bottom: 8%;
+
+  width: 300px;
+
+}
+
+.rds-floating-card-2 {
+
+  left: -2%;
+
+  bottom: 25%;
 
 }
 
@@ -2907,6 +3559,1465 @@
   .rds-floating-body {
 
     gap: .3rem;
+
+  }
+
+}
+
+/*==========================
+        ≤399.98px
+==========================*/
+
+@media (max-width:399.98px) {
+
+  .rds-floating-card h3 {
+
+    font-size: 1.2rem;
+
+  }
+
+  .rds-floating-card p {
+
+    font-size: .9rem;
+
+  }
+
+}
+
+
+/*======================================================
+        RDS FEATURE CARD
+======================================================*/
+
+.rds-feature {
+
+  position: relative;
+
+  height: 100%;
+
+  padding: 2rem;
+
+  background: var(--surface, var(--white));
+
+  border: 1px solid var(--border, rgba(8, 26, 44, .08));
+
+  border-radius: var(--radius-lg, 20px);
+
+  box-shadow: var(--shadow-sm, 0 10px 30px rgba(8, 26, 44, .06));
+
+  overflow: hidden;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+
+/*======================================================
+        FEATURE ACCENT
+======================================================*/
+
+.rds-feature::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: linear-gradient(90deg,
+      var(--secondary),
+      transparent);
+
+  opacity: .8;
+
+}
+
+
+/*======================================================
+        FEATURE ICON
+======================================================*/
+
+.rds-feature-icon {
+
+  width: 58px;
+
+  height: 58px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 1.5rem;
+
+  border-radius: 16px;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: 1.25rem;
+
+  border: 1px solid rgba(199, 164, 77, .18);
+
+}
+
+
+/*======================================================
+        FEATURE TITLE
+======================================================*/
+
+.rds-feature-title {
+
+  margin: 0 0 .75rem;
+
+  color: var(--primary);
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+}
+
+
+/*======================================================
+        FEATURE DESCRIPTION
+======================================================*/
+
+.rds-feature-description {
+
+  margin: 0;
+
+  color: var(--text-light);
+
+  font-size: .98rem;
+
+  line-height: 1.75;
+
+}
+
+
+/*======================================================
+        FEATURE LINK
+======================================================*/
+
+.rds-feature-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .5rem;
+
+  margin-top: 1.5rem;
+
+  color: var(--primary);
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color .3s ease,
+    gap .3s ease;
+
+}
+
+.rds-feature-link:hover {
+
+  color: var(--secondary);
+
+  gap: .75rem;
+
+}
+
+
+/*======================================================
+        FEATURE HOVER
+======================================================*/
+
+.rds-feature:hover {
+
+  transform: translateY(-6px);
+
+  border-color: rgba(199, 164, 77, .25);
+
+  box-shadow:
+    0 20px 50px rgba(8, 26, 44, .10);
+
+}
+
+
+/*======================================================
+        FEATURE ICON HOVER
+======================================================*/
+
+.rds-feature:hover .rds-feature-icon {
+
+  background: var(--secondary);
+
+  color: var(--primary);
+
+}
+
+
+/*======================================================
+        FEATURE VARIANT — DARK
+======================================================*/
+
+.rds-feature-dark {
+
+  background: var(--primary);
+
+  border-color: rgba(255, 255, 255, .10);
+
+}
+
+.rds-feature-dark .rds-feature-title {
+
+  color: var(--white);
+
+}
+
+.rds-feature-dark .rds-feature-description {
+
+  color: rgba(255, 255, 255, .72);
+
+}
+
+.rds-feature-dark .rds-feature-link {
+
+  color: var(--secondary);
+
+}
+
+
+/*======================================================
+        FEATURE VARIANT — GLASS
+======================================================*/
+
+.rds-feature-glass {
+
+  background: rgba(255, 255, 255, .06);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border-color: rgba(255, 255, 255, .12);
+
+}
+
+.rds-feature-glass .rds-feature-title {
+
+  color: var(--white);
+
+}
+
+.rds-feature-glass .rds-feature-description {
+
+  color: rgba(255, 255, 255, .72);
+
+}
+
+
+/*======================================================
+        FEATURE RESPONSIVE
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .rds-feature {
+
+    padding: 1.75rem;
+
+  }
+
+}
+
+
+@media (max-width:991.98px) {
+
+  .rds-feature {
+
+    padding: 1.75rem;
+
+  }
+
+  .rds-feature-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+  }
+
+}
+
+
+@media (max-width:767.98px) {
+
+  .rds-feature {
+
+    padding: 1.5rem;
+
+  }
+
+  .rds-feature-title {
+
+    font-size: 1.15rem;
+
+  }
+
+  .rds-feature-description {
+
+    font-size: .95rem;
+
+    line-height: 1.7;
+
+  }
+
+}
+
+
+@media (max-width:575.98px) {
+
+  .rds-feature {
+
+    padding: 1.4rem;
+
+    border-radius: 16px;
+
+  }
+
+  .rds-feature-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    margin-bottom: 1.25rem;
+
+    border-radius: 14px;
+
+  }
+
+}
+
+
+@media (max-width:399.98px) {
+
+  .rds-feature {
+
+    padding: 1.25rem;
+
+  }
+
+  .rds-feature-title {
+
+    font-size: 1.08rem;
+
+  }
+
+  .rds-feature-description {
+
+    font-size: .92rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        RDS — PRINCIPLES
+======================================================*/
+
+/*=====================================================
+        PRINCIPLES FOUNDATION
+======================================================*/
+
+.rds-principles {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  width: 100%;
+
+
+  /*display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;*/
+
+}
+
+
+/*=====================================================
+        PRINCIPLE ITEM
+======================================================*/
+
+.rds-principle {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 2rem;
+
+  min-height: 220px;
+
+  background: var(--white);
+
+  border: 1px solid rgba(11, 36, 56, .08);
+
+  border-radius: var(--radius-lg, 1.25rem);
+
+  box-shadow:
+    0 12px 35px rgba(11, 36, 56, .06);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease,
+    background-color .4s ease;
+
+
+
+  /*display: flex;
+
+  align-items: flex-start;
+
+  gap: 1.15rem;
+
+  padding: 1.25rem;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(8, 26, 44, .08);
+
+  background: rgba(255, 255, 255, .72);
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;*/
+
+}
+
+
+/*=====================================================
+        PRINCIPLE ACCENT
+======================================================*/
+
+.rds-principle::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 4px;
+
+  height: 0;
+
+  background: var(--secondary);
+
+  border-radius: 0 0 6px 0;
+
+  transition: height .4s ease;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE NUMBER
+======================================================*/
+
+.rds-principle-number {
+
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--secondary);
+
+  font-size: .75rem;
+
+  font-weight: 800;
+
+  letter-spacing: .16em;
+
+  text-transform: uppercase;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE ICON
+======================================================*/
+
+.rds-principle-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 3rem;
+
+  height: 3rem;
+
+  margin-bottom: 1.25rem;
+
+  border-radius: .85rem;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: 1.15rem;
+
+  flex-shrink: 0;
+
+  transition:
+    transform .4s ease,
+    background-color .4s ease;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE TITLE
+======================================================*/
+
+.rds-principle-title {
+
+  margin: 0 0 .75rem;
+
+  color: var(--primary);
+
+  font-size: 1.2rem;
+
+  font-weight: 750;
+
+  line-height: 1.3;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE DESCRIPTION
+======================================================*/
+
+.rds-principle-description {
+
+  margin: 0;
+
+  color: var(--text-muted, #6b7a88);
+
+  font-size: .95rem;
+
+  line-height: 1.75;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE HOVER
+======================================================*/
+
+.rds-principle:hover {
+
+  transform: translateY(-8px);
+
+  border-color: rgba(199, 164, 77, .28);
+
+  box-shadow:
+    0 22px 50px rgba(11, 36, 56, .11);
+
+  transform: translateX(6px);
+  /*
+  border-color: rgba(199, 164, 77, .30);
+
+  background: var(--white);
+
+  box-shadow:
+    0 15px 35px rgba(8, 26, 44, .08);*/
+
+
+}
+
+
+.rds-principle:hover::before {
+
+  height: 100%;
+
+}
+
+
+.rds-principle:hover .rds-principle-icon {
+
+  transform:
+    translateY(-3px) scale(1.05);
+
+  background: rgba(199, 164, 77, .16);
+
+}
+
+
+/*=====================================================
+        PRINCIPLE GLASS VARIANT
+======================================================*/
+
+.rds-principles-glass .rds-principle {
+
+  background: rgba(255, 255, 255, .07);
+
+  border-color: rgba(255, 255, 255, .14);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, .12);
+
+}
+
+
+.rds-principles-glass .rds-principle-title {
+
+  color: var(--white);
+
+}
+
+
+.rds-principles-glass .rds-principle-description {
+
+  color: rgba(255, 255, 255, .70);
+
+}
+
+
+/*=====================================================
+        PRINCIPLE DARK VARIANT
+======================================================*/
+
+.rds-principles-dark .rds-principle {
+
+  background: var(--primary);
+
+  border-color: rgba(255, 255, 255, .08);
+
+}
+
+
+.rds-principles-dark .rds-principle-title {
+
+  color: var(--white);
+
+}
+
+
+.rds-principles-dark .rds-principle-description {
+
+  color: rgba(255, 255, 255, .70);
+
+}
+
+
+/*=====================================================
+        PRINCIPLE COMPACT
+======================================================*/
+
+.rds-principles-compact {
+
+  gap: 1rem;
+
+}
+
+
+.rds-principles-compact .rds-principle {
+
+  min-height: auto;
+
+  padding: 1.5rem;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE HORIZONTAL
+======================================================*/
+
+.rds-principles-horizontal {
+
+  grid-template-columns: 1fr;
+
+}
+
+
+.rds-principles-horizontal .rds-principle {
+
+  flex-direction: row;
+
+  align-items: flex-start;
+
+  gap: 1.25rem;
+
+  min-height: auto;
+
+}
+
+
+.rds-principles-horizontal .rds-principle-icon {
+
+  margin-bottom: 0;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE CENTER
+======================================================*/
+
+.rds-principles-center .rds-principle {
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+
+.rds-principles-center .rds-principle-icon {
+
+  margin-inline: auto;
+
+}
+
+
+/*=====================================================
+        PRINCIPLE ACCESSIBILITY
+======================================================*/
+
+.rds-principle:focus-within {
+
+  outline: 2px solid rgba(199, 164, 77, .45);
+
+  outline-offset: 4px;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — LARGE TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .rds-principles {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.25rem;
+
+  }
+
+  .rds-principle {
+
+    padding: 1.75rem;
+
+    min-height: 210px;
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — TABLET / MOBILE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-principles {
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+  }
+
+  .rds-principle {
+
+    min-height: auto;
+
+    padding: 1.5rem;
+
+  }
+
+  .rds-principle-title {
+
+    font-size: 1.1rem;
+
+  }
+
+  .rds-principle-description {
+
+    font-size: .92rem;
+
+    line-height: 1.7;
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — SMALL MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-principle {
+
+    padding: 1.35rem;
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-principle-icon {
+
+    width: 2.75rem;
+
+    height: 2.75rem;
+
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+
+  }
+
+  .rds-principle-number {
+
+    margin-bottom: 1rem;
+
+    font-size: .7rem;
+
+  }
+
+  .rds-principle-title {
+
+    font-size: 1.05rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — VERY SMALL MOBILE
+======================================================*/
+
+@media (max-width: 399.98px) {
+
+  .rds-principle {
+
+    padding: 1.2rem;
+
+  }
+
+  .rds-principle-description {
+
+    font-size: .88rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        RDS — ACTIONS
+======================================================*/
+
+/*=====================================================
+        ACTIONS FOUNDATION
+======================================================*/
+
+.rds-actions {
+
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 1rem;
+
+  width: 100%;
+
+}
+
+
+/*=====================================================
+        ACTION ITEM
+======================================================*/
+
+.rds-action {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  flex: 1 1 0;
+
+  min-width: 0;
+
+  padding: 1.25rem 1.5rem;
+
+  color: var(--primary);
+
+  text-decoration: none;
+
+  background: var(--white);
+
+  border: 1px solid rgba(11, 36, 56, .08);
+
+  border-radius: var(--radius-lg, 1.25rem);
+
+  box-shadow:
+    0 10px 30px rgba(11, 36, 56, .05);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    background-color .35s ease;
+
+}
+
+
+/*=====================================================
+        ACTION ACCENT
+======================================================*/
+
+.rds-action::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 3px;
+
+  height: 0;
+
+  background: var(--secondary);
+
+  transition: height .35s ease;
+
+}
+
+
+/*=====================================================
+        ACTION ICON
+======================================================*/
+
+.rds-action-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 3rem;
+
+  height: 3rem;
+
+  flex: 0 0 3rem;
+
+  border-radius: .85rem;
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: 1.1rem;
+
+  transition:
+    transform .35s ease,
+    background-color .35s ease;
+
+}
+
+
+/*=====================================================
+        ACTION CONTENT
+======================================================*/
+
+.rds-action-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: .25rem;
+
+}
+
+
+/*=====================================================
+        ACTION TITLE
+======================================================*/
+
+.rds-action-title {
+
+  margin: 0;
+
+  color: var(--primary);
+
+  font-size: 1rem;
+
+  font-weight: 750;
+
+  line-height: 1.35;
+
+}
+
+
+/*=====================================================
+        ACTION DESCRIPTION
+======================================================*/
+
+.rds-action-description {
+
+  margin: 0;
+
+  color: var(--text-muted, #6b7a88);
+
+  font-size: .85rem;
+
+  line-height: 1.55;
+
+}
+
+
+/*=====================================================
+        ACTION ARROW
+======================================================*/
+
+.rds-action-arrow {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-left: auto;
+
+  color: var(--secondary);
+
+  font-size: 1rem;
+
+  flex-shrink: 0;
+
+  transition:
+    transform .35s ease;
+
+}
+
+
+/*=====================================================
+        ACTION HOVER
+======================================================*/
+
+.rds-action:hover {
+
+  color: var(--primary);
+
+  transform: translateY(-5px);
+
+  border-color: rgba(199, 164, 77, .28);
+
+  box-shadow:
+    0 18px 42px rgba(11, 36, 56, .10);
+
+}
+
+
+.rds-action:hover::before {
+
+  height: 100%;
+
+}
+
+
+.rds-action:hover .rds-action-icon {
+
+  transform:
+    translateY(-2px) scale(1.06);
+
+  background: rgba(199, 164, 77, .16);
+
+}
+
+
+.rds-action:hover .rds-action-arrow {
+
+  transform: translateX(5px);
+
+}
+
+
+/*=====================================================
+        ACTIONS CENTER
+======================================================*/
+
+.rds-actions-center {
+
+  justify-content: center;
+
+}
+
+
+/*=====================================================
+        ACTIONS END
+======================================================*/
+
+.rds-actions-end {
+
+  justify-content: flex-end;
+
+}
+
+
+/*=====================================================
+        ACTIONS STACKED
+======================================================*/
+
+.rds-actions-stacked {
+
+  flex-direction: column;
+
+}
+
+
+/*=====================================================
+        ACTIONS COMPACT
+======================================================*/
+
+.rds-actions-compact {
+
+  gap: .75rem;
+
+}
+
+
+.rds-actions-compact .rds-action {
+
+  padding: 1rem 1.2rem;
+
+}
+
+
+.rds-actions-compact .rds-action-icon {
+
+  width: 2.5rem;
+
+  height: 2.5rem;
+
+  flex-basis: 2.5rem;
+
+}
+
+
+/*=====================================================
+        ACTIONS GLASS
+======================================================*/
+
+.rds-actions-glass .rds-action {
+
+  background: rgba(255, 255, 255, .07);
+
+  border-color: rgba(255, 255, 255, .14);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, .12);
+
+}
+
+
+.rds-actions-glass .rds-action-title {
+
+  color: var(--white);
+
+}
+
+
+.rds-actions-glass .rds-action-description {
+
+  color: rgba(255, 255, 255, .68);
+
+}
+
+
+/*=====================================================
+        ACTIONS DARK
+======================================================*/
+
+.rds-actions-dark .rds-action {
+
+  background: var(--primary);
+
+  border-color: rgba(255, 255, 255, .08);
+
+}
+
+
+.rds-actions-dark .rds-action-title {
+
+  color: var(--white);
+
+}
+
+
+.rds-actions-dark .rds-action-description {
+
+  color: rgba(255, 255, 255, .68);
+
+}
+
+
+/*=====================================================
+        ACTIONS OUTLINE
+======================================================*/
+
+.rds-actions-outline .rds-action {
+
+  background: transparent;
+
+  box-shadow: none;
+
+  border-color: rgba(199, 164, 77, .25);
+
+}
+
+
+/*=====================================================
+        ACTIONS FULL WIDTH
+======================================================*/
+
+.rds-actions-block .rds-action {
+
+  width: 100%;
+
+}
+
+
+/*=====================================================
+        ACCESSIBILITY
+======================================================*/
+
+.rds-action:focus-visible {
+
+  outline: 2px solid rgba(199, 164, 77, .55);
+
+  outline-offset: 4px;
+
+}
+
+
+/*=====================================================
+        DISABLED
+======================================================*/
+
+.rds-action.disabled,
+
+.rds-action[aria-disabled="true"] {
+
+  opacity: .55;
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — LARGE TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .rds-actions {
+
+    flex-wrap: wrap;
+
+  }
+
+  .rds-action {
+
+    flex: 1 1 calc(50% - .5rem);
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — MOBILE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-actions {
+
+    flex-direction: column;
+
+    gap: .85rem;
+
+  }
+
+  .rds-action {
+
+    width: 100%;
+
+    flex: none;
+
+    padding: 1.15rem 1.25rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — SMALL MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-action {
+
+    padding: 1rem 1.1rem;
+
+    border-radius: 1rem;
+
+  }
+
+  .rds-action-icon {
+
+    width: 2.75rem;
+
+    height: 2.75rem;
+
+    flex-basis: 2.75rem;
+
+    font-size: 1rem;
+
+  }
+
+  .rds-action-title {
+
+    font-size: .95rem;
+
+  }
+
+  .rds-action-description {
+
+    font-size: .82rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — VERY SMALL MOBILE
+======================================================*/
+
+@media (max-width: 399.98px) {
+
+  .rds-action {
+
+    gap: .8rem;
+
+    padding: .95rem;
+
+  }
+
+  .rds-action-icon {
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    flex-basis: 2.5rem;
+
+  }
+
+  .rds-action-title {
+
+    font-size: .9rem;
+
+  }
+
+  .rds-action-description {
+
+    font-size: .78rem;
+
+  }
+
+  .rds-action-arrow {
+
+    font-size: .9rem;
 
   }
 

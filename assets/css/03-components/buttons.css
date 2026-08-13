@@ -194,7 +194,7 @@
 
   background: transparent;
 
-  color: var(--white);
+  color: var(--secondary);
 
   border: 1px solid rgba(199, 164, 77, .12);
 
@@ -218,7 +218,7 @@
 
   background: rgba(11, 36, 56, .9);
 
-  color: var(--secondary);
+  color: var(--white);
 
   border-color: rgba(199, 164, 77, .45);
 
@@ -474,6 +474,8 @@
 
   align-items: center;
 
+  justify-content: space-between;
+
   gap: 1rem;
 
 }
@@ -531,6 +533,14 @@
 /*=====================================================
         RESPONSIVE
 ======================================================*/
+@media (max-width:991px) {
+
+  .rds-btn-group {
+
+    justify-content: space-between;
+
+  }
+}
 
 @media (max-width:767px) {
 
@@ -543,6 +553,10 @@
   }
 
   .rds-btn-group {
+
+    display: flex;
+
+    align-self: center;
 
     flex-direction: column;
 

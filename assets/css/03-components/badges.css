@@ -1,10 +1,10 @@
 /*=====================================================
         05. BADGES & LABELS
-======================================================*/
+======================================================
 
 /*=====================================================
         BADGE FOUNDATION
-======================================================*/
+======================================================
 
 .rds-badge {
 
@@ -59,7 +59,7 @@
 
 /*=====================================================
         BADGE CONTENT
-======================================================*/
+======================================================
 
 .rds-badge-content {
 
@@ -77,7 +77,7 @@
 
 /*=====================================================
         BADGE ICON
-======================================================*/
+======================================================
 
 .rds-badge-icon {
 
@@ -109,7 +109,7 @@
 
 /*=====================================================
         BADGE LABEL
-======================================================*/
+======================================================
 
 .rds-badge-label {
 
@@ -127,7 +127,7 @@
 
 /*=====================================================
         BADGE SUBTITLE
-======================================================*/
+======================================================
 
 .rds-badge-subtitle {
 
@@ -141,7 +141,7 @@
 
 /*=====================================================
         LABEL FOUNDATION
-======================================================*/
+======================================================
 
 .rds-label {
 
@@ -167,7 +167,7 @@
 
 /*=====================================================
         LABEL ACCENT
-======================================================*/
+======================================================
 
 .rds-label::before {
 
@@ -185,7 +185,7 @@
 
 /*=====================================================
         LABEL UNDERLINE
-======================================================*/
+======================================================
 
 .rds-label::after {
 
@@ -212,11 +212,11 @@
 
 /*=====================================================
         BADGE VARIANTS
-======================================================*/
+======================================================
 
 /*=====================================================
         GLASS
-======================================================*/
+======================================================
 
 .rds-badge-glass {
 
@@ -243,14 +243,16 @@
 
 .rds-badge-glass .rds-badge-label {
 
-  color: #fff;
+  color:
+    /*#fff
+    var(--secondary);
 
 }
 
 
 /*=====================================================
         SOLID
-======================================================*/
+======================================================
 
 .rds-badge-solid {
 
@@ -279,7 +281,7 @@
 
 /*=====================================================
         OUTLINE
-======================================================*/
+======================================================
 
 .rds-badge-outline {
 
@@ -308,7 +310,7 @@
 
 /*=====================================================
         LIGHT
-======================================================*/
+======================================================
 
 .rds-badge-light {
 
@@ -338,7 +340,7 @@
 
 /*=====================================================
         DARK
-======================================================*/
+======================================================
 
 .rds-badge-dark {
 
@@ -367,7 +369,858 @@
 
 /*=====================================================
         BADGE DECORATIONS
+======================================================
+
+/*=====================================================
+        BADGE SHINE
+======================================================
+
+.rds-badge-shine {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+}
+
+.rds-badge-shine::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+
+  left: -40%;
+
+  width: 40%;
+
+  height: 300%;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, .35),
+      transparent);
+
+  transform: rotate(20deg);
+
+  opacity: 0;
+
+}
+
+.rds-badge:hover .rds-badge-shine::before {
+
+  opacity: 1;
+
+  animation: rdsBadgeShine 1.2s ease;
+
+}
+
+/*=====================================================
+        BADGE GLOW
+======================================================
+
+.rds-badge-glow {
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(circle at center,
+      rgba(199, 164, 77, .18),
+      transparent 70%);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity .35s ease;
+
+}
+
+.rds-badge:hover .rds-badge-glow {
+
+  opacity: 1;
+
+}
+
+/*=====================================================
+        BADGE WAVE
+======================================================
+
+.rds-badge-wave {
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+}
+
+.rds-badge-wave::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(120deg,
+      transparent 20%,
+      rgba(255, 255, 255, .10) 50%,
+      transparent 80%);
+
+  transform: translateX(-130%);
+
+}
+
+.rds-badge:hover .rds-badge-wave::before {
+
+  animation: rdsBadgeWave 1.1s ease;
+
+}
+
+/*=====================================================
+        ICON ANIMATION
+======================================================
+
+.rds-badge:hover .rds-badge-icon {
+
+  transform:
+    translateY(-2px) rotate(-8deg) scale(1.08);
+
+}
+
+/*=====================================================
+        BADGE LIFT
+======================================================
+
+.rds-badge:hover {
+
+  transform: translateY(-4px);
+
+}
+
+/*=====================================================
+        BADGE GLOW
+======================================================
+
+.rds-badge::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 60%;
+
+  height: 100%;
+
+  background:
+
+    linear-gradient(120deg,
+
+      transparent,
+
+      rgba(255, 255, 255, .25),
+
+      transparent);
+
+  animation: badgeShine 8s infinite;
+
+}
+
+.rds-badge:hover::after {
+
+  opacity: 1;
+
+}
+
+/*=====================================================
+        BADGE SIZES
+======================================================
+
+/* Small 
+
+.rds-badge-sm {
+
+  padding: .55rem 1rem;
+
+  gap: .55rem;
+
+}
+
+.rds-badge-sm .rds-badge-icon {
+
+  width: 1.9rem;
+
+  height: 1.9rem;
+
+}
+
+.rds-badge-sm .rds-badge-label {
+
+  font-size: .72rem;
+
+}
+
+
+/* Medium (Default) 
+
+.rds-badge-md {
+
+  padding: .8rem 1.35rem;
+
+}
+
+
+/* Large 
+
+.rds-badge-lg {
+
+  padding: 1rem 1.7rem;
+
+  gap: 1rem;
+
+}
+
+.rds-badge-lg .rds-badge-icon {
+
+  width: 2.7rem;
+
+  height: 2.7rem;
+
+}
+
+.rds-badge-lg .rds-badge-icon i {
+
+  font-size: 1.1rem;
+
+}
+
+.rds-badge-lg .rds-badge-label {
+
+  font-size: .9rem;
+
+}
+
+
+/*=====================================================
+        BADGE WIDTH
+======================================================
+
+.rds-badge-block {
+
+  display: flex;
+
+  width: 100%;
+
+  justify-content: center;
+
+}
+
+.rds-badge-auto {
+
+  width: auto;
+
+}
+
+
+/*=====================================================
+        LABEL SIZES
+======================================================
+
+.rds-label-sm {
+
+  font-size: .72rem;
+
+  letter-spacing: .14em;
+
+}
+
+.rds-label-md {
+
+  font-size: .82rem;
+
+  letter-spacing: .18em;
+
+}
+
+.rds-label-lg {
+
+  font-size: .95rem;
+
+  letter-spacing: .22em;
+
+}
+
+
+/*=====================================================
+        LABEL ALIGNMENT
+======================================================
+
+.rds-label-center {
+
+  justify-content: center;
+
+}
+
+.rds-label-left {
+
+  justify-content: flex-start;
+
+}
+
+.rds-label-right {
+
+  justify-content: flex-end;
+
+}
+
+
+/*=====================================================
+        BADGE GROUP
+======================================================
+
+.rds-badge-group {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 1rem;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE
+======================================================
+
+@media (max-width:767px) {
+
+  .rds-badge {
+
+    max-width: 100%;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .85rem 1.35rem;
+
+  }
+
+  .rds-label-lg {
+
+    font-size: .85rem;
+
+  }
+
+}
+
+/*=====================================================
+        BADGE ACCESSIBILITY
+======================================================
+
+.rds-badge:focus-visible {
+
+  outline: 2px solid rgba(199, 164, 77, .45);
+
+  outline-offset: 4px;
+
+}
+
+/*=====================================================
+        BADGE DISABLED
+=====================================================
+
+.rds-badge.disabled,
+
+.rds-badge:disabled {
+
+  opacity: .6;
+
+  pointer-events: none;
+
+}
+
+/*=====================================================
+        HOVER UTILITIES
+======================================================
+
+.rds-badge-hover-lift:hover {
+
+  transform: translateY(-4px);
+
+}
+
+.rds-badge-hover-scale:hover {
+
+  transform: scale(1.04);
+
+}
+
+.rds-badge-hover-glow:hover {
+
+  box-shadow:
+    0 18px 40px rgba(199, 164, 77, .22);
+
+}
+
+/*=====================================================
+        TRANSITIONS
+======================================================
+
+.rds-badge {
+
+  transition:
+    transform .35s ease,
+    background-color .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    opacity .35s ease;
+
+}*/
+
+/*=====================================================
+        05. BADGES & LABELS
 ======================================================*/
+
+
+/*=====================================================
+        BADGE FOUNDATION
+======================================================*/
+
+.rds-badge {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .85rem;
+
+  max-width: 100%;
+
+  padding: .8rem 1.35rem;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  text-decoration: none;
+
+  user-select: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform .35s ease,
+    background-color .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    opacity .35s ease;
+
+}
+
+
+/*=====================================================
+        BADGE ACCENT LINE
+======================================================*/
+
+.rds-badge::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+
+  right: 22px;
+
+  bottom: -10px;
+
+  height: 2px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      var(--secondary),
+      transparent);
+
+  pointer-events: none;
+
+}
+
+
+/*=====================================================
+        BADGE CONTENT
+======================================================*/
+
+.rds-badge-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+
+  gap: .15rem;
+
+  line-height: 1.2;
+
+}
+
+
+/*=====================================================
+        BADGE ICON
+======================================================*/
+
+.rds-badge-icon {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 2.25rem;
+
+  height: 2.25rem;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  transition:
+    transform .35s ease,
+    background-color .35s ease;
+
+}
+
+.rds-badge-icon i {
+
+  font-size: .95rem;
+
+}
+
+
+/*=====================================================
+        BADGE LABEL
+======================================================*/
+
+.rds-badge-label {
+
+  display: block;
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+}
+
+
+/*=====================================================
+        BADGE SUBTITLE
+======================================================*/
+
+.rds-badge-subtitle {
+
+  display: block;
+
+  font-size: .72rem;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  opacity: .75;
+
+}
+
+
+/*=====================================================
+        LABEL FOUNDATION
+======================================================*/
+
+.rds-label {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: .7rem;
+
+  max-width: 100%;
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: .18em;
+
+  text-transform: uppercase;
+
+  color: var(--secondary);
+
+}
+
+
+/*=====================================================
+        LABEL ACCENT
+======================================================*/
+
+.rds-label::before {
+
+  content: "";
+
+  width: 36px;
+
+  height: 2px;
+
+  flex: 0 0 auto;
+
+  border-radius: 999px;
+
+  background: var(--secondary);
+
+}
+
+
+/*=====================================================
+        LABEL UNDERLINE
+======================================================*/
+
+.rds-label::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 100%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      var(--secondary),
+      transparent);
+
+  opacity: .25;
+
+}
+
+
+/*=====================================================
+        BADGE VARIANTS
+======================================================*/
+
+
+/*=====================================================
+        GLASS
+======================================================*/
+
+.rds-badge-glass {
+
+  background: rgba(255, 255, 255, .10);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border-color: rgba(255, 255, 255, .18);
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, .10);
+
+}
+
+.rds-badge-glass .rds-badge-icon {
+
+  background: rgba(255, 255, 255, .10);
+
+  color: var(--secondary);
+
+}
+
+.rds-badge-glass .rds-badge-label {
+
+  color: var(--secondary);
+
+}
+
+
+/*=====================================================
+        SOLID
+======================================================*/
+
+.rds-badge-solid {
+
+  background: var(--primary);
+
+  border-color: var(--primary);
+
+  color: var(--white);
+
+}
+
+.rds-badge-solid .rds-badge-icon {
+
+  background: rgba(255, 255, 255, .10);
+
+  color: var(--secondary);
+
+}
+
+.rds-badge-solid .rds-badge-label {
+
+  color: var(--white);
+
+}
+
+
+/*=====================================================
+        OUTLINE
+======================================================*/
+
+.rds-badge-outline {
+
+  background: transparent;
+
+  color: var(--secondary);
+
+  border-color: rgba(199, 164, 77, .35);
+
+}
+
+.rds-badge-outline .rds-badge-icon {
+
+  background: rgba(199, 164, 77, .08);
+
+  color: var(--secondary);
+
+}
+
+.rds-badge-outline .rds-badge-label {
+
+  color: var(--primary);
+
+}
+
+
+/*=====================================================
+        LIGHT
+======================================================*/
+
+.rds-badge-light {
+
+  background: var(--white);
+
+  border-color: rgba(11, 36, 56, .08);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, .06);
+
+}
+
+.rds-badge-light .rds-badge-icon {
+
+  background: rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+}
+
+.rds-badge-light .rds-badge-label {
+
+  color: var(--primary);
+
+}
+
+
+/*=====================================================
+        DARK
+======================================================*/
+
+.rds-badge-dark {
+
+  background: var(--primary);
+
+  border-color: rgba(199, 164, 77, .18);
+
+  box-shadow:
+    0 15px 35px rgba(11, 36, 56, .22);
+
+}
+
+.rds-badge-dark .rds-badge-icon {
+
+  background: rgba(255, 255, 255, .08);
+
+  color: var(--secondary);
+
+}
+
+.rds-badge-dark .rds-badge-label {
+
+  color: var(--white);
+
+}
+
+
+/*=====================================================
+        BADGE DECORATIONS
+======================================================*/
+
 
 /*=====================================================
         BADGE SHINE
@@ -421,6 +1274,7 @@
 
 }
 
+
 /*=====================================================
         BADGE GLOW
 ======================================================*/
@@ -452,6 +1306,7 @@
 
 }
 
+
 /*=====================================================
         BADGE WAVE
 ======================================================*/
@@ -462,9 +1317,9 @@
 
   inset: 0;
 
-  border-radius: inherit;
-
   overflow: hidden;
+
+  border-radius: inherit;
 
   pointer-events: none;
 
@@ -494,29 +1349,9 @@
 
 }
 
-/*=====================================================
-        ICON ANIMATION
-======================================================*/
-
-.rds-badge:hover .rds-badge-icon {
-
-  transform:
-    translateY(-2px) rotate(-8deg) scale(1.08);
-
-}
 
 /*=====================================================
-        BADGE LIFT
-======================================================*/
-
-.rds-badge:hover {
-
-  transform: translateY(-4px);
-
-}
-
-/*=====================================================
-        BADGE GLOW
+        BADGE SHIMMER
 ======================================================*/
 
 .rds-badge::after {
@@ -534,36 +1369,53 @@
   height: 100%;
 
   background:
-
     linear-gradient(120deg,
-
       transparent,
-
       rgba(255, 255, 255, .25),
-
       transparent);
 
-  animation: badgeShine 8s infinite;
+  animation: rdsBadgeShine 8s infinite;
+
+  pointer-events: none;
 
 }
 
-.rds-badge:hover::after {
 
-  opacity: 1;
+/*=====================================================
+        ICON INTERACTION
+======================================================*/
+
+.rds-badge:hover .rds-badge-icon {
+
+  transform:
+    translateY(-2px) rotate(-8deg) scale(1.08);
 
 }
+
+
+/*=====================================================
+        BADGE HOVER
+======================================================*/
+
+.rds-badge:hover {
+
+  transform: translateY(-4px);
+
+}
+
 
 /*=====================================================
         BADGE SIZES
 ======================================================*/
 
-/* Small */
+
+/* SMALL */
 
 .rds-badge-sm {
 
-  padding: .55rem 1rem;
-
   gap: .55rem;
+
+  padding: .55rem 1rem;
 
 }
 
@@ -575,6 +1427,12 @@
 
 }
 
+.rds-badge-sm .rds-badge-icon i {
+
+  font-size: .82rem;
+
+}
+
 .rds-badge-sm .rds-badge-label {
 
   font-size: .72rem;
@@ -582,22 +1440,24 @@
 }
 
 
-/* Medium (Default) */
+/* MEDIUM */
 
 .rds-badge-md {
+
+  gap: .85rem;
 
   padding: .8rem 1.35rem;
 
 }
 
 
-/* Large */
+/* LARGE */
 
 .rds-badge-lg {
 
-  padding: 1rem 1.7rem;
-
   gap: 1rem;
+
+  padding: 1rem 1.7rem;
 
 }
 
@@ -703,9 +1563,9 @@
 
   display: flex;
 
-  flex-wrap: wrap;
-
   align-items: center;
+
+  flex-wrap: wrap;
 
   gap: 1rem;
 
@@ -713,42 +1573,17 @@
 
 
 /*=====================================================
-        RESPONSIVE
-======================================================*/
-
-@media (max-width:767px) {
-
-  .rds-badge {
-
-    max-width: 100%;
-
-  }
-
-  .rds-badge-lg {
-
-    padding: .85rem 1.35rem;
-
-  }
-
-  .rds-label-lg {
-
-    font-size: .85rem;
-
-  }
-
-}
-
-/*=====================================================
         BADGE ACCESSIBILITY
 ======================================================*/
 
 .rds-badge:focus-visible {
 
-  outline: 2px solid rgba(199, 164, 77, .45);
+  outline: 2px solid rgba(199, 164, 77, .55);
 
   outline-offset: 4px;
 
 }
+
 
 /*=====================================================
         BADGE DISABLED
@@ -763,6 +1598,7 @@
   pointer-events: none;
 
 }
+
 
 /*=====================================================
         HOVER UTILITIES
@@ -787,18 +1623,417 @@
 
 }
 
+
 /*=====================================================
-        TRANSITIONS
+        RESPONSIVE
 ======================================================*/
 
-.rds-badge {
 
-  transition:
-    transform .35s ease,
-    background-color .35s ease,
-    color .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease,
-    opacity .35s ease;
+/*=====================================================
+        LARGE TABLET
+======================================================*/
+
+@media (max-width:1199.98px) {
+
+  .rds-badge {
+
+    gap: .75rem;
+
+    padding: .75rem 1.2rem;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .9rem 1.5rem;
+
+  }
+
+  .rds-label {
+
+    font-size: .8rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width:991.98px) {
+
+  .rds-badge {
+
+    gap: .7rem;
+
+  }
+
+  .rds-badge-label {
+
+    font-size: .78rem;
+
+  }
+
+  .rds-badge-subtitle {
+
+    font-size: .7rem;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .85rem 1.3rem;
+
+    gap: .8rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-icon {
+
+    width: 2.45rem;
+
+    height: 2.45rem;
+
+  }
+
+  .rds-label {
+
+    gap: .6rem;
+
+    font-size: .78rem;
+
+    letter-spacing: .15em;
+
+  }
+
+  .rds-label::before {
+
+    width: 30px;
+
+  }
+
+  .rds-badge-group {
+
+    gap: .75rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width:767.98px) {
+
+  .rds-badge {
+
+    max-width: 100%;
+
+    white-space: normal;
+
+    padding: .7rem 1rem;
+
+    gap: .65rem;
+
+  }
+
+  .rds-badge-icon {
+
+    width: 2.1rem;
+
+    height: 2.1rem;
+
+  }
+
+  .rds-badge-icon i {
+
+    font-size: .88rem;
+
+  }
+
+  .rds-badge-label {
+
+    font-size: .76rem;
+
+    letter-spacing: .065em;
+
+    white-space: normal;
+
+  }
+
+  .rds-badge-subtitle {
+
+    font-size: .68rem;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .8rem 1.1rem;
+
+    gap: .7rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-icon {
+
+    width: 2.3rem;
+
+    height: 2.3rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-label {
+
+    font-size: .8rem;
+
+  }
+
+  .rds-label {
+
+    gap: .55rem;
+
+    font-size: .75rem;
+
+    letter-spacing: .13em;
+
+  }
+
+  .rds-label::before {
+
+    width: 26px;
+
+  }
+
+  .rds-label::after {
+
+    bottom: -6px;
+
+  }
+
+  .rds-badge-group {
+
+    gap: .6rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        SMALL MOBILE
+======================================================*/
+
+@media (max-width:575.98px) {
+
+  .rds-badge {
+
+    padding: .65rem .9rem;
+
+    gap: .6rem;
+
+  }
+
+  .rds-badge-icon {
+
+    width: 2rem;
+
+    height: 2rem;
+
+  }
+
+  .rds-badge-label {
+
+    font-size: .72rem;
+
+    letter-spacing: .055em;
+
+  }
+
+  .rds-badge-subtitle {
+
+    font-size: .66rem;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .75rem 1rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-icon {
+
+    width: 2.15rem;
+
+    height: 2.15rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-label {
+
+    font-size: .76rem;
+
+  }
+
+  .rds-label {
+
+    font-size: .7rem;
+
+    letter-spacing: .11em;
+
+  }
+
+  .rds-label::before {
+
+    width: 22px;
+
+  }
+
+  .rds-badge-group {
+
+    width: 100%;
+
+    gap: .5rem;
+
+  }
+
+}
+
+
+/*=====================================================
+        EXTRA SMALL MOBILE
+======================================================*/
+
+@media (max-width:399.98px) {
+
+  .rds-badge {
+
+    padding: .6rem .8rem;
+
+    gap: .5rem;
+
+  }
+
+  .rds-badge-icon {
+
+    width: 1.85rem;
+
+    height: 1.85rem;
+
+  }
+
+  .rds-badge-icon i {
+
+    font-size: .78rem;
+
+  }
+
+  .rds-badge-label {
+
+    font-size: .68rem;
+
+    letter-spacing: .045em;
+
+  }
+
+  .rds-badge-subtitle {
+
+    font-size: .62rem;
+
+  }
+
+  .rds-badge-lg {
+
+    padding: .7rem .85rem;
+
+    gap: .55rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-icon {
+
+    width: 2rem;
+
+    height: 2rem;
+
+  }
+
+  .rds-badge-lg .rds-badge-label {
+
+    font-size: .7rem;
+
+  }
+
+  .rds-label {
+
+    gap: .45rem;
+
+    font-size: .66rem;
+
+    letter-spacing: .09em;
+
+  }
+
+  .rds-label::before {
+
+    width: 18px;
+
+  }
+
+  .rds-label::after {
+
+    bottom: -5px;
+
+  }
+
+}
+
+
+/*=====================================================
+        REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rds-badge,
+  .rds-badge-icon {
+
+    transition: none;
+
+  }
+
+  .rds-badge::after,
+  .rds-badge-shine::before,
+  .rds-badge-wave::before {
+
+    animation: none !important;
+
+  }
+
+}
+
+
+/*=====================================================
+        TOUCH DEVICES
+======================================================*/
+
+@media (hover: none) {
+
+  .rds-badge:hover {
+
+    transform: none;
+
+  }
+
+  .rds-badge:hover .rds-badge-icon {
+
+    transform: none;
+
+  }
 
 }

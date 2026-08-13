@@ -1,0 +1,65 @@
+/*======================================================
+                REVEAL ANIMATIONS
+======================================================*/
+
+.reveal {
+
+  opacity: 0;
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+  will-change: opacity, transform;
+
+}
+
+/* Left */
+
+.reveal-left {
+
+  transform: translateX(-60px);
+
+}
+
+/* Right */
+
+.reveal-right {
+
+  transform: translateX(60px);
+
+}
+
+/* Bottom */
+
+.reveal-up {
+
+  transform: translateY(60px);
+
+}
+
+/* Top */
+
+.reveal-down {
+
+  transform: translateY(-60px);
+
+}
+
+/* Scale */
+
+.reveal-scale {
+
+  transform: scale(.92);
+
+}
+
+/* Active State */
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform: none;
+
+}
