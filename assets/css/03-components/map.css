@@ -700,6 +700,51 @@
 
 }
 
+#user-location-pin {
+  display: none;
+}
+
+.rds-map-location-pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--secondary);
+  box-shadow:
+    0 0 0 6px rgba(199, 164, 77, .18),
+    0 0 20px rgba(199, 164, 77, .65);
+  z-index: 10;
+  display: none;
+}
+
+.rds-impact-layout {
+  width: 100%;
+}
+
+.rds-impact-map {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.rds-impact-map .rds-card {
+  width: 100%;
+}
+
+.rds-impact-map .rds-card-content {
+  align-items: center;
+}
+
+.rds-impact-map .rds-card-description {
+  margin-inline: auto;
+}
+
+.rds-impact-metrics {
+  width: 100%;
+  margin-inline: auto;
+}
+
 
 /*=====================================================
         MAP RESPONSIVE FOUNDATION

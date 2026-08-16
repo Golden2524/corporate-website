@@ -182,14 +182,213 @@
 
 }
 
-
-/*=====================================================
-        HERO DIVIDER
+/*======================================================
+                RDS HERO DIVIDER
 ======================================================*/
 
 .rds-hero-divider {
 
-  margin: 2rem 0;
+  width: min(100%, 520px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin: 1.75rem 0;
+
+}
+
+
+
+
+/*======================================================
+                HERO DIVIDER LINE
+======================================================*/
+
+.rds-hero-divider-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(199, 164, 77, .75));
+
+}
+
+
+.rds-hero-divider-line:last-child {
+
+  background:
+    linear-gradient(90deg,
+      rgba(199, 164, 77, .75),
+      transparent);
+
+}
+
+
+/*======================================================
+                HERO DIVIDER MARK
+======================================================*/
+
+.rds-hero-divider-mark {
+
+  width: 10px;
+
+  height: 10px;
+
+  flex: 0 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--secondary);
+
+  transform: rotate(45deg);
+
+}
+
+
+.rds-hero-divider-mark i {
+
+  font-size: .42rem;
+
+  transform: rotate(-45deg);
+
+}
+
+
+/*======================================================
+                HERO DIVIDER GLOW
+======================================================*/
+
+.rds-hero-divider-mark::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(199, 164, 77, .22),
+      transparent 70%);
+
+  filter: blur(4px);
+
+  z-index: -1;
+
+}
+
+
+/*======================================================
+                HERO DIVIDER RESPONSIVE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-hero-divider {
+
+    width: min(100%, 380px);
+
+    gap: .75rem;
+
+    margin: 1.4rem 0;
+
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .rds-hero-divider {
+
+    width: 85%;
+
+    gap: .6rem;
+
+  }
+
+  .rds-hero-divider-line {
+
+    background:
+      linear-gradient(90deg,
+        transparent,
+        rgba(199, 164, 77, .6));
+
+  }
+
+}
+
+/*======================================================
+        RDS HERO DIVIDER — CENTERED
+======================================================*/
+
+.rds-hero-middle .rds-hero-divider {
+
+  width: min(100%, 520px);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+
+}
+
+
+/* Ensure the divider itself is centered */
+
+.rds-hero-middle {
+
+  text-align: center;
+
+}
+
+
+.rds-hero-middle .rds-hero-divider-line {
+
+  flex: 1;
+
+}
+
+
+/*======================================================
+        CENTERED HERO DIVIDER — RESPONSIVE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-hero-middle .rds-hero-divider {
+
+    width: min(100%, 380px);
+
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .rds-hero-middle .rds-hero-divider {
+
+    width: 85%;
+
+  }
 
 }
 
@@ -290,6 +489,20 @@
   min-height: 68vh;
 
 }
+
+/*=====================================================
+        HERO VERTICAL ALIGNMENT
+======================================================
+
+/*=====================================================
+        MIDDLE
+======================================================
+
+.rds-hero-middle .rds-hero-background {
+
+  align-items: center;
+
+}*/
 
 
 /*=====================================================

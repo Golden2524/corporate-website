@@ -1,129 +1,242 @@
-/*==========================================
-        GROUP FOOTPRINT
-==========================================*/
+console.log("ABOUT.JS IS RUNNING");
+
+/*======================================================
+        ABOUT PAGE — GLOBAL FOOTPRINT & IMPACT
+======================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const impactSection = document.querySelector(".impact-section");
+  const impactSection =
+    document.querySelector(".about-impact-section");
 
-  const worldMap = document.getElementById("worldMap");
+  const worldMap =
+    document.getElementById("worldMap");
 
-  const counters = document.querySelectorAll(".counter");
+  const counters =
+    document.querySelectorAll(
+      ".about-impact-section .counter"
+    );
+
+  const pin =
+    document.getElementById("user-location-pin");
+
+
+  /*====================================================
+        SAFETY CHECK
+  ====================================================*/
+
+  if (!impactSection || !worldMap) {
+    return;
+  }
+
+
+  /*====================================================
+        ANIMATION STATE
+  ====================================================*/
 
   let hasAnimated = false;
 
-  const observer = new IntersectionObserver(entries => {
 
-    entries.forEach(entry => {
+  /*====================================================
+        INTERSECTION OBSERVER
+  ====================================================*/
 
-      if (entry.isIntersecting && !hasAnimated) {
+  const observer = new IntersectionObserver(
+    entries => {
 
-        hasAnimated = true;
+      entries.forEach(entry => {
 
-        worldMap.classList.add("show");
+        if (
+          entry.isIntersecting &&
+          !hasAnimated
+        ) {
 
-        animateCounters();
+          hasAnimated = true;
 
-        locateVisitor();
 
-      }
+          /* Map animation */
 
-    });
+          worldMap.classList.add("show");
 
-  }, {
 
-    threshold: 0.4
+          /* Counter animation */
 
-  });
+          animateCounters();
+
+
+          /* User location */
+
+          locateVisitor();
+
+        }
+
+      });
+
+    },
+    {
+
+      threshold: 0.15,
+      rootMargin: "0px 0px -80px 0px"
+
+    }
+  );
+
 
   observer.observe(impactSection);
 
-});
 
-/*==========================================
-        COUNTERS
-==========================================*/
+  /*====================================================
+        COUNTER ANIMATION
+  ====================================================*/
 
-/*==========================================
-        PREMIUM COUNTERS
-==========================================*/
+  function animateCounters() {
 
-function animateCounters() {
+    counters.forEach(counter => {
 
-  const counters = document.querySelectorAll(".counter");
+      const target =
+        Number(counter.dataset.target);
 
-  counters.forEach(counter => {
+      const duration = 2200;
 
-    const target = Number(counter.dataset.target);
+      const start =
+        performance.now();
 
-    const duration = 2200;
 
-    const start = performance.now();
+      function update(time) {
 
-    function update(time) {
+        const progress =
+          Math.min(
+            (time - start) / duration,
+            1
+          );
 
-      const progress = Math.min((time - start) / duration, 1);
 
-      const ease = 1 - Math.pow(1 - progress, 3);
+        /* Smooth ease-out */
 
-      counter.textContent = Math.floor(ease * target) + "+";
+        const ease =
+          1 - Math.pow(
+            1 - progress,
+            3
+          );
 
-      if (progress < 1) {
 
-        requestAnimationFrame(update);
+        const value =
+          Math.floor(
+            ease * target
+          );
+
+
+        counter.textContent =
+          value + "+";
+
+
+        if (progress < 1) {
+
+          requestAnimationFrame(update);
+
+        }
 
       }
 
-    }
 
-    requestAnimationFrame(update);
+      requestAnimationFrame(update);
 
-  });
-
-}
-/*==========================================
-        USER LOCATION
-==========================================*/
-
-function locateVisitor() {
-
-  if (!navigator.geolocation) {
-
-    return;
+    });
 
   }
 
-  navigator.geolocation.getCurrentPosition(position => {
 
-    const lat = position.coords.latitude;
+  /*====================================================
+        USER LOCATION
+  ====================================================*/
 
-    const lng = position.coords.longitude;
+  function locateVisitor() {
 
-    placeMarker(lat, lng);
+    if (!navigator.geolocation) {
 
-  });
+      return;
 
-}
+    }
 
-/*==========================================
-        MAP CONVERSION
-==========================================*/
 
-function placeMarker(lat, lng) {
+    navigator.geolocation.getCurrentPosition(
 
-  const pin = document.getElementById("user-location-pin");
+      position => {
 
-  const map = document.querySelector(".map-wrapper");
+        const lat =
+          position.coords.latitude;
 
-  const x = ((lng + 180) / 360) * 100;
+        const lng =
+          position.coords.longitude;
 
-  const y = ((90 - lat) / 180) * 100;
 
-  pin.style.left = x + "%";
+        placeMarker(lat, lng);
 
-  pin.style.top = y + "%";
+      },
 
-  pin.style.display = "block";
+      error => {
 
-  pin.setAttribute("title", "You are here");
-}
+        console.warn(
+          "Unable to determine visitor location.",
+          error.message
+        );
+
+      }
+
+    );
+
+  }
+
+
+  /*====================================================
+        MAP LOCATION CONVERSION
+  ====================================================*/
+
+  function placeMarker(lat, lng) {
+
+    if (!pin || !worldMap) {
+
+      return;
+
+    }
+
+
+    /*
+      Convert longitude to horizontal position.
+      -180 → 0%
+       180 → 100%
+    */
+
+    const x =
+      ((lng + 180) / 360) * 100;
+
+
+    /*
+      Convert latitude to vertical position.
+      90 → 0%
+      -90 → 100%
+    */
+
+    const y =
+      ((90 - lat) / 180) * 100;
+
+
+    pin.style.left =
+      `${x}%`;
+
+    pin.style.top =
+      `${y}%`;
+
+
+    pin.style.display =
+      "block";
+
+
+    pin.setAttribute(
+      "title",
+      "You are here"
+    );
+
+  }
+
+});

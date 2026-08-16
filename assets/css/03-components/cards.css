@@ -188,6 +188,26 @@
 
 }
 
+.rds-card-content-centered {
+
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 540px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 2rem;
+
+  color: var(--white);
+
+}
+
 /*=====================================================
         CARD CONTAINER
 ======================================================*/
@@ -673,43 +693,10 @@
 
   white-space: nowrap;
 
-}
-
-
-/*=====================================================
-        CARD ICON
-======================================================
-
-.rds-card-icon {
-
-  width: 5rem;
-
-  height: 5rem;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 1.35rem;
-
-  background: rgba(199, 164, 77, .10);
-
-  flex-shrink: 0;
-
-  transition: all .45s ease;
+  margin-bottom: 20px;
 
 }
 
-
-.rds-card-icon i {
-
-  font-size: 2rem;
-
-  color: var(--secondary);
-
-  transition: all .45s ease;
-
-}*/
 
 /*======================================================
                 CARD ICON
@@ -766,35 +753,6 @@
 
 }
 
-
-/*=====================================================
-        CARD NUMBER
-======================================================
-
-.rds-card-number {
-
-  position: absolute;
-
-  top: 1.25rem;
-
-  right: 1.5rem;
-
-  font-size: 4.5rem;
-
-  font-weight: 800;
-
-  line-height: 1;
-
-  color: rgba(11, 36, 56, .04);
-
-  pointer-events: none;
-
-  user-select: none;
-
-  transition: all .45s ease;
-
-}*/
-
 /*======================================================
                 CARD NUMBER
 ======================================================*/
@@ -816,65 +774,6 @@
   letter-spacing: .18rem;
 
 }
-
-
-/*=====================================================
-        CARD TITLE
-======================================================
-
-.rds-card-title {
-
-  margin: 0;
-
-  color: var(--text);
-
-  font-size: 1.55rem;
-
-  font-weight: 700;
-
-  line-height: 1.3;
-
-  letter-spacing: -.02em;
-
-}
-
-
-/*=====================================================
-        CARD SUBTITLE
-======================================================
-
-.rds-card-subtitle {
-
-  color: var(--secondary);
-
-  font-size: .9rem;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
-
-  text-transform: uppercase;
-
-}
-
-
-/*=====================================================
-        CARD DESCRIPTION
-======================================================
-
-.rds-card-description {
-
-  margin-top: 1.35rem;
-
-  color: var(--muted);
-
-  font-size: 1rem;
-
-  line-height: 1.9;
-
-  flex: 1;
-
-}*/
 
 /*======================================================
                 CARD HEADING
@@ -911,6 +810,25 @@
 
   line-height: 1.75;
 
+}
+
+.rds-card-content-centered.text-center p,
+.rds-card-body.text-center p {
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  font-size: 1rem;
+
+}
+
+.rds-card-content-centered.text-center>.rds-badge {
+
+  align-self: center;
+
+  margin-bottom: 20px;
 }
 
 
@@ -1987,6 +1905,10 @@
     padding: 26px;
   }
 
+  .rds-card-content-centered {
+    padding: 26px;
+  }
+
   .rds-card-icon {
     width: 48px;
     height: 48px;
@@ -2059,6 +1981,10 @@
   }
 
   .rds-card-content {
+    padding: 24px;
+  }
+
+  .rds-card-content-centered {
     padding: 24px;
   }
 
@@ -2157,6 +2083,10 @@
     padding: 22px;
   }
 
+  .rds-card-content-centered {
+    padding: 22px;
+  }
+
   .rds-card-icon {
     width: 44px;
     height: 44px;
@@ -2228,6 +2158,10 @@
   }
 
   .rds-card-content {
+    padding: 20px;
+  }
+
+  .rds-card-content-centered {
     padding: 20px;
   }
 

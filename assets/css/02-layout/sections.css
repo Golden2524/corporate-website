@@ -122,7 +122,7 @@
 
 /*=====================================================
         SECTION DIVIDER
-======================================================*/
+======================================================
 
 .rds-section-divider {
 
@@ -137,6 +137,111 @@
   background: linear-gradient(90deg,
       var(--secondary),
       transparent);
+
+}*/
+
+/*======================================================
+                RDS SECTION DIVIDER
+======================================================*/
+
+.rds-section-divider {
+
+  width: min(100%, 420px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: .85rem;
+
+  margin: 2rem auto 0;
+
+}
+
+
+/*======================================================
+                SECTION DIVIDER LINE
+======================================================*/
+
+.rds-section-divider-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(199, 164, 77, .38));
+
+}
+
+
+.rds-section-divider-line:last-child {
+
+  background:
+    linear-gradient(90deg,
+      rgba(199, 164, 77, .38),
+      transparent);
+
+}
+
+
+/*======================================================
+                SECTION DIVIDER MARK
+======================================================*/
+
+.rds-section-divider-mark {
+
+  position: relative;
+
+  width: 7px;
+
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: var(--secondary);
+
+  box-shadow:
+    0 0 0 5px rgba(199, 164, 77, .08),
+    0 0 18px rgba(199, 164, 77, .18);
+
+}
+
+
+/*======================================================
+                SECTION DIVIDER RESPONSIVE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-section-divider {
+
+    width: min(100%, 320px);
+
+    gap: .7rem;
+
+    margin-top: 1.5rem;
+
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .rds-section-divider {
+
+    width: 80%;
+
+    gap: .6rem;
+
+  }
 
 }
 
@@ -1349,6 +1454,117 @@ REDUCED MOTION
 
 }
 
+/*=====================================================
+        RDS ACTION
+======================================================*/
+
+.rds-action {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+}
+
+
+/*=====================================================
+        ACTION ALIGNMENT
+======================================================*/
+
+.rds-action-center {
+
+  justify-content: center;
+
+}
+
+.rds-action-left {
+
+  justify-content: flex-start;
+
+}
+
+.rds-action-right {
+
+  justify-content: flex-end;
+
+}
+
+
+/*=====================================================
+        ACTION WRAP
+======================================================*/
+
+.rds-action-wrap {
+
+  flex-wrap: wrap;
+
+}
+
+
+/*=====================================================
+        ACTION FULL WIDTH
+======================================================*/
+
+.rds-action-block {
+
+  width: 100%;
+
+}
+
+.rds-action-block .rds-btn {
+
+  width: 100%;
+
+}
+
+
+/*=====================================================
+        ACTION RESPONSIVE
+======================================================*/
+
+@media (max-width: 767px) {
+
+  .rds-action {
+
+    gap: .75rem;
+
+  }
+
+  .rds-action-wrap {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+  .rds-action-wrap .rds-btn {
+
+    width: 100%;
+
+  }
+
+}
+
+
+/*=====================================================
+        ACTION REDUCED MOTION
+======================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rds-action {
+
+    transition: none;
+
+  }
+
+}
+
 /*======================================================
                 SECTION FOOTER
 ======================================================*/
@@ -1409,6 +1625,8 @@ REDUCED MOTION
 
   box-shadow:
     0 35px 90px rgba(7, 24, 45, .22);
+
+  margin-top: 50px;
 
 }
 
@@ -1575,7 +1793,7 @@ REDUCED MOTION
 
   margin: 1.75rem auto 0;
 
-  color: var(--muted);
+  color: var(--white);
 
   font-size: 1.08rem;
 
