@@ -252,28 +252,28 @@
   max-width: 380px;
   min-height: 220px;
   padding: 0.75rem;
-  border-radius: 4px;
+  border-radius: var(--radius-lg, 24px);
 }
 
 .rds-card-md {
   max-width: 480px;
   min-height: 300px;
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: var(--radius-lg, 24px);
 }
 
 .rds-card-lg {
   max-width: 580px;
   min-height: 400px;
   padding: 2rem;
-  border-radius: 4px;
+  border-radius: var(--radius-lg, 24px);
 }
 
 .rds-card-xl {
   max-width: 680px;
   min-height: 500px;
   padding: 3rem;
-  border-radius: 4px;
+  border-radius: var(--radius-lg, 24px);
 }
 
 
@@ -298,6 +298,94 @@
   background: var(--primary);
 
   color: #ffffff;
+
+}
+
+/*=====================================================
+        LIGHT CARD SUPPORT
+======================================================*/
+
+.rds-card-light {
+
+  background: #ffffff;
+
+  color: var(--text);
+
+}
+
+
+.rds-card-light .rds-card-title {
+
+  color: var(--text);
+
+}
+
+
+.rds-card-light .rds-card-description {
+
+  color: var(--muted);
+
+}
+
+
+.rds-card-light .rds-card-eyebrow {
+
+  color: var(--secondary);
+
+}
+
+
+.rds-card-light .rds-card-link {
+
+  color: var(--primary);
+
+}
+
+
+.rds-card-light .rds-card-number {
+
+  color: rgba(11, 36, 56, .28);
+
+}
+
+
+/*=====================================================
+        LIGHT CARD HOVER
+======================================================*/
+
+.rds-card.rds-card-light:hover {
+
+  background: #ffffff;
+
+  color: var(--text);
+
+}
+
+
+.rds-card.rds-card-light:hover .rds-card-title {
+
+  color: var(--text);
+
+}
+
+
+.rds-card.rds-card-light:hover .rds-card-description {
+
+  color: var(--muted);
+
+}
+
+
+.rds-card.rds-card-light:hover .rds-card-link {
+
+  color: var(--secondary);
+
+}
+
+
+.rds-card.rds-card-light:hover .rds-card-icon {
+
+  color: var(--primary);
 
 }
 
@@ -458,6 +546,221 @@
 .rds-card-auto-height {
 
   height: auto;
+
+}
+
+/*======================================================
+        RDS LIST
+======================================================*/
+
+.rds-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+/*======================================================
+        RDS LIST ITEM
+======================================================*/
+
+.rds-list-item {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1.25rem;
+
+  width: 100%;
+
+  padding: 1.25rem 0;
+
+}
+
+
+/*======================================================
+        RDS LIST ICON
+======================================================*/
+
+.rds-list-icon {
+
+  flex: 0 0 48px;
+
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    rgba(199, 164, 77, .10);
+
+  color: var(--secondary);
+
+  font-size: 1.05rem;
+
+  box-shadow:
+    0 8px 20px rgba(199, 164, 77, .10);
+
+}
+
+
+/*======================================================
+        RDS LIST CONTENT
+======================================================*/
+
+.rds-list-content {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .35rem;
+
+}
+
+
+/*======================================================
+        RDS LIST TITLE
+======================================================*/
+
+.rds-list-title {
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+}
+
+
+/*======================================================
+        RDS LIST DESCRIPTION
+======================================================*/
+
+.rds-list-description {
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: .9rem;
+
+  line-height: 1.7;
+
+  max-width: 620px;
+
+}
+
+
+/*======================================================
+        RDS LIST DIVIDER
+======================================================*/
+
+.rds-list .rds-card-divider {
+
+  margin: .35rem 0;
+
+}
+
+
+/*======================================================
+        RDS LIST HOVER
+======================================================*/
+
+.rds-list-item {
+
+  transition:
+    transform .35s ease;
+
+}
+
+.rds-list-item:hover {
+
+  transform: translateX(5px);
+
+}
+
+
+.rds-list-item:hover .rds-list-icon {
+
+  background: var(--secondary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+
+}
+
+
+/*======================================================
+        RDS LIST RESPONSIVE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-list-item {
+
+    gap: 1rem;
+
+    padding: 1rem 0;
+
+  }
+
+
+  .rds-list-icon {
+
+    flex-basis: 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    font-size: .95rem;
+
+  }
+
+
+  .rds-list-title {
+
+    font-size: 1rem;
+
+  }
+
+
+  .rds-list-description {
+
+    font-size: .86rem;
+
+    line-height: 1.65;
+
+  }
 
 }
 

@@ -294,6 +294,16 @@
 
 }
 
+@media (max-width: 991px) {
+
+  .rds-hero-divider {
+    margin-inline: auto;
+
+    text-align: center;
+  }
+
+}
+
 
 /*======================================================
                 HERO DIVIDER RESPONSIVE
@@ -309,6 +319,10 @@
 
     margin: 1.4rem 0;
 
+    margin-inline: auto;
+
+    text-align: center;
+
   }
 
 }
@@ -322,6 +336,10 @@
 
     gap: .6rem;
 
+    margin-inline: auto;
+
+    text-align: center;
+
   }
 
   .rds-hero-divider-line {
@@ -330,6 +348,125 @@
       linear-gradient(90deg,
         transparent,
         rgba(199, 164, 77, .6));
+
+  }
+
+}
+
+/*======================================================
+        RDS HERO SUPPORT
+======================================================*/
+
+.rds-hero-support {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  width: 100%;
+
+  margin-top: 2rem;
+
+}
+
+
+/*======================================================
+        SUPPORT LINE
+======================================================*/
+
+.rds-hero-support-line {
+
+  flex: 0 1 90px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(199, 164, 77, .55),
+      transparent);
+
+}
+
+
+/*======================================================
+        SUPPORT TEXT
+======================================================*/
+
+.rds-hero-support-text {
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, .68);
+
+  font-size: .76rem;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: .14em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+}
+
+
+/*======================================================
+        LIGHT HERO SUPPORT
+======================================================*/
+
+.rds-hero-support-light .rds-hero-support-text {
+
+  color:
+    var(--muted);
+
+}
+
+
+.rds-hero-support-light .rds-hero-support-line {
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(11, 36, 56, .18),
+      transparent);
+
+}
+
+
+/*======================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-hero-support {
+
+    gap: .7rem;
+
+    margin-top: 1.5rem;
+
+  }
+
+  .rds-hero-support-line {
+
+    flex-basis: 45px;
+
+  }
+
+  .rds-hero-support-text {
+
+    font-size: .68rem;
+
+    letter-spacing: .1em;
 
   }
 

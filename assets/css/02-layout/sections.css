@@ -213,6 +213,176 @@
 
 }
 
+/*======================================================
+        SECTION NOTE
+======================================================*/
+
+.rds-section-note {
+
+  width: 100%;
+
+  max-width: 820px;
+
+  margin: 4rem auto 0;
+
+  padding: 1.5rem 2rem;
+
+  text-align: center;
+
+}
+
+
+/*======================================================
+        SECTION NOTE TEXT
+======================================================*/
+
+.rds-section-note p {
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+
+}
+
+
+/*======================================================
+        SECTION NOTE EMPHASIS
+======================================================*/
+
+.rds-section-note p span {
+
+  color: inherit;
+
+}
+
+
+.rds-section-note p strong {
+
+  color: var(--secondary);
+
+  font-weight: 700;
+
+}
+
+
+/*======================================================
+        DARK SURFACE SUPPORT
+======================================================*/
+
+.rds-surface-dark .rds-section-note p {
+
+  color: rgba(255, 255, 255, .68);
+
+}
+
+
+.rds-surface-dark .rds-section-note p strong {
+
+  color: var(--secondary);
+
+}
+
+
+/*======================================================
+        SECTION NOTE DECORATIVE LINE
+======================================================*/
+
+.rds-section-note::before {
+
+  content: "";
+
+  display: block;
+
+  width: 56px;
+
+  height: 2px;
+
+  margin: 0 auto 1.25rem;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      var(--secondary),
+      transparent);
+
+  opacity: .7;
+
+}
+
+
+/*======================================================
+        HOVER / MOTION SUPPORT
+======================================================*/
+
+.rds-section-note {
+
+  transition:
+    transform .4s ease,
+    opacity .4s ease;
+
+}
+
+
+.rds-section-note:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+/*======================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width: 768px) {
+
+  .rds-section-note {
+
+    max-width: 680px;
+
+    margin-top: 3rem;
+
+    padding: 1.25rem 1rem;
+
+  }
+
+
+  .rds-section-note p {
+
+    font-size: .94rem;
+
+    line-height: 1.75;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .rds-section-note {
+
+    margin-top: 2.5rem;
+
+    padding: 1rem .5rem;
+
+  }
+
+
+  .rds-section-note p {
+
+    font-size: .9rem;
+
+  }
+
+}
+
 
 /*======================================================
                 SECTION DIVIDER RESPONSIVE
