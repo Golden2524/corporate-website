@@ -327,7 +327,6 @@
 
 }
 
-
 .rds-card-light .rds-card-eyebrow {
 
   color: var(--secondary);
@@ -657,6 +656,13 @@
 
 }
 
+.rds-card .rds-list-title {
+  color: var(--secondary);
+}
+
+.rds-card-light .rds-list-title {
+  color: var(--text);
+}
 
 /*======================================================
         RDS LIST DESCRIPTION

@@ -275,6 +275,31 @@
         DARK SURFACE SUPPORT
 ======================================================*/
 
+.rds-surface-dark .rds-card-eyebrow {
+
+  color: var(--white);
+
+}
+
+.rds-surface-dark .rds-section-note p {
+
+  color: rgba(255, 255, 255, .68);
+
+}
+
+
+.rds-surface-dark .rds-section-note p strong {
+
+  color: var(--secondary);
+
+}
+
+.rds-surface-dark .rds-section-note h3 {
+
+  color: var(--secondary);
+
+}
+
 .rds-surface-dark .rds-section-note p {
 
   color: rgba(255, 255, 255, .68);
