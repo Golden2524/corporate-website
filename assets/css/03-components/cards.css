@@ -664,6 +664,10 @@
   color: var(--text);
 }
 
+.rds-card-light .rds-list-description {
+  color: var(--muted);
+}
+
 /*======================================================
         RDS LIST DESCRIPTION
 ======================================================*/

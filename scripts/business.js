@@ -127,3 +127,46 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(impactSection);
 
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollLink = document.querySelector(".scroll-indicator");
+
+  if (!scrollLink) return;
+
+  // 1. SMOOTH SCROLL GLIDE
+  scrollLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // FINDS THE PARENT HERO SECTION, THE GRABS THE SECTION RIGHT BELOW IT
+    const currentHero = scrollLink.closest("section") || scrollLink.closest("header");
+    const targetSection = currentHero ? currentHero.nextElementSibling : null;
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+
+  // 2. FADE & SINK TRANSLATION
+  window.addEventListener("scroll", () => {
+    const scrollDistance = window.scrollY;
+    const fadeDistance = 180;
+
+    if (scrollDistance <= fadeDistance) {
+      const calculatedOpacity = 1 - (scrollDistance / fadeDistance);
+      const gentleSink = scrollDistance * 0.35;
+
+      scrollLink.style.opacity = calculatedOpacity;
+      scrollLink.style.transform = `translate(-50%, ${gentleSink}px)`;
+      scrollLink.style.pointerEvents = "auto";
+    } else {
+      scrollLink.style.opacity = "0";
+      scrollLink.style.pointerEvents = "none";
+    }
+  })
+});

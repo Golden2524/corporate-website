@@ -95,7 +95,7 @@
 
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   width: 100%;
 
@@ -616,6 +616,10 @@
 
 }
 
+.rds-hero-page {
+  position: relative;
+  width: 100%;
+}
 
 /*=====================================================
         INNER PAGE HERO

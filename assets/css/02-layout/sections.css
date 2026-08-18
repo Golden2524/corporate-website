@@ -270,6 +270,18 @@
 
 }
 
+.rds-card-light .rds-section-note h3 {
+
+  color: var(--primary);
+
+}
+
+.rds-card-light .rds-section-note p {
+
+  color: var(--muted);
+
+}
+
 
 /*======================================================
         DARK SURFACE SUPPORT
