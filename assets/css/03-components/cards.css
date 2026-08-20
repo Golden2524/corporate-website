@@ -94,6 +94,247 @@
 
 }
 
+
+/*=====================================================
+        FEATURED CARD
+======================================================*/
+
+.rds-card-featured {
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — MEDIA
+======================================================*/
+
+.rds-card-featured .rds-card-media {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 50%;
+
+  overflow: hidden;
+
+}
+
+
+/*=====================================================
+        CARD MEDIA
+======================================================*/
+
+.rds-card-media {
+
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — IMAGE
+======================================================*/
+
+.rds-card-featured .rds-card-image {
+
+  min-height: 420px;
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — IMAGE HOVER
+======================================================*/
+
+.rds-card-featured:hover .rds-card-image {
+
+  transform: scale(1.045);
+
+}
+
+
+/*=====================================================
+        CARD MEDIA BADGE
+======================================================*/
+
+.rds-card-media-badge {
+
+  position: absolute;
+
+  top: 1.25rem;
+
+  left: 1.25rem;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 32px;
+
+  padding: .45rem .8rem;
+
+  border: 1px solid rgba(255, 255, 255, .22);
+
+  border-radius: 999px;
+
+  background:
+    rgba(7, 29, 54, .72);
+
+  color: #ffffff;
+
+  font-size: .68rem;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, .16);
+
+}
+
+
+/*=====================================================
+        MEDIA OVERLAY
+======================================================*/
+
+.rds-card-media::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(180deg,
+      rgba(7, 29, 54, .08),
+      transparent 45%,
+      rgba(7, 29, 54, .18));
+
+}
+
+
+/*=====================================================
+        FEATURED MEDIA OVERLAY
+======================================================*/
+
+.rds-card-featured .rds-card-media::after {
+
+  background:
+    linear-gradient(180deg,
+      rgba(7, 29, 54, .08),
+      transparent 50%,
+      rgba(7, 29, 54, .22));
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — CONTENT
+======================================================*/
+
+.rds-card-featured .rds-card-content {
+
+  padding: 2.5rem;
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — TITLE
+======================================================*/
+
+.rds-card-featured .rds-card-title {
+
+  max-width: 560px;
+
+}
+
+
+/*=====================================================
+        FEATURED CARD — DESCRIPTION
+======================================================*/
+
+.rds-card-featured .rds-card-description {
+
+  max-width: 540px;
+
+}
+
+
+/*=====================================================
+        RESPONSIVE — FEATURED CARD
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .rds-card-featured .rds-card-image {
+
+    min-height: 340px;
+
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE — FEATURED CARD
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .rds-card-featured .rds-card-image {
+
+    min-height: 260px;
+
+  }
+
+
+  .rds-card-featured .rds-card-content {
+
+    padding: 1.5rem;
+
+  }
+
+
+  .rds-card-media-badge {
+
+    top: 1rem;
+
+    left: 1rem;
+
+    font-size: .62rem;
+
+  }
+
+}
+
 /*======================================================
                 CARD IMAGE
 ======================================================*/
