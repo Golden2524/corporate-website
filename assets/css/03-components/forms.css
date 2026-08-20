@@ -1,0 +1,589 @@
+/*=====================================================
+        RDS FORMS
+        forms.css
+======================================================*/
+
+
+/*=====================================================
+        FORM FOUNDATION
+======================================================*/
+
+.rds-form {
+
+  width: 100%;
+
+  margin: 0;
+
+}
+
+
+/*=====================================================
+        FORM GROUP
+======================================================*/
+
+.rds-form-group {
+
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+}
+
+
+/*=====================================================
+        FORM LABEL
+======================================================*/
+
+.rds-form-label {
+
+  display: block;
+
+  margin-bottom: .55rem;
+
+  color: var(--text);
+
+  font-size: .82rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: .04em;
+
+}
+
+
+/*=====================================================
+        DARK FORM LABEL
+======================================================*/
+
+.rds-card-dark .rds-form-label,
+.rds-card-glass .rds-form-label {
+
+  color: rgba(255, 255, 255, .88);
+
+}
+
+
+/*=====================================================
+        FORM CONTROL
+======================================================*/
+
+.rds-form-control {
+
+  display: block;
+
+  width: 100%;
+
+  min-height: 52px;
+
+  padding: .85rem 1rem;
+
+  border: 1px solid rgba(11, 36, 56, .14);
+
+  border-radius: var(--radius-md, 12px);
+
+  background: #ffffff;
+
+  color: var(--text);
+
+  font-family: inherit;
+
+  font-size: .95rem;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  outline: none;
+
+  box-shadow: none;
+
+  appearance: none;
+
+  transition:
+    border-color .3s ease,
+    background-color .3s ease,
+    box-shadow .3s ease,
+    color .3s ease;
+
+}
+
+
+/*=====================================================
+        TEXTAREA
+======================================================*/
+
+textarea.rds-form-control {
+
+  min-height: 150px;
+
+  resize: vertical;
+
+}
+
+
+/*=====================================================
+        SELECT
+======================================================*/
+
+select.rds-form-control {
+
+  cursor: pointer;
+
+  padding-right: 2.75rem;
+
+  background-image:
+    linear-gradient(45deg,
+      transparent 50%,
+      var(--muted) 50%),
+    linear-gradient(135deg,
+      var(--muted) 50%,
+      transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 22px,
+    calc(100% - 12px) 22px;
+
+  background-size:
+    6px 6px,
+    6px 6px;
+
+  background-repeat: no-repeat;
+
+}
+
+
+/*=====================================================
+        PLACEHOLDER
+======================================================*/
+
+.rds-form-control::placeholder {
+
+  color: var(--muted);
+
+  opacity: .7;
+
+}
+
+
+/*=====================================================
+        FOCUS
+======================================================*/
+
+.rds-form-control:focus {
+
+  border-color: var(--primary);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(11, 129, 255, .10);
+
+}
+
+
+/*=====================================================
+        HOVER
+======================================================*/
+
+.rds-form-control:hover:not(:focus) {
+
+  border-color:
+    rgba(11, 36, 56, .25);
+
+}
+
+
+/*=====================================================
+        INVALID STATE
+======================================================*/
+
+.rds-form-control:invalid:not(:placeholder-shown) {
+
+  border-color:
+    rgba(220, 53, 69, .55);
+
+}
+
+
+/*=====================================================
+        VALID STATE
+======================================================*/
+
+.rds-form-control:valid:not(:placeholder-shown) {
+
+  border-color:
+    rgba(25, 135, 84, .35);
+
+}
+
+
+/*=====================================================
+        DISABLED
+======================================================*/
+
+.rds-form-control:disabled {
+
+  cursor: not-allowed;
+
+  background:
+    rgba(11, 36, 56, .04);
+
+  color:
+    rgba(11, 36, 56, .45);
+
+  opacity: .7;
+
+}
+
+
+/*=====================================================
+        FORM ACTION
+======================================================*/
+
+.rds-form-action {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 1rem;
+
+  margin-top: .25rem;
+
+}
+
+
+/*=====================================================
+        FORM HELP TEXT
+======================================================*/
+
+.rds-form-help {
+
+  display: block;
+
+  margin-top: .45rem;
+
+  color: var(--muted);
+
+  font-size: .78rem;
+
+  line-height: 1.5;
+
+}
+
+
+/*=====================================================
+        FORM ERROR
+======================================================*/
+
+.rds-form-error {
+
+  display: block;
+
+  margin-top: .45rem;
+
+  color: #c0392b;
+
+  font-size: .78rem;
+
+  line-height: 1.5;
+
+}
+
+
+/*=====================================================
+        FORM SUCCESS
+======================================================*/
+
+.rds-form-success {
+
+  display: block;
+
+  margin-top: .45rem;
+
+  color: #198754;
+
+  font-size: .78rem;
+
+  line-height: 1.5;
+
+}
+
+
+/*=====================================================
+        DARK FORM CONTROLS
+======================================================*/
+
+.rds-card-dark .rds-form-control {
+
+  border-color:
+    rgba(255, 255, 255, .14);
+
+  background:
+    rgba(255, 255, 255, .055);
+
+  color: #ffffff;
+
+}
+
+
+.rds-card-dark .rds-form-control::placeholder {
+
+  color:
+    rgba(255, 255, 255, .52);
+
+}
+
+
+.rds-card-dark .rds-form-control:hover:not(:focus) {
+
+  border-color:
+    rgba(255, 255, 255, .28);
+
+}
+
+
+.rds-card-dark .rds-form-control:focus {
+
+  border-color:
+    var(--secondary);
+
+  background:
+    rgba(255, 255, 255, .08);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(199, 164, 77, .10);
+
+}
+
+
+/*=====================================================
+        GLASS FORM CONTROLS
+======================================================*/
+
+.rds-card-glass .rds-form-control {
+
+  border-color:
+    rgba(255, 255, 255, .20);
+
+  background:
+    rgba(255, 255, 255, .08);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+}
+
+
+.rds-card-glass .rds-form-control::placeholder {
+
+  color:
+    rgba(255, 255, 255, .58);
+
+}
+
+
+.rds-card-glass .rds-form-control:hover:not(:focus) {
+
+  border-color:
+    rgba(255, 255, 255, .35);
+
+}
+
+
+.rds-card-glass .rds-form-control:focus {
+
+  border-color:
+    var(--secondary);
+
+  background:
+    rgba(255, 255, 255, .12);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(199, 164, 77, .10);
+
+}
+
+
+/*=====================================================
+        CHECKBOX / RADIO
+======================================================*/
+
+.rds-form-check {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: .65rem;
+
+}
+
+
+.rds-form-check-input {
+
+  flex: 0 0 auto;
+
+  width: 18px;
+
+  height: 18px;
+
+  margin-top: .15rem;
+
+  accent-color: var(--primary);
+
+  cursor: pointer;
+
+}
+
+
+.rds-form-check-label {
+
+  color: var(--text);
+
+  font-size: .88rem;
+
+  line-height: 1.5;
+
+  cursor: pointer;
+
+}
+
+
+/*=====================================================
+        DARK CHECKBOX / RADIO
+======================================================*/
+
+.rds-card-dark .rds-form-check-label,
+.rds-card-glass .rds-form-check-label {
+
+  color:
+    rgba(255, 255, 255, .75);
+
+}
+
+
+/*=====================================================
+        FILE INPUT
+======================================================*/
+
+.rds-form-file {
+
+  width: 100%;
+
+  padding: .75rem 1rem;
+
+  border: 1px dashed rgba(11, 36, 56, .20);
+
+  border-radius: var(--radius-md, 12px);
+
+  background:
+    rgba(11, 36, 56, .025);
+
+  color: var(--text);
+
+  font-family: inherit;
+
+  font-size: .88rem;
+
+  cursor: pointer;
+
+  transition:
+    border-color .3s ease,
+    background-color .3s ease;
+
+}
+
+
+.rds-form-file:hover {
+
+  border-color: var(--primary);
+
+  background:
+    rgba(11, 129, 255, .035);
+
+}
+
+
+/*=====================================================
+        FORM DIVIDER
+======================================================*/
+
+.rds-form-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  margin: 1.5rem 0;
+
+  background:
+    rgba(11, 36, 56, .10);
+
+}
+
+
+/*=====================================================
+        DARK FORM DIVIDER
+======================================================*/
+
+.rds-card-dark .rds-form-divider,
+.rds-card-glass .rds-form-divider {
+
+  background:
+    rgba(255, 255, 255, .12);
+
+}
+
+
+/*=====================================================
+        RESPONSIVE
+======================================================*/
+
+@media (max-width: 767.98px) {
+
+  .rds-form-control {
+
+    min-height: 50px;
+
+    padding: .8rem .9rem;
+
+    font-size: .92rem;
+
+  }
+
+
+  textarea.rds-form-control {
+
+    min-height: 135px;
+
+  }
+
+
+  .rds-form-action {
+
+    width: 100%;
+
+  }
+
+
+  .rds-form-action .rds-btn {
+
+    width: 100%;
+
+  }
+
+}

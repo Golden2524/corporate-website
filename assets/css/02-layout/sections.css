@@ -1810,11 +1810,6 @@ REDUCED MOTION
 
 
 /*=====================================================
-        HOMEPAGE SECTION 5
-        FINAL CTA
-======================================================*/
-
-/*=====================================================
         CTA FOUNDATION
 ======================================================*/
 
@@ -1924,6 +1919,76 @@ REDUCED MOTION
   pointer-events: none;
 
   z-index: 0;
+
+}
+
+/*=====================================================
+        LIGHT CTA
+======================================================*/
+
+.rds-cta-light {
+
+  color: var(--text);
+
+  background: #ffffff;
+
+  border: 1px solid rgba(11, 36, 56, .10);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px rgba(11, 36, 56, .10);
+
+}
+
+
+/*=====================================================
+        LIGHT CTA CONTENT
+======================================================*/
+
+.rds-cta-light .rds-cta-title {
+
+  color: var(--text);
+
+}
+
+
+.rds-cta-light .rds-cta-description {
+
+  color: var(--muted);
+
+}
+
+
+/*=====================================================
+        LIGHT CTA SUPPORT
+======================================================*/
+
+.rds-cta-light .rds-cta-support {
+
+  color: var(--text);
+
+}
+
+
+.rds-cta-light .rds-cta-support p {
+
+  color: var(--muted);
+
+}
+
+
+/*=====================================================
+        LIGHT CTA DIVIDER
+======================================================*/
+
+.rds-cta-light .rds-cta-divider span {
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(11, 36, 56, .16),
+      transparent);
 
 }
 
