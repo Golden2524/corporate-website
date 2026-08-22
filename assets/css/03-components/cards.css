@@ -517,6 +517,85 @@
   border-radius: var(--radius-lg, 24px);
 }
 
+/*
+/*=====================================================
+        NEWS CARD — STACKED IMAGE + CONTENT
+======================================================
+
+.rds-news-card {
+  min-height: 0;
+}
+
+
+/* IMAGE 
+
+.rds-news-card .rds-card-image {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  height: 320px;
+  overflow: hidden;
+}
+
+
+.rds-news-card .rds-card-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* CONTENT 
+
+.rds-news-card .rds-card-content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 2rem;
+
+  background: var(--primary);
+  color: var(--white);
+}
+
+
+/*=====================================================
+        NEWS CARD — TABLET
+======================================================
+
+@media (max-width: 991.98px) {
+
+  .rds-news-card .rds-card-image,
+  .rds-news-card .rds-card-image img {
+    height: 320px;
+  }
+
+  .rds-news-card .rds-card-content {
+    padding: 26px;
+  }
+
+}
+
+
+/*=====================================================
+        NEWS CARD — MOBILE
+======================================================
+
+@media (max-width: 575.98px) {
+
+  .rds-news-card .rds-card-image,
+  .rds-news-card .rds-card-image img {
+    height: 280px;
+  }
+
+}
+*/
 
 /*=====================================================
         CARD VARIANTS
@@ -571,6 +650,8 @@
 .rds-card .rds-card-eyebrow {
 
   color: var(--secondary);
+
+  margin-bottom: 5px;
 
 }
 
@@ -2096,7 +2177,6 @@
 
 }
 
-
 /*=====================================================
         HOVER DECORATIONS
 ======================================================*/
@@ -2450,6 +2530,8 @@
     padding: 2.25rem;
 
   }
+
+
 
   .rds-card-image {
     height: 320px;
