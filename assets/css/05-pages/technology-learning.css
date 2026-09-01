@@ -1,0 +1,1437 @@
+/*=====================================================
+        TECHNOLOGY LEARNING
+        SECTION 2 — SKILL MEDIA
+======================================================*/
+
+
+/*=====================================================
+        SKILL CARD
+======================================================*/
+
+.technology-skill-card {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+/*=====================================================
+        SKILL MEDIA
+======================================================*/
+
+.technology-skill-media {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/*=====================================================
+        SLIDESHOW
+======================================================*/
+
+.technology-skill-slideshow {
+  position: absolute;
+  inset: 0;
+}
+
+.technology-skill-slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.04);
+
+  transition:
+    opacity .8s ease,
+    transform 5s ease;
+}
+
+.technology-skill-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/*=====================================================
+        MEDIA OVERLAY
+======================================================*/
+
+.technology-skill-media-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(8, 26, 44, .05),
+      rgba(8, 26, 44, .55));
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/*=====================================================
+        MEDIA LABEL
+======================================================*/
+
+.technology-skill-media-label {
+  position: absolute;
+
+  top: 1.25rem;
+  left: 1.25rem;
+
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: .4rem .75rem;
+
+  border: 1px solid rgba(255, 255, 255, .28);
+
+  border-radius: 999px;
+
+  background: rgba(8, 26, 44, .45);
+
+  color: var(--white);
+
+  font-size: .7rem;
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/*=====================================================
+        SKILL CARD CONTENT
+======================================================*/
+
+.technology-skill-card .rds-card-content {
+
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+
+/*=====================================================
+        SKILL CARD LINK
+======================================================*/
+
+.technology-skill-card .rds-card-link {
+  margin-top: auto;
+}
+
+
+/*=====================================================
+        CATEGORY SPACING
+======================================================*/
+
+.technology-skills-category {
+  margin-top: 4rem;
+}
+
+.technology-skills-category+.technology-skills-category {
+  margin-top: 6rem;
+}
+
+
+/*=====================================================
+        CATEGORY HEADER
+======================================================*/
+
+.technology-skills-category-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.technology-skills-category-title {
+  margin: .4rem 0 .65rem;
+
+  font-size: clamp(1.65rem,
+      2.5vw,
+      2.15rem);
+
+  font-weight: 700;
+  line-height: 1.15;
+
+  color: var(--text);
+}
+
+.technology-skills-category-description {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.75;
+}
+
+
+/*=====================================================
+        HOVER
+======================================================*/
+
+.technology-skill-card:hover .technology-skill-slide.active {
+
+  transform: scale(1.035);
+}
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .technology-skill-media {
+    height: 220px;
+  }
+
+  .technology-skill-card .rds-card-content {
+    min-height: 320px;
+    padding: 1.75rem;
+  }
+
+  .technology-skills-category-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .technology-skill-media {
+    height: 210px;
+  }
+
+  .technology-skill-card .rds-card-content {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .technology-skill-media-label {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .technology-skills-category {
+    margin-top: 3rem;
+  }
+
+  .technology-skills-category+.technology-skills-category {
+    margin-top: 4rem;
+  }
+
+}
+
+/*=====================================================
+        TECHNOLOGY LEARNING
+        SECTION 3 — RESOURCES
+======================================================*/
+
+
+/*=====================================================
+        FEATURED RESOURCE
+======================================================*/
+
+.technology-resource-feature {
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: var(--radius-lg, 24px);
+
+  background: var(--primary);
+}
+
+
+/*=====================================================
+        VIDEO CONTAINER
+======================================================*/
+
+.technology-resource-video {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg, 24px);
+}
+
+.technology-resource-video iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/*=====================================================
+        RESOURCE DETAILS
+======================================================*/
+
+.technology-resource-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: .85rem;
+
+  margin-top: 1.75rem;
+}
+
+.technology-resource-detail {
+  display: flex;
+  align-items: center;
+
+  gap: .75rem;
+
+  color: rgba(255, 255, 255, .78);
+
+  font-size: .9rem;
+}
+
+.technology-resource-detail i {
+  width: 1.25rem;
+
+  color: var(--accent);
+
+  font-size: 1rem;
+}
+
+
+/*=====================================================
+        RESOURCE ACTIONS
+======================================================*/
+
+.technology-resource-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1.25rem;
+
+  margin-top: 2rem;
+}
+
+
+/*=====================================================
+        RESOURCE CATEGORIES
+======================================================*/
+
+.technology-resource-categories {
+  margin-top: 1rem;
+}
+
+.technology-resource-category {
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.25rem;
+
+  padding: 2rem;
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+  border-radius: var(--radius-lg, 24px);
+
+  background: rgba(255, 255, 255, .045);
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+}
+
+.technology-resource-category:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(255, 255, 255, .22);
+
+  background: rgba(255, 255, 255, .07);
+}
+
+
+/*=====================================================
+        CATEGORY ICON
+======================================================*/
+
+.technology-resource-category-icon {
+  flex: 0 0 auto;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, .14);
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, .06);
+
+  color: var(--accent);
+
+  font-size: 1.35rem;
+}
+
+
+/*=====================================================
+        CATEGORY CONTENT
+======================================================*/
+
+.technology-resource-category-title {
+  margin: .4rem 0 .65rem;
+
+  color: var(--white);
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.technology-resource-category-description {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, .68);
+
+  line-height: 1.7;
+}
+
+
+/*=====================================================
+        CATEGORY LINK
+======================================================*/
+
+.technology-resource-category .rds-card-link {
+  display: inline-flex;
+
+  margin-top: 1.25rem;
+}
+
+
+/*=====================================================
+        RESOURCE CARD CONTENT
+======================================================*/
+
+.technology-resources-section .rds-card-content {
+  height: 100%;
+}
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .technology-resource-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .technology-resource-category {
+    padding: 1.75rem;
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .technology-resource-video {
+    border-radius: 18px;
+  }
+
+  .technology-resource-category {
+    flex-direction: column;
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+  }
+
+  .technology-resource-category-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .technology-resource-category-title {
+    font-size: 1.2rem;
+  }
+
+}
+
+/*=====================================================
+        TECHNOLOGY LEARNING
+        SECTION 4 — APPLICATION
+======================================================*/
+
+
+/*=====================================================
+        APPLICATION INTRO
+======================================================*/
+
+.technology-learning-application-intro {
+  padding-right: 2rem;
+}
+
+.technology-learning-application-title {
+  max-width: 520px;
+
+  margin: .5rem 0 1rem;
+
+  color: var(--text);
+
+  font-size: clamp(2rem, 3vw, 2.75rem);
+
+  font-weight: 700;
+
+  line-height: 1.12;
+}
+
+.technology-learning-application-description {
+  max-width: 540px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+
+/*=====================================================
+        LEARNING BENEFITS
+======================================================*/
+
+.technology-learning-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  margin-top: 2.5rem;
+}
+
+.technology-learning-benefit {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.technology-learning-benefit-icon {
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(11, 129, 255, .08);
+
+  color: var(--primary);
+
+  font-size: 1.15rem;
+}
+
+.technology-learning-benefit h4 {
+  margin: 0 0 .35rem;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.technology-learning-benefit p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: .9rem;
+
+  line-height: 1.65;
+}
+
+
+/*=====================================================
+        APPLICATION CARD
+======================================================*/
+
+.technology-learning-application-card {
+  padding: 2.25rem;
+
+  border: 1px solid rgba(11, 36, 56, .08);
+
+  border-radius: var(--radius-lg, 24px);
+
+  background: var(--white);
+
+  box-shadow:
+    0 25px 70px rgba(11, 36, 56, .09);
+}
+
+
+/*=====================================================
+        FORM GROUP
+======================================================*/
+
+.technology-learning-form-group {
+  padding-bottom: 2.25rem;
+
+  margin-bottom: 2.25rem;
+
+  border-bottom: 1px solid rgba(11, 36, 56, .08);
+}
+
+.technology-learning-form-group:last-of-type {
+  border-bottom: 0;
+}
+
+
+/*=====================================================
+        FORM STEP
+======================================================*/
+
+.technology-learning-form-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  margin-bottom: .9rem;
+
+  border-radius: 10px;
+
+  background: var(--text);
+
+  color: var(--white);
+
+  font-size: .72rem;
+  font-weight: 700;
+
+  letter-spacing: .08em;
+}
+
+
+/*=====================================================
+        FORM HEADING
+======================================================*/
+
+.technology-learning-form-heading {
+  margin-bottom: 1.35rem;
+}
+
+.technology-learning-form-heading h3 {
+  margin: 0 0 .35rem;
+
+  color: var(--text);
+
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.technology-learning-form-heading p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: .9rem;
+
+  line-height: 1.6;
+}
+
+
+/*=====================================================
+        FORM CONTROLS
+======================================================*/
+
+.technology-learning-form .form-label {
+  margin-bottom: .5rem;
+
+  color: var(--text);
+
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.technology-learning-form .form-label span {
+  color: var(--primary);
+}
+
+.technology-learning-form .form-control,
+.technology-learning-form .form-select {
+  min-height: 52px;
+
+  border: 1px solid rgba(11, 36, 56, .12);
+
+  border-radius: 12px;
+
+  background: var(--white);
+
+  color: var(--text);
+
+  box-shadow: none;
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.technology-learning-form textarea.form-control {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+.technology-learning-form .form-control:focus,
+.technology-learning-form .form-select:focus {
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 4px rgba(11, 129, 255, .08);
+}
+
+
+/*=====================================================
+        SKILL SELECTION GRID
+======================================================*/
+
+.technology-learning-skill-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: .75rem;
+}
+
+
+/*=====================================================
+        SKILL OPTION
+======================================================*/
+
+.technology-learning-skill-option {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.technology-learning-skill-option input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.technology-learning-skill-option-content {
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  gap: .75rem;
+
+  padding: .9rem 1rem;
+
+  border: 1px solid rgba(11, 36, 56, .1);
+
+  border-radius: 14px;
+
+  background: var(--white);
+
+  color: var(--text);
+
+  font-size: .86rem;
+  font-weight: 600;
+
+  transition:
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+.technology-learning-skill-option-content i {
+  flex: 0 0 auto;
+
+  color: var(--primary);
+
+  font-size: 1.05rem;
+}
+
+
+/* SELECTED */
+
+.technology-learning-skill-option input:checked+.technology-learning-skill-option-content {
+
+  border-color: var(--primary);
+
+  background: rgba(11, 129, 255, .06);
+
+  color: var(--primary);
+}
+
+
+/* HOVER */
+
+.technology-learning-skill-option:hover .technology-learning-skill-option-content {
+
+  transform: translateY(-2px);
+
+  border-color: rgba(11, 129, 255, .35);
+}
+
+
+/*=====================================================
+        LEARNING FORMAT
+======================================================*/
+
+.technology-learning-format-options {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: .75rem;
+}
+
+.technology-learning-format-option {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.technology-learning-format-option input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.technology-learning-format-option span {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: .5rem;
+
+  padding: .8rem;
+
+  border: 1px solid rgba(11, 36, 56, .1);
+
+  border-radius: 12px;
+
+  color: var(--text);
+
+  font-size: .8rem;
+  font-weight: 600;
+
+  text-align: center;
+
+  transition:
+    border-color .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+.technology-learning-format-option i {
+  color: var(--primary);
+
+  font-size: 1rem;
+}
+
+.technology-learning-format-option input:checked+span {
+
+  border-color: var(--primary);
+
+  background: rgba(11, 129, 255, .06);
+
+  color: var(--primary);
+}
+
+
+/*=====================================================
+        CONSENT
+======================================================*/
+
+.technology-learning-form-consent {
+  margin-bottom: 1.5rem;
+}
+
+.technology-learning-consent-option {
+  display: flex;
+  align-items: flex-start;
+
+  gap: .75rem;
+
+  cursor: pointer;
+
+  color: var(--muted);
+
+  font-size: .78rem;
+
+  line-height: 1.6;
+}
+
+.technology-learning-consent-option input {
+  flex: 0 0 auto;
+
+  width: 17px;
+  height: 17px;
+
+  margin-top: .15rem;
+
+  accent-color: var(--primary);
+}
+
+
+/*=====================================================
+        FORM SUBMIT
+======================================================*/
+
+.technology-learning-form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/*=====================================================
+        FORM STATUS
+======================================================*/
+
+.technology-learning-form-status {
+  margin-top: 1rem;
+
+  padding: .9rem 1rem;
+
+  border-radius: 12px;
+
+  font-size: .85rem;
+
+  line-height: 1.5;
+}
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .technology-learning-application-intro {
+    padding-right: 0;
+  }
+
+  .technology-learning-application-card {
+    padding: 2rem;
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .technology-learning-application-card {
+    padding: 1.5rem;
+
+    border-radius: 20px;
+  }
+
+  .technology-learning-skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-learning-format-options {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-learning-form-submit {
+    justify-content: stretch;
+  }
+
+  .technology-learning-form-submit .rds-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+/*=====================================================
+        TECHNOLOGY LEARNING
+        SECTION 5 — CTA / CLOSING
+======================================================*/
+
+
+/*=====================================================
+        CTA WRAPPER
+======================================================*/
+
+.technology-learning-cta {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 5rem;
+
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  border-radius: var(--radius-lg, 24px);
+
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, .06),
+      rgba(255, 255, 255, .025));
+
+  isolation: isolate;
+}
+
+
+/*=====================================================
+        CTA CONTENT
+======================================================*/
+
+.technology-learning-cta-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(100%, 650px);
+}
+
+.technology-learning-cta-title {
+  max-width: 650px;
+
+  margin: .75rem 0 1.25rem;
+
+  color: var(--white);
+
+  font-size: clamp(2.4rem,
+      5vw,
+      4.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -.035em;
+}
+
+.technology-learning-cta-description {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, .72);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/*=====================================================
+        CTA ACTIONS
+======================================================*/
+
+.technology-learning-cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+
+/*=====================================================
+        CTA VISUAL
+======================================================*/
+
+.technology-learning-cta-visual {
+  position: absolute;
+
+  top: 50%;
+  right: -30px;
+
+  width: 440px;
+  height: 440px;
+
+  transform: translateY(-50%);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/*=====================================================
+        ORBITS
+======================================================*/
+
+.technology-learning-cta-orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%) rotate(0deg);
+}
+
+.technology-learning-cta-orbit-one {
+  width: 300px;
+  height: 300px;
+
+  animation:
+    technologyLearningOrbitOne 18s linear infinite;
+}
+
+.technology-learning-cta-orbit-two {
+  width: 190px;
+  height: 190px;
+
+  border-color: rgba(255, 214, 107, .20);
+
+  animation:
+    technologyLearningOrbitTwo 12s linear infinite reverse;
+}
+
+
+/*=====================================================
+        CTA CORE
+======================================================*/
+
+.technology-learning-cta-core {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 214, 107, .35);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, .07);
+
+  color: var(--accent);
+
+  font-size: 1.7rem;
+
+  box-shadow:
+    0 0 60px rgba(255, 214, 107, .10);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  animation:
+    technologyLearningCorePulse 4s ease-in-out infinite;
+}
+
+
+/*=====================================================
+        CTA NODES
+======================================================*/
+
+.technology-learning-cta-node {
+  position: absolute;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, .15);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, .06);
+
+  color: var(--white);
+
+  font-size: 1rem;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, .15);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.technology-learning-cta-node-one {
+  top: 45px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.technology-learning-cta-node-two {
+  right: 35px;
+  bottom: 70px;
+}
+
+.technology-learning-cta-node-three {
+  left: 30px;
+  bottom: 85px;
+}
+
+
+/*=====================================================
+        CONNECTING GLOW
+======================================================*/
+
+.technology-learning-cta-visual::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 230px;
+  height: 230px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(11, 129, 255, .16),
+      transparent 70%);
+
+  filter: blur(10px);
+}
+
+
+/*=====================================================
+        ANIMATIONS
+======================================================*/
+
+@keyframes technologyLearningOrbitOne {
+
+  from {
+    transform:
+      translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%) rotate(360deg);
+  }
+
+}
+
+@keyframes technologyLearningOrbitTwo {
+
+  from {
+    transform:
+      translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%) rotate(-360deg);
+  }
+
+}
+
+@keyframes technologyLearningCorePulse {
+
+  0%,
+  100% {
+    transform:
+      translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%) scale(1.08);
+  }
+
+}
+
+
+/*=====================================================
+        TABLET
+======================================================*/
+
+@media (max-width: 991.98px) {
+
+  .technology-learning-cta {
+    min-height: 580px;
+
+    padding: 4rem 2.5rem;
+  }
+
+  .technology-learning-cta-content {
+    width: 100%;
+  }
+
+  .technology-learning-cta-visual {
+    right: -120px;
+
+    opacity: .45;
+  }
+
+  .technology-learning-cta-title {
+    max-width: 600px;
+  }
+
+}
+
+
+/*=====================================================
+        MOBILE
+======================================================*/
+
+@media (max-width: 575.98px) {
+
+  .technology-learning-cta {
+    min-height: auto;
+
+    padding: 3rem 1.5rem;
+
+    border-radius: 20px;
+  }
+
+  .technology-learning-cta-title {
+    font-size: clamp(2rem,
+        11vw,
+        2.8rem);
+  }
+
+  .technology-learning-cta-description {
+    font-size: .92rem;
+  }
+
+  .technology-learning-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .technology-learning-cta-actions .rds-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .technology-learning-cta-visual {
+    top: auto;
+    right: -150px;
+    bottom: -120px;
+
+    width: 350px;
+    height: 350px;
+
+    transform: none;
+
+    opacity: .25;
+  }
+
+}
+
+/*=====================================================
+        CTA — REDUCED MOTION
+======================================================*/
+
+.technology-learning-cta.technology-learning-reduced-motion .technology-learning-cta-orbit-one,
+.technology-learning-cta.technology-learning-reduced-motion .technology-learning-cta-orbit-two,
+.technology-learning-cta.technology-learning-reduced-motion .technology-learning-cta-core {
+
+  animation: none;
+}
+
+
+/*=====================================================
+        CTA — KEYBOARD FOCUS
+======================================================*/
+
+.technology-learning-cta.technology-learning-cta-focused {
+  border-color: rgba(255, 255, 255, .22);
+}
